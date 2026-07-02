@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kandu Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>Kandu Analysis</h1>
+  <p>日付別ランキング・集計データ</p>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>日付を選択</h2>
+    <input type="date" id="datePicker" value="2026-07-15" />
+    <p id="updated"></p>
+    <p id="memo"></p>
+  </section>
+
+  <section>
+    <h2>人気ランキング</h2>
+    <div id="ranking" class="ranking"></div>
+  </section>
+
+  <section>
+    <h2>集計データ表</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>職業</th>
+            <th>定員</th>
+            <th>体験時間</th>
+            <th>開催回数</th>
+            <th>メモ</th>
+          </tr>
+        </thead>
+        <tbody id="summary"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>非公式データです。実際の予約状況は公式サイトで確認してください。</p>
+</footer>
+
+<script>
+let allData = {};
+
+async function loadData() {
+  const res = await fetch("data.json");
+  allData = await res.json();
+
+  document.getElementById("datePicker").addEventListener("change", render);
+  render();
+}
+
+function render() {
+  const date = document.getElementById("datePicker").value;
+  const data = allData[date];
+
+  const rankingEl = document.getElementById("ranking");
+  const summaryEl = document.getElementById("summary");
+
+  if (!data) {
+    document.getElementById("updated").textContent = "";
+    document.getElementById("memo").textContent = "この日のデータはまだありません。";
+    rankingEl.innerHTML = "";
+    summaryEl.innerHTML = "";
+    return;
+  }
+
+  document.getElementById("updated").textContent = "最終更新：" + data.updated_at;
+  document.getElementById("memo").textContent = data.memo || "";
+
+  rankingEl.innerHTML = data.ranking.map(item => `
+    <div class="rank-card">
+      <span>${item.rank}</span>
+      <strong>${item.name}</strong>
+      <p>完売目安：${item.sold_out}</p>
+    </div>
+  `).join("");
+
+  summaryEl.innerHTML = data.summary.map(item => `
+    <tr>
+      <td>${item.name}</td>
+      <td>${item.capacity}人</td>
+      <td>${item.duration}分</td>
+      <td>${item.sessions}回</td>
+      <td>${item.memo || ""}</td>
+    </tr>
+  `).join("");
+}
+
+loadData();
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "2026-07-15": {
+    "updated_at": "2026/07/15 09:30",
+    "memo": "サンプルデータです",
+    "ranking": [
+      {"rank": 1, "name": "アイスクリームメーカー", "sold_out": "9:40"},
+      {"rank": 2, "name": "警察官", "sold_out": "10:10"},
+      {"rank": 3, "name": "銀だこ職人", "sold_out": "10:30"}
+    ],
+    "summary": [
+      {"name": "アイスクリームメーカー", "capacity": 6, "duration": 30, "sessions": 8, "memo": "最優先"},
+      {"name": "警察官", "capacity": 6, "duration": 30, "sessions": 6, "memo": "早め推奨"},
+      {"name": "パイロット", "capacity": 6, "duration": 30, "sessions": 9, "memo": "枠多め"}
+    ]
+  }
+}
