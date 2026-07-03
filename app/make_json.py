@@ -9,214 +9,267 @@ RAW_DIR = BASE_DIR / "data" / "raw"
 DOCS_DIR = BASE_DIR / "docs"
 OUTPUT_FILE = DOCS_DIR / "data.json"
 
-PART1_TIMES = [
-    "09:00", "09:30", "10:00", "10:30", "11:00",
-    "11:30", "12:00", "12:30", "13:00"
-]
-
-PART2_TIMES = [
-    "15:00", "15:30", "16:00", "16:30",
-    "17:00", "17:30", "18:00", "18:30"
-]
+PARTS = {
+    "part1": {
+        "label": "1部",
+        "slots": ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00"],
+        "start_min": "09:00",
+        "start_max": "14:59",
+    },
+    "part2": {
+        "label": "2部",
+        "slots": ["15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30"],
+        "start_min": "15:00",
+        "start_max": "23:59",
+    },
+}
 
 
 def clean_job_name(name):
     if pd.isna(name):
         return ""
-
     name = str(name)
     name = re.sub(r"\[([^=\]]+)=([^\]]+)\]", r"\1", name)
     return name.strip()
 
 
-def load_all_csv():
+def load_raw_csv():
     files = sorted(RAW_DIR.glob("kandu_*.csv"))
-
     if not files:
         print("CSVがありません")
         return pd.DataFrame()
 
-    return pd.concat([pd.read_csv(file) for file in files], ignore_index=True)
+    frames = []
+    for file in files:
+        try:
+            frames.append(pd.read_csv(file))
+        except Exception as e:
+            print(f"読み込み失敗: {file} / {e}")
+
+    return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
 
 
-def round_to_slot(dt):
-    hour = dt.hour
-    minute = dt.minute
-
-    if minute < 30:
-        return f"{hour:02d}:00"
-    return f"{hour:02d}:30"
+def floor_to_30min(dt):
+    minute = 0 if dt.minute < 30 else 30
+    return f"{dt.hour:02d}:{minute:02d}"
 
 
-def get_part_by_slot(slot):
-    if slot in PART1_TIMES:
-        return "part1"
-    if slot in PART2_TIMES:
-        return "part2"
+def detect_part_by_slot(slot):
+    for part_key, config in PARTS.items():
+        if slot in config["slots"]:
+            return part_key
     return None
 
 
-def get_part_by_start_time(start):
-    if not isinstance(start, str) or ":" not in start:
+def detect_part_by_start(start):
+    if pd.isna(start):
         return None
 
-    hour = int(start.split(":")[0])
+    start = str(start)
 
-    if 9 <= hour < 15:
-        return "part1"
-
-    if hour >= 15:
-        return "part2"
+    for part_key, config in PARTS.items():
+        if config["start_min"] <= start <= config["start_max"]:
+            return part_key
 
     return None
+
+
+def normalize_df(df):
+    df = df.copy()
+
+    required = ["取得時刻", "職業", "定員", "開始", "体験時間", "残席"]
+    missing = [col for col in required if col not in df.columns]
+    if missing:
+        raise ValueError(f"CSVに必要な列がありません: {missing}")
+
+    df["職業"] = df["職業"].apply(clean_job_name)
+    df["取得時刻"] = pd.to_datetime(df["取得時刻"], errors="coerce")
+    df = df[df["取得時刻"].notna()]
+
+    df["取得日"] = df["取得時刻"].dt.strftime("%Y-%m-%d")
+    df["取得枠"] = df["取得時刻"].apply(floor_to_30min)
+
+    df["取得部"] = df["取得枠"].apply(detect_part_by_slot)
+    df["開始部"] = df["開始"].apply(detect_part_by_start)
+
+    df = df[df["取得部"].notna()]
+    df = df[df["開始部"].notna()]
+    df = df[df["取得部"] == df["開始部"]]
+
+    for col in ["定員", "体験時間", "残席"]:
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0).astype(int)
+
+    return df
+
+
+def latest_snapshot(part_df):
+    latest_slot = part_df["取得枠"].max()
+    return part_df[part_df["取得枠"] == latest_slot].copy()
 
 
 def make_ranking(part_df):
-    latest_slot = part_df["取得枠"].max()
-    latest_df = part_df[part_df["取得枠"] == latest_slot].copy()
+    latest_df = latest_snapshot(part_df)
 
     summary = (
-        latest_df.groupby("職業")
+        latest_df.groupby("職業", as_index=False)
         .agg(
-            残席合計=("残席", "sum"),
-            開催回数=("開始", "count"),
-            定員=("定員", "max"),
-            体験時間=("体験時間", "max"),
+            capacity_total=("定員", "sum"),
+            remaining_total=("残席", "sum"),
+            sessions=("開始", "count"),
         )
-        .reset_index()
-        .sort_values(["残席合計", "開催回数"], ascending=[True, True])
     )
 
-    ranking = []
+    summary["reserved_total"] = summary["capacity_total"] - summary["remaining_total"]
+    summary["reserved_rate"] = summary.apply(
+        lambda row: row["reserved_total"] / row["capacity_total"] if row["capacity_total"] > 0 else 0,
+        axis=1
+    )
 
-    for _, row in summary.head(10).iterrows():
+    summary = summary.sort_values(
+        ["reserved_rate", "remaining_total", "sessions", "職業"],
+        ascending=[False, True, True, True]
+    ).head(10)
+
+    ranking = []
+    for _, row in summary.iterrows():
         ranking.append({
             "rank": len(ranking) + 1,
             "name": row["職業"],
-            "remaining_total": int(row["残席合計"]),
-            "sessions": int(row["開催回数"]),
+            "reserved_rate": round(float(row["reserved_rate"]) * 100, 1),
+            "reserved_total": int(row["reserved_total"]),
+            "capacity_total": int(row["capacity_total"]),
+            "remaining_total": int(row["remaining_total"]),
+            "sessions": int(row["sessions"]),
         })
 
     return ranking
 
 
 def make_summary(part_df):
-    latest_slot = part_df["取得枠"].max()
-    latest_df = part_df[part_df["取得枠"] == latest_slot].copy()
+    latest_df = latest_snapshot(part_df)
 
     summary = (
-        latest_df.groupby("職業")
+        latest_df.groupby("職業", as_index=False)
         .agg(
-            定員=("定員", "max"),
-            体験時間=("体験時間", "max"),
-            開催回数=("開始", "count"),
-            残席合計=("残席", "sum"),
+            capacity_total=("定員", "sum"),
+            remaining_total=("残席", "sum"),
+            sessions=("開始", "count"),
+            capacity=("定員", "max"),
+            duration=("体験時間", "max"),
         )
-        .reset_index()
-        .sort_values(["残席合計", "職業"], ascending=[True, True])
+    )
+
+    summary["reserved_total"] = summary["capacity_total"] - summary["remaining_total"]
+    summary["reserved_rate"] = summary.apply(
+        lambda row: row["reserved_total"] / row["capacity_total"] if row["capacity_total"] > 0 else 0,
+        axis=1
+    )
+
+    summary = summary.sort_values(
+        ["reserved_rate", "remaining_total", "職業"],
+        ascending=[False, True, True]
     )
 
     return [
         {
             "name": row["職業"],
-            "capacity": int(row["定員"]) if pd.notna(row["定員"]) else "",
-            "duration": int(row["体験時間"]) if pd.notna(row["体験時間"]) else "",
-            "sessions": int(row["開催回数"]),
-            "remaining_total": int(row["残席合計"]),
+            "capacity": int(row["capacity"]),
+            "duration": int(row["duration"]),
+            "sessions": int(row["sessions"]),
+            "capacity_total": int(row["capacity_total"]),
+            "reserved_total": int(row["reserved_total"]),
+            "remaining_total": int(row["remaining_total"]),
+            "reserved_rate": round(float(row["reserved_rate"]) * 100, 1),
         }
         for _, row in summary.iterrows()
     ]
 
 
-def make_pivot(part_df, fixed_times):
-    pivot = pd.pivot_table(
-        part_df,
-        index=["職業", "開始"],
-        columns="取得枠",
-        values="残席",
-        aggfunc="min"
+def make_pivot(part_df, slots):
+    pivot_df = (
+        part_df.pivot_table(
+            index=["職業", "開始"],
+            columns="取得枠",
+            values="残席",
+            aggfunc="min",
+        )
+        .reset_index()
+        .sort_values(["職業", "開始"])
     )
-
-    pivot = pivot.reset_index()
-    pivot = pivot.sort_values(["職業", "開始"])
 
     rows = []
 
-    for _, row in pivot.iterrows():
+    for _, row in pivot_df.iterrows():
         values = {}
 
-        for time in fixed_times:
-            value = row[time] if time in row.index else ""
-           
+        for slot in slots:
+            if slot in pivot_df.columns:
+                value = row[slot]
+                values[slot] = "" if pd.isna(value) else int(value)
+            else:
+                values[slot] = ""
 
         rows.append({
             "job": row["職業"],
             "start": row["開始"],
-            "values": values
+            "values": values,
         })
 
     return {
-        "times": fixed_times,
-        "rows": rows
+        "times": slots,
+        "rows": rows,
     }
 
 
-def make_part_data(part_df, label, fixed_times):
+def make_part(part_df, part_key):
+    config = PARTS[part_key]
     latest_time = part_df["取得時刻"].max()
 
     return {
-        "label": label,
+        "label": config["label"],
         "updated_at": latest_time.strftime("%Y/%m/%d %H:%M"),
-        "times": fixed_times,
+        "times": config["slots"],
         "ranking": make_ranking(part_df),
         "summary": make_summary(part_df),
-        "pivot": make_pivot(part_df, fixed_times)
+        "pivot": make_pivot(part_df, config["slots"]),
     }
 
 
-def main():
-    df = load_all_csv()
-
-    if df.empty:
-        return
-
-    df["職業"] = df["職業"].apply(clean_job_name)
-    df["取得時刻"] = pd.to_datetime(df["取得時刻"])
-    df["取得日"] = df["取得時刻"].dt.strftime("%Y-%m-%d")
-    df["取得枠"] = df["取得時刻"].apply(round_to_slot)
-
-    df["残席"] = pd.to_numeric(df["残席"], errors="coerce").fillna(0).astype(int)
-    df["定員"] = pd.to_numeric(df["定員"], errors="coerce").fillna(0).astype(int)
-    df["体験時間"] = pd.to_numeric(df["体験時間"], errors="coerce").fillna(0).astype(int)
-
-    df["部"] = df["取得枠"].apply(get_part_by_slot)
-    df["開始部"] = df["開始"].apply(get_part_by_start_time)
-
-    df = df[df["部"].notna()]
-    df = df[df["部"] == df["開始部"]]
-
-    result = {
-        "dates": {}
-    }
+def build_json(df):
+    result = {"dates": {}}
 
     for date, day_df in df.groupby("取得日"):
         parts = {}
 
-        part1_df = day_df[day_df["部"] == "part1"].copy()
-        if not part1_df.empty:
-            parts["part1"] = make_part_data(part1_df, "1部", PART1_TIMES)
-
-        part2_df = day_df[day_df["部"] == "part2"].copy()
-        if not part2_df.empty:
-            parts["part2"] = make_part_data(part2_df, "2部", PART2_TIMES)
+        for part_key in PARTS:
+            part_df = day_df[day_df["取得部"] == part_key].copy()
+            if not part_df.empty:
+                parts[part_key] = make_part(part_df, part_key)
 
         if parts:
             latest_time = day_df["取得時刻"].max()
-
             result["dates"][date] = {
                 "updated_at": latest_time.strftime("%Y/%m/%d %H:%M"),
-                "parts": parts
+                "parts": parts,
             }
+
+    return result
+
+
+def main():
+    df = load_raw_csv()
+
+    if df.empty:
+        print("処理するCSVがありません")
+        return
+
+    df = normalize_df(df)
+
+    if df.empty:
+        print("有効なデータがありません")
+        return
+
+    result = build_json(df)
 
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
 

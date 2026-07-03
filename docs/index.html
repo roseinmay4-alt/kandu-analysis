@@ -17,21 +17,31 @@
 
       <section class="side-card">
         <h2>日付を選択</h2>
+
         <div class="calendar-header">
           <button id="prevMonth">‹</button>
           <strong id="calendarTitle"></strong>
           <button id="nextMonth">›</button>
         </div>
+
         <div class="week-row">
-          <span class="sun">日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span class="sat">土</span>
+          <span class="sun">日</span>
+          <span>月</span>
+          <span>火</span>
+          <span>水</span>
+          <span>木</span>
+          <span>金</span>
+          <span class="sat">土</span>
         </div>
+
         <div id="calendar" class="calendar"></div>
+
         <p class="legend"><span></span>データのある日</p>
       </section>
 
       <section class="side-card">
-        <h2>週間ランキング TOP10</h2>
-        <p class="small">集計期間：直近7日分</p>
+        <h2>人気ランキング TOP10</h2>
+        <p id="rankingSub" class="small">予約率が高い順</p>
         <ol id="weeklyRanking" class="weekly-ranking"></ol>
       </section>
 
@@ -49,7 +59,10 @@
 
       <section class="panel">
         <div class="table-title">
-          <h2>残席推移表</h2>
+          <div>
+            <h2>残席推移表</h2>
+            <div id="partTabs" class="part-tabs"></div>
+          </div>
           <p id="selectedDateLabel"></p>
         </div>
 
@@ -69,6 +82,8 @@
 <script>
 let siteData = {};
 let currentDate = new Date();
+let selectedDateKey = "";
+let selectedPartKey = "part1";
 
 function pad(n) {
   return String(n).padStart(2, "0");
@@ -83,54 +98,60 @@ function formatDateJa(dateKey) {
   return `${y}年${Number(m)}月${Number(d)}日`;
 }
 
-function timeToMinutes(t) {
-  if (!t || !t.includes(":")) return null;
-  const [h, m] = t.split(":").map(Number);
+function timeToMinutes(time) {
+  if (!time || !time.includes(":")) return null;
+  const [h, m] = time.split(":").map(Number);
   return h * 60 + m;
 }
 
 async function loadData() {
-  const res = await fetch("data.json");
+  const res = await fetch("data.json?ts=" + Date.now());
   siteData = await res.json();
 
-  const dates = Object.keys(siteData.dates || {}).sort();
+  const dates = getDateKeys();
   if (dates.length > 0) {
     currentDate = new Date(dates[dates.length - 1]);
+    selectedDateKey = dates[dates.length - 1];
   }
 
   document.getElementById("prevMonth").addEventListener("click", () => {
     currentDate.setMonth(currentDate.getMonth() - 1);
-    renderAll();
+    renderCalendar();
   });
 
   document.getElementById("nextMonth").addEventListener("click", () => {
     currentDate.setMonth(currentDate.getMonth() + 1);
-    renderAll();
+    renderCalendar();
   });
 
-  renderAll();
+  renderPage();
 }
 
-function renderAll() {
+function getDateKeys() {
+  return Object.keys(siteData.dates || {}).sort();
+}
+
+function getDayData(dateKey) {
+  return siteData.dates?.[dateKey] || null;
+}
+
+function getParts(dateKey) {
+  return getDayData(dateKey)?.parts || {};
+}
+
+function getAvailablePartKeys(dateKey) {
+  return Object.keys(getParts(dateKey));
+}
+
+function renderPage() {
   renderCalendar();
-  renderWeeklyRanking();
 
-  const latestDate = getLatestDateInCurrentMonth() || Object.keys(siteData.dates || {}).sort().at(-1);
-  if (latestDate) {
-    renderDate(latestDate);
+  const dates = getDateKeys();
+  if (!selectedDateKey && dates.length > 0) {
+    selectedDateKey = dates[dates.length - 1];
   }
-}
 
-function getLatestDateInCurrentMonth() {
-  const y = currentDate.getFullYear();
-  const m = currentDate.getMonth() + 1;
-  return Object.keys(siteData.dates || {})
-    .filter(d => {
-      const [dy, dm] = d.split("-").map(Number);
-      return dy === y && dm === m;
-    })
-    .sort()
-    .at(-1);
+  renderDate(selectedDateKey);
 }
 
 function renderCalendar() {
@@ -158,9 +179,19 @@ function renderCalendar() {
     btn.textContent = day;
     btn.className = "calendar-day";
 
-    if (siteData.dates && siteData.dates[key]) {
+    if (getDayData(key)) {
       btn.classList.add("has-data");
-      btn.addEventListener("click", () => renderDate(key));
+
+      if (key === selectedDateKey) {
+        btn.classList.add("selected");
+      }
+
+      btn.addEventListener("click", () => {
+        selectedDateKey = key;
+        selectedPartKey = "part1";
+        renderDate(key);
+        renderCalendar();
+      });
     } else {
       btn.classList.add("no-data");
     }
@@ -169,61 +200,88 @@ function renderCalendar() {
   }
 }
 
-function renderWeeklyRanking() {
-  const rankingEl = document.getElementById("weeklyRanking");
-  rankingEl.innerHTML = "";
-
-  const dates = Object.keys(siteData.dates || {}).sort().slice(-7);
-  const scores = new Map();
-
-  dates.forEach(date => {
-    const ranking = siteData.dates[date].ranking || [];
-    ranking.forEach(item => {
-      if (!scores.has(item.name)) {
-        scores.set(item.name, { name: item.name, total: 0, count: 0 });
-      }
-      const row = scores.get(item.name);
-      row.total += Number(item.remaining_total ?? 999);
-      row.count += 1;
-    });
-  });
-
-  const ranking = Array.from(scores.values())
-    .map(item => ({
-      name: item.name,
-      avg: item.count ? item.total / item.count : 999
-    }))
-    .sort((a, b) => a.avg - b.avg)
-    .slice(0, 10);
-
-  ranking.forEach((item, index) => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-      <span class="rank-num">${index + 1}</span>
-      <strong>${item.name}</strong>
-      <em>平均残席：${item.avg.toFixed(1)}</em>
-    `;
-    rankingEl.appendChild(li);
-  });
-}
-
 function renderDate(dateKey) {
-  const dayData = siteData.dates[dateKey];
+  const dayData = getDayData(dateKey);
+
+  document.getElementById("selectedDateLabel").textContent = dateKey ? formatDateJa(dateKey) : "";
+
+  if (!dayData) {
+    document.getElementById("pageTitle").textContent = "データなし";
+    document.getElementById("updatedAt").textContent = "この日のデータはありません";
+    document.getElementById("partTabs").innerHTML = "";
+    document.getElementById("weeklyRanking").innerHTML = "";
+    renderPivot(null);
+    return;
+  }
 
   document.getElementById("pageTitle").textContent =
     dateKey === toDateKey(new Date()) ? "本日のデータ" : `${formatDateJa(dateKey)} のデータ`;
 
-  document.getElementById("selectedDateLabel").textContent = formatDateJa(dateKey);
+  const availableParts = getAvailablePartKeys(dateKey);
 
-  if (!dayData) {
-    document.getElementById("updatedAt").textContent = "この日のデータはありません";
-    document.getElementById("pivotTable").innerHTML = "";
+  if (!availableParts.includes(selectedPartKey)) {
+    selectedPartKey = availableParts[0] || "";
+  }
+
+  const partData = getParts(dateKey)[selectedPartKey];
+
+  document.getElementById("updatedAt").textContent =
+    partData ? `最終更新：${partData.updated_at}（${partData.label}）` : `最終更新：${dayData.updated_at}`;
+
+  renderTabs(dateKey);
+  renderRanking(partData);
+  renderPivot(partData?.pivot || null);
+}
+
+function renderTabs(dateKey) {
+  const tabs = document.getElementById("partTabs");
+  tabs.innerHTML = "";
+
+  const parts = getParts(dateKey);
+
+  Object.entries(parts).forEach(([partKey, partData]) => {
+    const btn = document.createElement("button");
+    btn.className = "part-tab";
+    btn.textContent = partData.label;
+    btn.dataset.part = partKey;
+
+    if (partKey === selectedPartKey) {
+      btn.classList.add("active");
+    }
+
+    btn.addEventListener("click", () => {
+      selectedPartKey = partKey;
+      renderDate(selectedDateKey);
+    });
+
+    tabs.appendChild(btn);
+  });
+}
+
+function renderRanking(partData) {
+  const rankingEl = document.getElementById("weeklyRanking");
+  const sub = document.getElementById("rankingSub");
+
+  rankingEl.innerHTML = "";
+
+  if (!partData || !partData.ranking || partData.ranking.length === 0) {
+    sub.textContent = "ランキングデータなし";
     return;
   }
 
-  document.getElementById("updatedAt").textContent = `最終更新：${dayData.updated_at}`;
+  sub.textContent = `${partData.label}｜予約率が高い順`;
 
-  renderPivot(dayData.pivot);
+  partData.ranking.forEach((item, index) => {
+    const li = document.createElement("li");
+
+    li.innerHTML = `
+      <span class="rank-num">${index + 1}</span>
+      <strong>${item.name}</strong>
+      <em>${item.reserved_rate}%</em>
+    `;
+
+    rankingEl.appendChild(li);
+  });
 }
 
 function renderPivot(pivot) {
@@ -249,12 +307,12 @@ function renderPivot(pivot) {
 
   const tbody = document.createElement("tbody");
 
-  let prevJob = "";
-  let jobRowCount = {};
-
+  const jobRowCount = {};
   pivot.rows.forEach(row => {
     jobRowCount[row.job] = (jobRowCount[row.job] || 0) + 1;
   });
+
+  let prevJob = "";
 
   pivot.rows.forEach(row => {
     const tr = document.createElement("tr");
@@ -277,10 +335,12 @@ function renderPivot(pivot) {
 
     pivot.times.forEach(time => {
       const td = document.createElement("td");
-      const value = row.values[time];
-      td.textContent = value === "" ? "" : value;
+      const value = row.values?.[time] ?? "";
+
+      td.textContent = value;
 
       const headerMinutes = timeToMinutes(time);
+
       if (headerMinutes !== null && startMinutes !== null) {
         if (headerMinutes > startMinutes) {
           td.classList.add("after-cell");
