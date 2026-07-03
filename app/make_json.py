@@ -147,7 +147,7 @@ def make_pivot(part_df, fixed_times):
 
         for time in fixed_times:
             value = row[time] if time in row.index else ""
-            values[time] = "" if pd.isna(value) else int(value)
+           
 
         rows.append({
             "job": row["職業"],
