@@ -495,8 +495,11 @@ body {
 }
 .mobile-cards {
   display: none;
-}
 
+
+.mobile-cards {
+  display: none;
+  }
 @media (max-width: 768px) {
   body {
     font-size: 13px;
