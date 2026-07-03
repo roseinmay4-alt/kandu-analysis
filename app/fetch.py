@@ -36,11 +36,11 @@ def get_activities(response_data):
 
 
 def main():
-    r = requests.get(URL, headers=HEADERS, timeout=30)
-    print("ステータスコード:", r.status_code)
-    r.raise_for_status()
+    response = requests.get(URL, headers=HEADERS, timeout=30)
+    print("ステータスコード:", response.status_code)
+    response.raise_for_status()
 
-    data = r.json()
+    data = response.json()
 
     api_timestamp = data.get("response_information", {}).get("timestamp")
     if not api_timestamp:
@@ -56,12 +56,6 @@ def main():
 
     activities = get_activities(response_data)
 
-    if not activities:
-        print("アクティビティ一覧が見つかりませんでした。")
-        print("response_data の型:", type(response_data))
-        print(response_data)
-        return
-
     rows = []
 
     for activity in activities:
@@ -76,6 +70,7 @@ def main():
             end_text = slot.get("end_time", "")
 
             duration = ""
+
             if start_text and end_text:
                 start = datetime.strptime(start_text, "%H:%M")
                 end = datetime.strptime(end_text, "%H:%M")
@@ -92,10 +87,11 @@ def main():
             })
 
     if not rows:
-        print("アクティビティはありましたが、予約枠データがありませんでした。")
+        print("予約枠データがありませんでした。")
         return
 
     df = pd.DataFrame(rows)
+
     filename = make_filename(api_timestamp)
     df.to_csv(filename, index=False, encoding="utf-8-sig")
 
@@ -105,3 +101,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    

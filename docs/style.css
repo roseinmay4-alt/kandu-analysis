@@ -1,96 +1,458 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #fff8ef;
-  color: #222;
+  min-height: 100%;
 }
 
-header {
-  background: #ffcf70;
-  padding: 32px 16px;
-  text-align: center;
+body {
+  font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: #fffaf3;
+  color: #071529;
 }
 
-header h1 {
+/* =====================
+   全体レイアウト
+===================== */
+
+.layout {
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+  padding: 32px 40px;
+}
+
+.sidebar {
+  width: 420px;
+}
+
+.main {
+  min-width: 0;
+}
+
+/* =====================
+   左ヘッダー
+===================== */
+
+.site-header {
+  margin-bottom: 26px;
+}
+
+.site-header h1 {
+  margin: 0 0 18px;
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.site-header p {
   margin: 0;
-  font-size: 36px;
+  font-size: 15px;
+  color: #4b5563;
 }
 
-main {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 24px 16px 48px;
+/* =====================
+   カード共通
+===================== */
+
+.side-card,
+.panel {
+  background: #fff;
+  border: 1px solid #f0d6b8;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(120, 80, 30, 0.06);
 }
+
+.side-card {
+  padding: 28px 30px;
+  margin-bottom: 26px;
+}
+
+.side-card h2 {
+  margin: 0 0 24px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* =====================
+   カレンダー
+===================== */
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.calendar-header button {
+  width: 56px;
+  height: 56px;
+  border: 1px solid #d9dee7;
+  border-radius: 10px;
+  background: #fff;
+  color: #071529;
+  font-size: 26px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.calendar-header button:hover {
+  background: #fff7ec;
+}
+
+#calendarTitle {
+  min-width: 130px;
+  text-align: center;
+  font-size: 21px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.week-row,
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 14px;
+  row-gap: 14px;
+}
+
+.week-row {
+  margin-bottom: 14px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.week-row span {
+  display: grid;
+  place-items: center;
+  height: 32px;
+}
+
+.sun {
+  color: #ff3767;
+}
+
+.sat {
+  color: #2563eb;
+}
+
+.calendar > div {
+  height: 38px;
+}
+
+.calendar-day {
+  width: 38px;
+  height: 38px;
+  justify-self: center;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #9aa0a6;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.calendar-day.has-data {
+  background: #ffe0ea;
+  color: #ff3b68;
+  cursor: pointer;
+}
+
+.calendar-day.has-data:hover {
+  background: #ffbfd1;
+}
+
+.calendar-day.no-data {
+  cursor: default;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 24px 0 0;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.legend span {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #ff9db5;
+  flex: 0 0 auto;
+}
+
+/* =====================
+   ランキング
+===================== */
+
+.small {
+  margin: -12px 0 18px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.weekly-ranking {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.weekly-ranking li {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0d6b8;
+}
+
+.weekly-ranking li:last-child {
+  border-bottom: none;
+}
+
+.rank-num {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #ffb83d;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.weekly-ranking strong {
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.weekly-ranking em {
+  font-style: normal;
+  color: #4b5563;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.notice {
+  margin: 0;
+  padding: 0 6px;
+  color: #8a8f98;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =====================
+   メイン上部
+===================== */
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.main-header h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.main-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.badge {
+  flex: 0 0 auto;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: #ff8eaa;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* =====================
+   パネル
+===================== */
 
 .panel {
-  background: white;
-  border-radius: 22px;
-  padding: 24px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
-  margin-bottom: 28px;
+  padding: 28px 30px;
+  overflow: visible;
 }
 
-input[type="date"] {
-  font-size: 20px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
+.table-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 14px;
 }
 
-.ranking {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  margin-bottom: 32px;
+.table-title h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
 }
 
-.rank-card {
-  background: white;
-  border-radius: 18px;
-  padding: 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.07);
+.table-title p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
 }
 
-.rank-card span {
+.legend-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 14px;
+  color: #4b5563;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.legend-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legend-row i {
+  width: 30px;
+  height: 12px;
   display: inline-block;
-  background: #ff9f43;
-  color: white;
-  font-weight: bold;
-  padding: 8px 13px;
-  border-radius: 999px;
-  margin-bottom: 12px;
+  border-radius: 4px;
 }
 
-.rank-card strong {
-  display: block;
-  font-size: 20px;
+.legend-row .before {
+  background: #fff4c7;
 }
 
-.table-wrap {
-  overflow-x: auto;
-  background: white;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.07);
+.legend-row .during {
+  background: #e7f3ff;
 }
 
-table {
+.legend-row .after {
+  background: #d9d9d9;
+}
+
+/* =====================
+   残席推移表
+===================== */
+
+.pivot-wrap {
   width: 100%;
+  max-height: none !important;
+  overflow-x: auto;
+  overflow-y: visible !important;
+  border: 1px solid #ead7bd;
+  border-radius: 14px;
+  background: #fff;
+}
+
+#pivotTable {
+  width: 100%;
+  min-width: 980px;
   border-collapse: collapse;
+  table-layout: fixed;
+  background: #fff;
+  font-size: 14px;
 }
 
-th, td {
-  padding: 14px;
-  border-bottom: 1px solid #eee;
-  text-align: left;
-}
-
-th {
-  background: #ffe4a8;
-}
-
-footer {
+#pivotTable th,
+#pivotTable td {
+  border: 1px solid #ead7bd;
+  height: 38px;
+  padding: 9px 8px;
   text-align: center;
-  font-size: 12px;
+  vertical-align: middle;
+}
+
+#pivotTable thead th {
+  background: #fffdf9;
+  font-weight: 800;
+}
+
+#pivotTable th:nth-child(1),
+#pivotTable .job-cell {
+  width: 190px;
+}
+
+#pivotTable th:nth-child(2),
+#pivotTable .start-cell {
+  width: 95px;
+}
+
+.job-cell {
+  text-align: left !important;
+  background: #fff;
+  font-weight: 800;
+}
+
+.start-cell {
+  background: #fffdf9;
+  font-weight: 800;
+}
+
+.before-cell {
+  background: #fff4c7;
+}
+
+.during-cell {
+  background: #e7f3ff;
+}
+
+.after-cell {
+  background: #d9d9d9;
   color: #777;
-  padding: 24px;
+}
+
+/* 残席の見やすさ */
+#pivotTable td {
+  font-variant-numeric: tabular-nums;
+}
+
+/* =====================
+   画面幅が狭い時の最低限
+===================== */
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 380px minmax(0, 1fr);
+    gap: 28px;
+    padding: 24px;
+  }
+
+  .sidebar {
+    width: 380px;
+  }
+
+  .side-card {
+    padding: 24px;
+  }
+
+  .week-row,
+  .calendar {
+    column-gap: 10px;
+  }
 }
