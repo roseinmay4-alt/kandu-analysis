@@ -493,3 +493,153 @@ body {
 .panel {
   min-height: 330px;
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
+  .layout {
+    display: block;
+    padding: 14px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .site-header {
+    min-height: auto;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+    border-radius: 16px;
+  }
+
+  .site-header h1 {
+    font-size: 26px;
+  }
+
+  .site-header p {
+    font-size: 12px;
+  }
+
+  .side-card {
+    padding: 18px;
+    margin-bottom: 14px;
+    border-radius: 16px;
+  }
+
+  .side-card h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .calendar-header {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .calendar-header button {
+    width: 40px;
+    height: 40px;
+  }
+
+  #calendarTitle {
+    font-size: 18px;
+  }
+
+  .week-row,
+  .calendar {
+    column-gap: 6px;
+    row-gap: 8px;
+  }
+
+  .calendar-day {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .main-header {
+    min-height: auto;
+    margin: 18px 0 12px;
+  }
+
+  .main-header h2 {
+    font-size: 24px;
+  }
+
+  .badge {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
+  .panel {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .table-title {
+    display: block;
+  }
+
+  .table-title h2 {
+    font-size: 20px;
+  }
+
+  .table-title p {
+    margin-top: 8px;
+  }
+
+  .part-tabs {
+    margin-top: 10px;
+  }
+
+  .part-tab {
+    height: 34px;
+    min-width: 62px;
+    font-size: 14px;
+  }
+
+  .legend-row {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin-top: 12px;
+    font-size: 11px;
+  }
+
+  .pivot-wrap {
+    margin-top: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #pivotTable {
+    min-width: 820px;
+    font-size: 11px;
+  }
+
+  #pivotTable th,
+  #pivotTable td {
+    height: 30px;
+    padding: 5px;
+  }
+
+  #pivotTable th:nth-child(1),
+  #pivotTable .job-cell {
+    width: 140px;
+  }
+
+  #pivotTable th:nth-child(2),
+  #pivotTable .start-cell {
+    width: 72px;
+  }
+
+  .weekly-ranking li {
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+  }
+
+  .notice {
+    margin-bottom: 20px;
+  }
+}
