@@ -12,25 +12,29 @@ OUTPUT_FILE = DOCS_DIR / "data.json"
 PARTS = {
     "part1": {
         "label": "1部",
-        "slots": ["09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00"],
+        "slots": [
+            "09:00", "09:30", "10:00", "10:30", "11:00",
+            "11:30", "12:00", "12:30", "13:00"
+        ],
         "start_min": "09:00",
         "start_max": "14:59",
     },
     "part2": {
-    "label": "2部",
-    "slots": [
-        "15:00", "15:30", "16:00", "16:30", "17:00",
-        "17:30", "18:00", "18:30", "19:00"
-    ],
-    "start_min": "15:00",
-    "start_max": "23:59",
-},
+        "label": "2部",
+        "slots": [
+            "15:00", "15:30", "16:00", "16:30", "17:00",
+            "17:30", "18:00", "18:30", "19:00"
+        ],
+        "start_min": "15:00",
+        "start_max": "23:59",
+    },
 }
 
 
 def clean_job_name(name):
     if pd.isna(name):
         return ""
+
     name = str(name)
     name = re.sub(r"\[([^=\]]+)=([^\]]+)\]", r"\1", name)
     return name.strip()
@@ -38,18 +42,23 @@ def clean_job_name(name):
 
 def load_raw_csv():
     files = sorted(RAW_DIR.glob("kandu_*.csv"))
+
     if not files:
         print("CSVがありません")
         return pd.DataFrame()
 
     frames = []
+
     for file in files:
         try:
             frames.append(pd.read_csv(file))
         except Exception as e:
             print(f"読み込み失敗: {file} / {e}")
 
-    return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
+    if not frames:
+        return pd.DataFrame()
+
+    return pd.concat(frames, ignore_index=True)
 
 
 def floor_to_30min(dt):
@@ -80,12 +89,14 @@ def detect_part_by_start(start):
 def normalize_df(df):
     df = df.copy()
 
-    required = ["取得時刻", "職業", "定員", "開始", "体験時間", "残席"]
-    missing = [col for col in required if col not in df.columns]
-    if missing:
-        raise ValueError(f"CSVに必要な列がありません: {missing}")
+    required_columns = ["取得時刻", "職業", "定員", "開始", "体験時間", "残席"]
+    missing_columns = [col for col in required_columns if col not in df.columns]
+
+    if missing_columns:
+        raise ValueError(f"CSVに必要な列がありません: {missing_columns}")
 
     df["職業"] = df["職業"].apply(clean_job_name)
+
     df["取得時刻"] = pd.to_datetime(df["取得時刻"], errors="coerce")
     df = df[df["取得時刻"].notna()]
 
@@ -124,16 +135,19 @@ def make_ranking(part_df):
 
     summary["reserved_total"] = summary["capacity_total"] - summary["remaining_total"]
     summary["reserved_rate"] = summary.apply(
-        lambda row: row["reserved_total"] / row["capacity_total"] if row["capacity_total"] > 0 else 0,
-        axis=1
+        lambda row: row["reserved_total"] / row["capacity_total"]
+        if row["capacity_total"] > 0
+        else 0,
+        axis=1,
     )
 
     summary = summary.sort_values(
         ["reserved_rate", "remaining_total", "sessions", "職業"],
-        ascending=[False, True, True, True]
+        ascending=[False, True, True, True],
     ).head(10)
 
     ranking = []
+
     for _, row in summary.iterrows():
         ranking.append({
             "rank": len(ranking) + 1,
@@ -164,17 +178,21 @@ def make_summary(part_df):
 
     summary["reserved_total"] = summary["capacity_total"] - summary["remaining_total"]
     summary["reserved_rate"] = summary.apply(
-        lambda row: row["reserved_total"] / row["capacity_total"] if row["capacity_total"] > 0 else 0,
-        axis=1
+        lambda row: row["reserved_total"] / row["capacity_total"]
+        if row["capacity_total"] > 0
+        else 0,
+        axis=1,
     )
 
     summary = summary.sort_values(
         ["reserved_rate", "remaining_total", "職業"],
-        ascending=[False, True, True]
+        ascending=[False, True, True],
     )
 
-    return [
-        {
+    result = []
+
+    for _, row in summary.iterrows():
+        result.append({
             "name": row["職業"],
             "capacity": int(row["capacity"]),
             "duration": int(row["duration"]),
@@ -183,9 +201,9 @@ def make_summary(part_df):
             "reserved_total": int(row["reserved_total"]),
             "remaining_total": int(row["remaining_total"]),
             "reserved_rate": round(float(row["reserved_rate"]) * 100, 1),
-        }
-        for _, row in summary.iterrows()
-    ]
+        })
+
+    return result
 
 
 def make_pivot(part_df, slots):
@@ -208,9 +226,13 @@ def make_pivot(part_df, slots):
         for slot in slots:
             if slot in pivot_df.columns:
                 value = row[slot]
-                values[slot] = "" if pd.isna(value) else int(value)
             else:
+                value = ""
+
+            if pd.isna(value) or value == "":
                 values[slot] = ""
+            else:
+                values[slot] = int(value)
 
         rows.append({
             "job": row["職業"],
@@ -239,18 +261,22 @@ def make_part(part_df, part_key):
 
 
 def build_json(df):
-    result = {"dates": {}}
+    result = {
+        "dates": {}
+    }
 
     for date, day_df in df.groupby("取得日"):
         parts = {}
 
         for part_key in PARTS:
             part_df = day_df[day_df["取得部"] == part_key].copy()
+
             if not part_df.empty:
                 parts[part_key] = make_part(part_df, part_key)
 
         if parts:
             latest_time = day_df["取得時刻"].max()
+
             result["dates"][date] = {
                 "updated_at": latest_time.strftime("%Y/%m/%d %H:%M"),
                 "parts": parts,
