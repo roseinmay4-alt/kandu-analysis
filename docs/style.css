@@ -456,3 +456,33 @@ body {
     column-gap: 10px;
   }
 }
+.part-tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.part-tab {
+  min-width: 72px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #111827;
+  border-radius: 8px;
+  background: #fff;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.part-tab.active {
+  background: #111827;
+  color: #fff;
+}
+
+.part-tab:hover {
+  background: #fff4c7;
+  color: #111827;
+}
