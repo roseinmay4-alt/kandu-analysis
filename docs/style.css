@@ -11,8 +11,8 @@ body {
 body {
   font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
   background:
-    radial-gradient(circle at 20px 20px, rgba(255, 184, 61, 0.08) 0 2px, transparent 3px),
-    #fffaf3;
+    radial-gradient(circle at 18px 18px, rgba(255, 186, 113, 0.12) 0 2px, transparent 3px),
+    linear-gradient(135deg, #fff8ee 0%, #fffaf6 45%, #fff3ec 100%);
   color: #071529;
   font-size: 13px;
 }
@@ -26,57 +26,70 @@ body {
   padding: 22px 28px;
 }
 
-/* 左 */
 .sidebar {
   width: 330px;
 }
 
+.main {
+  min-width: 0;
+}
+
+/* タイトル */
 .site-header {
   min-height: 92px;
   margin-bottom: 18px;
-  padding: 4px 0 0;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ff8faf 0%, #ffc36d 100%);
+  box-shadow: 0 10px 22px rgba(255, 150, 120, 0.22);
+  color: #fff;
 }
 
 .site-header h1 {
-  position: relative;
-  display: inline-block;
-  margin: 0 0 12px;
-  padding: 0 0 8px;
-  font-size: 25px;
-  line-height: 1.2;
-  font-weight: 900;
+  margin: 0 0 6px;
+  font-size: 28px;
+  line-height: 1.05;
+  font-weight: 950;
   letter-spacing: 0.02em;
+  color: #fff;
+  text-shadow: 0 3px 0 rgba(130, 70, 40, 0.12);
 }
 
-.site-header h1::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 72%;
-  height: 6px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #ff8eaa, #ffcf70);
+.site-header h1::before {
+  content: "仕事体験テーマパーク";
+  display: block;
+  margin-bottom: 3px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
 }
+
+
 
 .site-header p {
   margin: 0;
   font-size: 12px;
-  color: #4b5563;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
 }
 
 /* カード */
 .side-card,
 .panel {
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid #f0d6b8;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid #f4cfa7;
   border-radius: 18px;
-  box-shadow: 0 8px 22px rgba(120, 80, 30, 0.055);
+  box-shadow: 0 10px 24px rgba(142, 92, 45, 0.08);
 }
 
 .side-card {
   padding: 22px 24px;
   margin-bottom: 18px;
+}
+
+.side-card h2,
+.table-title h2 {
+  color: #ff7f8f;
 }
 
 .side-card h2 {
@@ -97,13 +110,17 @@ body {
 .calendar-header button {
   width: 42px;
   height: 42px;
-  border: 1px solid #d9dee7;
-  border-radius: 10px;
+  border: 1px solid #f0d8c0;
+  border-radius: 12px;
   background: #fff;
   color: #071529;
   font-size: 22px;
   font-weight: 900;
   cursor: pointer;
+}
+
+.calendar-header button:hover {
+  background: #fff3df;
 }
 
 #calendarTitle {
@@ -136,11 +153,11 @@ body {
 }
 
 .sun {
-  color: #ff3767;
+  color: #ff4f7c;
 }
 
 .sat {
-  color: #2563eb;
+  color: #3b82f6;
 }
 
 .calendar > div {
@@ -166,7 +183,7 @@ body {
 }
 
 .calendar-day.selected {
-  background: #ff8eaa;
+  background: linear-gradient(135deg, #ff7aa2, #ffbd67);
   color: #fff;
 }
 
@@ -183,7 +200,7 @@ body {
   width: 11px;
   height: 11px;
   border-radius: 999px;
-  background: #ff9db5;
+  background: #ff8faf;
 }
 
 /* ランキング */
@@ -205,7 +222,7 @@ body {
   align-items: center;
   gap: 9px;
   padding: 9px 0;
-  border-bottom: 1px solid #f0d6b8;
+  border-bottom: 1px solid #f4dec8;
 }
 
 .weekly-ranking li:last-child {
@@ -218,7 +235,7 @@ body {
   display: grid;
   place-items: center;
   border-radius: 999px;
-  background: #ffb83d;
+  background: linear-gradient(135deg, #ff7aa2, #ffbd67);
   color: #fff;
   font-size: 13px;
   font-weight: 900;
@@ -235,8 +252,9 @@ body {
 
 .weekly-ranking em {
   font-style: normal;
-  color: #4b5563;
+  color: #ff7f8f;
   font-size: 12px;
+  font-weight: 900;
   white-space: nowrap;
 }
 
@@ -249,10 +267,6 @@ body {
 }
 
 /* メイン */
-.main {
-  min-width: 0;
-}
-
 .main-header {
   min-height: 92px;
   display: flex;
@@ -268,6 +282,12 @@ body {
   font-size: 27px;
   line-height: 1.2;
   font-weight: 900;
+  color: #ff7f8f;
+}
+
+.main-header h2::before {
+  content: "✦ ";
+  color: #ffbd67;
 }
 
 .main-header p {
@@ -281,11 +301,11 @@ body {
   margin-top: 6px;
   padding: 9px 18px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #ff8eaa, #ff7aa2);
+  background: linear-gradient(135deg, #ff7aa2, #ff8faf);
   color: #fff;
   font-size: 13px;
   font-weight: 900;
-  box-shadow: 0 8px 16px rgba(255, 142, 170, 0.28);
+  box-shadow: 0 8px 16px rgba(255, 122, 162, 0.28);
 }
 
 /* パネル */
@@ -303,23 +323,23 @@ body {
 }
 
 .table-title h2 {
-  position: relative;
-  display: inline-block;
   margin: 0;
-  padding-left: 12px;
   font-size: 21px;
   font-weight: 900;
 }
 
+.table-title h2::before,
+.table-title h2::after {
+  color: #ffbd67;
+  font-weight: 900;
+}
+
 .table-title h2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.18em;
-  width: 5px;
-  height: 1.2em;
-  border-radius: 999px;
-  background: #ff8eaa;
+  content: "✦ ";
+}
+
+.table-title h2::after {
+  content: " ✦";
 }
 
 .table-title p {
@@ -328,7 +348,7 @@ body {
   font-size: 12px;
 }
 
-/* 1部・2部タブ */
+/* 1部・2部 */
 .part-tabs {
   display: flex;
   gap: 8px;
@@ -355,6 +375,11 @@ body {
   color: #fff;
 }
 
+.part-tab:hover {
+  background: #fff4c7;
+}
+
+/* 凡例 */
 .legend-row {
   display: flex;
   justify-content: flex-end;
@@ -397,7 +422,7 @@ body {
   max-height: none !important;
   overflow-x: auto;
   overflow-y: visible !important;
-  border: 1px solid #ead7bd;
+  border: 1px solid #f0d4b8;
   border-radius: 12px;
   background: #fff;
 }
@@ -413,15 +438,15 @@ body {
 
 #pivotTable th,
 #pivotTable td {
-  border: 1px solid #ead7bd;
+  border: 1px solid #f0d4b8;
   height: 30px;
-  padding: 6px 6px;
+  padding: 6px;
   text-align: center;
   vertical-align: middle;
 }
 
 #pivotTable thead th {
-  background: #fffdf9;
+  background: #fff8ef;
   font-weight: 900;
 }
 
@@ -443,7 +468,7 @@ body {
 }
 
 .start-cell {
-  background: #fffdf9;
+  background: #fff8ef;
   font-weight: 900;
 }
 
@@ -464,31 +489,7 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* 高さ合わせ：左カードと右パネルの開始位置を揃える */
 .sidebar .side-card:first-of-type,
 .panel {
   min-height: 330px;
-}
-
-/* 画面が狭い時 */
-@media (max-width: 1100px) {
-  .layout {
-    grid-template-columns: 300px minmax(0, 1fr);
-    gap: 20px;
-    padding: 18px;
-  }
-
-  .sidebar {
-    width: 300px;
-  }
-
-  #pivotTable {
-    min-width: 820px;
-    font-size: 11px;
-  }
-
-  #pivotTable th:nth-child(1),
-  #pivotTable .job-cell {
-    width: 140px;
-  }
 }
