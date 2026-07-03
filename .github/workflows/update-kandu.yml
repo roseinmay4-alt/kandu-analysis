@@ -2,6 +2,7 @@ name: Update Kandu Data
 
 on:
   schedule:
+    # 日本時間 9:00〜14:00 の30分ごと
     - cron: "0,30 0-5 * * *"
   workflow_dispatch:
 
@@ -29,7 +30,11 @@ jobs:
         run: |
           python app/fetch.py
 
-      - name: Make JSON
+      - name: Make pivot Excel
+        run: |
+          python app/make_pivot.py
+
+      - name: Make site JSON
         run: |
           python app/make_json.py
 
