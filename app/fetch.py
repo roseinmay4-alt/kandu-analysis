@@ -25,6 +25,16 @@ def make_filename(api_timestamp: str) -> Path:
     return RAW_DIR / f"kandu_{file_timestamp}.csv"
 
 
+def get_activities(response_data):
+    if isinstance(response_data, dict):
+        return response_data.get("activities", [])
+
+    if isinstance(response_data, list):
+        return response_data
+
+    return []
+
+
 def main():
     r = requests.get(URL, headers=HEADERS, timeout=30)
     print("ステータスコード:", r.status_code)
@@ -44,9 +54,20 @@ def main():
         print("APIメッセージ:", message)
         return
 
+    activities = get_activities(response_data)
+
+    if not activities:
+        print("アクティビティ一覧が見つかりませんでした。")
+        print("response_data の型:", type(response_data))
+        print(response_data)
+        return
+
     rows = []
 
-    for activity in response_data:
+    for activity in activities:
+        if not isinstance(activity, dict):
+            continue
+
         name = activity.get("activity_name_ruby", "")
         capacity = activity.get("possible_number", "")
 

@@ -15,7 +15,7 @@
 <main>
   <section class="panel">
     <h2>日付を選択</h2>
-    <input type="date" id="datePicker" value="2026-07-15" />
+    <input type="date" id="datePicker" />
     <p id="updated"></p>
     <p id="memo"></p>
   </section>
@@ -35,7 +35,7 @@
             <th>定員</th>
             <th>体験時間</th>
             <th>開催回数</th>
-            <th>メモ</th>
+            <th>残席合計</th>
           </tr>
         </thead>
         <tbody id="summary"></tbody>
@@ -55,18 +55,29 @@ async function loadData() {
   const res = await fetch("data.json");
   allData = await res.json();
 
-  document.getElementById("datePicker").addEventListener("change", render);
+  const datePicker = document.getElementById("datePicker");
+
+  const dataDate = allData.updated
+    ? allData.updated.split(" ")[0].replaceAll("/", "-")
+    : "";
+
+  datePicker.value = dataDate || "2026-07-15";
+  datePicker.addEventListener("change", render);
+
   render();
 }
 
 function render() {
-  const date = document.getElementById("datePicker").value;
-  const data = allData[date];
+  const selectedDate = document.getElementById("datePicker").value;
+
+  const dataDate = allData.updated
+    ? allData.updated.split(" ")[0].replaceAll("/", "-")
+    : "";
 
   const rankingEl = document.getElementById("ranking");
   const summaryEl = document.getElementById("summary");
 
-  if (!data) {
+  if (selectedDate !== dataDate) {
     document.getElementById("updated").textContent = "";
     document.getElementById("memo").textContent = "この日のデータはまだありません。";
     rankingEl.innerHTML = "";
@@ -74,24 +85,46 @@ function render() {
     return;
   }
 
-  document.getElementById("updated").textContent = "最終更新：" + data.updated_at;
-  document.getElementById("memo").textContent = data.memo || "";
+  document.getElementById("updated").textContent = "最終更新：" + allData.updated;
+  document.getElementById("memo").textContent = "";
 
-  rankingEl.innerHTML = data.ranking.map(item => `
+  rankingEl.innerHTML = allData.ranking.map(item => `
     <div class="rank-card">
       <span>${item.rank}</span>
       <strong>${item.name}</strong>
-      <p>完売目安：${item.sold_out}</p>
+      <p>残席合計：${item.score}</p>
     </div>
   `).join("");
 
-  summaryEl.innerHTML = data.summary.map(item => `
+  const summaryMap = new Map();
+
+  allData.activities.forEach(item => {
+    const name = item["職業"];
+
+    if (!summaryMap.has(name)) {
+      summaryMap.set(name, {
+        name: name,
+        capacity: item["定員"],
+        duration: item["体験時間"],
+        sessions: 0,
+        seats: 0
+      });
+    }
+
+    const row = summaryMap.get(name);
+    row.sessions += 1;
+    row.seats += Number(item["残席"]);
+  });
+
+  const summary = Array.from(summaryMap.values());
+
+  summaryEl.innerHTML = summary.map(item => `
     <tr>
       <td>${item.name}</td>
       <td>${item.capacity}人</td>
       <td>${item.duration}分</td>
       <td>${item.sessions}回</td>
-      <td>${item.memo || ""}</td>
+      <td>${item.seats}</td>
     </tr>
   `).join("");
 }
