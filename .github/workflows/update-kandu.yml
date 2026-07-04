@@ -3,9 +3,7 @@ name: Update Kandu Data
 on:
   workflow_dispatch:
   schedule:
-    # 1部 JST 09:00〜13:00
     - cron: "0,30 0-4 * * *"
-    # 2部 JST 15:00〜18:30
     - cron: "0,30 6-9 * * *"
 
 permissions:
