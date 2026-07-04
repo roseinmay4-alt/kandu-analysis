@@ -2,44 +2,23 @@ name: Update Kandu Data
 
 on:
   workflow_dispatch:
-
   schedule:
-    # 1部
-    - cron: "0 0 * * *"   # 09:00 JST
-    - cron: "30 0 * * *"  # 09:30
-    - cron: "0 1 * * *"
-    - cron: "30 1 * * *"
-    - cron: "0 2 * * *"
-    - cron: "30 2 * * *"
-    - cron: "0 3 * * *"
-    - cron: "30 3 * * *"
-    - cron: "0 4 * * *"
+    # 1部 JST 09:00〜13:00
+    - cron: "0,30 0-4 * * *"
+    # 2部 JST 15:00〜18:30
+    - cron: "0,30 6-9 * * *"
 
-    # 2部
-    - cron: "0 6 * * *"
-    - cron: "30 6 * * *"
-    - cron: "0 7 * * *"
-    - cron: "30 7 * * *"
-    - cron: "0 8 * * *"
-    - cron: "30 8 * * *"
-    - cron: "0 9 * * *"
-    - cron: "30 9 * * *"
+permissions:
+  contents: write
 
 jobs:
-
   update:
-
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
-
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
-
         with:
           python-version: "3.11"
 
@@ -52,16 +31,10 @@ jobs:
         run: python app/make_json.py
 
       - name: Commit
-
         run: |
-
           git config user.name github-actions
           git config user.email github-actions@github.com
-
           git add data/raw docs/data.json
-
           git diff --cached --quiet && exit 0
-
           git commit -m "Auto update"
-
           git push
