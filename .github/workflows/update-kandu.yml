@@ -2,25 +2,36 @@ name: Update Kandu Data
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0,30 0-4 * * *"
-    - cron: "0,30 6-9 * * *"
 
 permissions:
   contents: write
+
+concurrency:
+  group: kandu-update
+  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Show time
+        run: |
+          echo "UTC time:"
+          date
+          echo "Japan time:"
+          TZ=Asia/Tokyo date
 
       - name: Fetch latest data
         run: python app/fetch.py
@@ -28,7 +39,7 @@ jobs:
       - name: Build JSON
         run: python app/make_json.py
 
-      - name: Commit
+      - name: Commit and push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
