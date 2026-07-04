@@ -6454,11 +6454,11 @@
       }
     },
     "2026-07-04": {
-      "updated_at": "2026/07/04 12:30",
+      "updated_at": "2026/07/04 12:46",
       "parts": {
         "part1": {
           "label": "1部",
-          "updated_at": "2026/07/04 12:30",
+          "updated_at": "2026/07/04 12:46",
           "times": [
             "09:00",
             "09:30",
@@ -6475,59 +6475,50 @@
               "rank": 1,
               "name": "⑮弁護士",
               "reserved_rate": 100.0,
-              "reserved_total": 6,
-              "capacity_total": 6,
+              "reserved_total": 12,
+              "capacity_total": 12,
               "remaining_total": 0,
-              "sessions": 1
+              "sessions": 2
             },
             {
               "rank": 2,
               "name": "⑧建設エンジニア",
               "reserved_rate": 100.0,
-              "reserved_total": 8,
-              "capacity_total": 8,
+              "reserved_total": 16,
+              "capacity_total": 16,
               "remaining_total": 0,
-              "sessions": 2
+              "sessions": 4
             },
             {
               "rank": 3,
               "name": "⑭ダンサー",
               "reserved_rate": 100.0,
-              "reserved_total": 8,
-              "capacity_total": 8,
+              "reserved_total": 16,
+              "capacity_total": 16,
               "remaining_total": 0,
-              "sessions": 2
+              "sessions": 4
             },
             {
               "rank": 4,
               "name": "㉔モノレール運転士",
               "reserved_rate": 100.0,
-              "reserved_total": 10,
-              "capacity_total": 10,
+              "reserved_total": 20,
+              "capacity_total": 20,
               "remaining_total": 0,
-              "sessions": 2
+              "sessions": 4
             },
             {
               "rank": 5,
               "name": "㊳ユーチューバー",
               "reserved_rate": 100.0,
-              "reserved_total": 6,
-              "capacity_total": 6,
+              "reserved_total": 12,
+              "capacity_total": 12,
               "remaining_total": 0,
-              "sessions": 3
+              "sessions": 6
             },
             {
               "rank": 6,
               "name": "㊶モデル",
-              "reserved_rate": 100.0,
-              "reserved_total": 24,
-              "capacity_total": 24,
-              "remaining_total": 0,
-              "sessions": 4
-            },
-            {
-              "rank": 7,
-              "name": "㉚アイスクリームメーカー",
               "reserved_rate": 100.0,
               "reserved_total": 48,
               "capacity_total": 48,
@@ -6535,31 +6526,40 @@
               "sessions": 8
             },
             {
+              "rank": 7,
+              "name": "㉚アイスクリームメーカー",
+              "reserved_rate": 100.0,
+              "reserved_total": 96,
+              "capacity_total": 96,
+              "remaining_total": 0,
+              "sessions": 16
+            },
+            {
               "rank": 8,
               "name": "㉜カフェ店長",
               "reserved_rate": 100.0,
-              "reserved_total": 32,
-              "capacity_total": 32,
+              "reserved_total": 64,
+              "capacity_total": 64,
               "remaining_total": 0,
-              "sessions": 8
+              "sessions": 16
             },
             {
               "rank": 9,
               "name": "④キャビンアテンダント",
               "reserved_rate": 100.0,
-              "reserved_total": 27,
-              "capacity_total": 27,
+              "reserved_total": 54,
+              "capacity_total": 54,
               "remaining_total": 0,
-              "sessions": 9
+              "sessions": 18
             },
             {
               "rank": 10,
               "name": "⑨警察官",
               "reserved_rate": 97.9,
-              "reserved_total": 47,
-              "capacity_total": 48,
-              "remaining_total": 1,
-              "sessions": 8
+              "reserved_total": 94,
+              "capacity_total": 96,
+              "remaining_total": 2,
+              "sessions": 16
             }
           ],
           "summary": [
@@ -6567,9 +6567,9 @@
               "name": "④キャビンアテンダント",
               "capacity": 3,
               "duration": 30,
-              "sessions": 9,
-              "capacity_total": 27,
-              "reserved_total": 27,
+              "sessions": 18,
+              "capacity_total": 54,
+              "reserved_total": 54,
               "remaining_total": 0,
               "reserved_rate": 100.0
             },
@@ -6577,9 +6577,9 @@
               "name": "⑧建設エンジニア",
               "capacity": 4,
               "duration": 30,
-              "sessions": 2,
-              "capacity_total": 8,
-              "reserved_total": 8,
+              "sessions": 4,
+              "capacity_total": 16,
+              "reserved_total": 16,
               "remaining_total": 0,
               "reserved_rate": 100.0
             },
@@ -6587,9 +6587,9 @@
               "name": "⑭ダンサー",
               "capacity": 4,
               "duration": 25,
-              "sessions": 2,
-              "capacity_total": 8,
-              "reserved_total": 8,
+              "sessions": 4,
+              "capacity_total": 16,
+              "reserved_total": 16,
               "remaining_total": 0,
               "reserved_rate": 100.0
             },
@@ -6597,9 +6597,9 @@
               "name": "⑮弁護士",
               "capacity": 6,
               "duration": 45,
-              "sessions": 1,
-              "capacity_total": 6,
-              "reserved_total": 6,
+              "sessions": 2,
+              "capacity_total": 12,
+              "reserved_total": 12,
               "remaining_total": 0,
               "reserved_rate": 100.0
             },
@@ -6607,9 +6607,9 @@
               "name": "㉔モノレール運転士",
               "capacity": 5,
               "duration": 25,
-              "sessions": 2,
-              "capacity_total": 10,
-              "reserved_total": 10,
+              "sessions": 4,
+              "capacity_total": 20,
+              "reserved_total": 20,
               "remaining_total": 0,
               "reserved_rate": 100.0
             },
@@ -6617,9 +6617,9 @@
               "name": "㉚アイスクリームメーカー",
               "capacity": 6,
               "duration": 30,
-              "sessions": 8,
-              "capacity_total": 48,
-              "reserved_total": 48,
+              "sessions": 16,
+              "capacity_total": 96,
+              "reserved_total": 96,
               "remaining_total": 0,
               "reserved_rate": 100.0
             },
@@ -6627,9 +6627,9 @@
               "name": "㉜カフェ店長",
               "capacity": 4,
               "duration": 30,
-              "sessions": 8,
-              "capacity_total": 32,
-              "reserved_total": 32,
+              "sessions": 16,
+              "capacity_total": 64,
+              "reserved_total": 64,
               "remaining_total": 0,
               "reserved_rate": 100.0
             },
@@ -6637,9 +6637,9 @@
               "name": "㊳ユーチューバー",
               "capacity": 2,
               "duration": 30,
-              "sessions": 3,
-              "capacity_total": 6,
-              "reserved_total": 6,
+              "sessions": 6,
+              "capacity_total": 12,
+              "reserved_total": 12,
               "remaining_total": 0,
               "reserved_rate": 100.0
             },
@@ -6647,9 +6647,9 @@
               "name": "㊶モデル",
               "capacity": 6,
               "duration": 55,
-              "sessions": 4,
-              "capacity_total": 24,
-              "reserved_total": 24,
+              "sessions": 8,
+              "capacity_total": 48,
+              "reserved_total": 48,
               "remaining_total": 0,
               "reserved_rate": 100.0
             },
@@ -6657,280 +6657,280 @@
               "name": "⑨警察官",
               "capacity": 6,
               "duration": 30,
-              "sessions": 8,
-              "capacity_total": 48,
-              "reserved_total": 47,
-              "remaining_total": 1,
+              "sessions": 16,
+              "capacity_total": 96,
+              "reserved_total": 94,
+              "remaining_total": 2,
               "reserved_rate": 97.9
+            },
+            {
+              "name": "⑩自衛隊員",
+              "capacity": 5,
+              "duration": 30,
+              "sessions": 18,
+              "capacity_total": 90,
+              "reserved_total": 87,
+              "remaining_total": 3,
+              "reserved_rate": 96.7
             },
             {
               "name": "④パイロット",
               "capacity": 6,
               "duration": 30,
-              "sessions": 9,
-              "capacity_total": 54,
-              "reserved_total": 52,
-              "remaining_total": 2,
+              "sessions": 18,
+              "capacity_total": 108,
+              "reserved_total": 104,
+              "remaining_total": 4,
               "reserved_rate": 96.3
             },
             {
               "name": "㉙銀だこ職人",
               "capacity": 4,
               "duration": 30,
-              "sessions": 6,
-              "capacity_total": 24,
-              "reserved_total": 23,
-              "remaining_total": 1,
-              "reserved_rate": 95.8
-            },
-            {
-              "name": "㉕おかしクリエイター",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 8,
+              "sessions": 12,
               "capacity_total": 48,
               "reserved_total": 46,
               "remaining_total": 2,
               "reserved_rate": 95.8
             },
             {
-              "name": "⑩自衛隊員",
-              "capacity": 5,
+              "name": "㉕おかしクリエイター",
+              "capacity": 6,
               "duration": 30,
-              "sessions": 9,
-              "capacity_total": 45,
-              "reserved_total": 43,
-              "remaining_total": 2,
-              "reserved_rate": 95.6
+              "sessions": 16,
+              "capacity_total": 96,
+              "reserved_total": 92,
+              "remaining_total": 4,
+              "reserved_rate": 95.8
             },
             {
               "name": "⑫ラジオパーソナリティ",
               "capacity": 6,
               "duration": 30,
-              "sessions": 2,
-              "capacity_total": 12,
-              "reserved_total": 11,
-              "remaining_total": 1,
+              "sessions": 4,
+              "capacity_total": 24,
+              "reserved_total": 22,
+              "remaining_total": 2,
               "reserved_rate": 91.7
             },
             {
               "name": "⑯お医者さん",
               "capacity": 4,
               "duration": 30,
-              "sessions": 9,
-              "capacity_total": 36,
-              "reserved_total": 32,
-              "remaining_total": 4,
+              "sessions": 18,
+              "capacity_total": 72,
+              "reserved_total": 64,
+              "remaining_total": 8,
               "reserved_rate": 88.9
             },
             {
               "name": "㉒ボートレーサー",
               "capacity": 4,
               "duration": 30,
-              "sessions": 9,
-              "capacity_total": 36,
-              "reserved_total": 32,
-              "remaining_total": 4,
+              "sessions": 18,
+              "capacity_total": 72,
+              "reserved_total": 64,
+              "remaining_total": 8,
               "reserved_rate": 88.9
             },
             {
               "name": "㊲イマーシブファイアファイタ",
               "capacity": 6,
               "duration": 30,
-              "sessions": 5,
-              "capacity_total": 30,
-              "reserved_total": 26,
-              "remaining_total": 4,
+              "sessions": 10,
+              "capacity_total": 60,
+              "reserved_total": 52,
+              "remaining_total": 8,
               "reserved_rate": 86.7
             },
             {
               "name": "⑰助産師",
               "capacity": 4,
               "duration": 25,
-              "sessions": 6,
-              "capacity_total": 24,
-              "reserved_total": 20,
-              "remaining_total": 4,
+              "sessions": 12,
+              "capacity_total": 48,
+              "reserved_total": 40,
+              "remaining_total": 8,
               "reserved_rate": 83.3
             },
             {
               "name": "㉟銀行員",
               "capacity": 2,
               "duration": 15,
-              "sessions": 4,
-              "capacity_total": 8,
-              "reserved_total": 6,
-              "remaining_total": 2,
-              "reserved_rate": 75.0
-            },
-            {
-              "name": "㉓eスポーツ体験",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 36,
-              "reserved_total": 27,
-              "remaining_total": 9,
-              "reserved_rate": 75.0
-            },
-            {
-              "name": "㉖消防士",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 36,
-              "reserved_total": 27,
-              "remaining_total": 9,
+              "sessions": 8,
+              "capacity_total": 16,
+              "reserved_total": 12,
+              "remaining_total": 4,
               "reserved_rate": 75.0
             },
             {
               "name": "⑪ドライバー/メカニック",
               "capacity": 4,
               "duration": 30,
-              "sessions": 5,
-              "capacity_total": 20,
-              "reserved_total": 14,
-              "remaining_total": 6,
-              "reserved_rate": 70.0
+              "sessions": 10,
+              "capacity_total": 40,
+              "reserved_total": 30,
+              "remaining_total": 10,
+              "reserved_rate": 75.0
+            },
+            {
+              "name": "㉓eスポーツ体験",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 18,
+              "capacity_total": 72,
+              "reserved_total": 54,
+              "remaining_total": 18,
+              "reserved_rate": 75.0
+            },
+            {
+              "name": "㉖消防士",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 18,
+              "capacity_total": 72,
+              "reserved_total": 54,
+              "remaining_total": 18,
+              "reserved_rate": 75.0
             },
             {
               "name": "㊵ヘアスタイリスト",
               "capacity": 6,
               "duration": 30,
-              "sessions": 7,
-              "capacity_total": 42,
-              "reserved_total": 28,
-              "remaining_total": 14,
+              "sessions": 14,
+              "capacity_total": 84,
+              "reserved_total": 56,
+              "remaining_total": 28,
               "reserved_rate": 66.7
-            },
-            {
-              "name": "⑲月面基地開発プロジェクト",
-              "capacity": 2,
-              "duration": 20,
-              "sessions": 13,
-              "capacity_total": 26,
-              "reserved_total": 16,
-              "remaining_total": 10,
-              "reserved_rate": 61.5
             },
             {
               "name": "⑥ロードサービス隊員",
               "capacity": 4,
               "duration": 30,
-              "sessions": 8,
-              "capacity_total": 32,
-              "reserved_total": 19,
-              "remaining_total": 13,
-              "reserved_rate": 59.4
+              "sessions": 16,
+              "capacity_total": 64,
+              "reserved_total": 40,
+              "remaining_total": 24,
+              "reserved_rate": 62.5
             },
             {
-              "name": "㉟投資家",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 4,
-              "capacity_total": 16,
-              "reserved_total": 8,
-              "remaining_total": 8,
-              "reserved_rate": 50.0
+              "name": "⑲月面基地開発プロジェクト",
+              "capacity": 2,
+              "duration": 20,
+              "sessions": 26,
+              "capacity_total": 52,
+              "reserved_total": 32,
+              "remaining_total": 20,
+              "reserved_rate": 61.5
             },
             {
               "name": "⑱セキュリティスタッフ 救命",
               "capacity": 5,
               "duration": 30,
-              "sessions": 4,
-              "capacity_total": 20,
-              "reserved_total": 10,
-              "remaining_total": 10,
+              "sessions": 8,
+              "capacity_total": 40,
+              "reserved_total": 21,
+              "remaining_total": 19,
+              "reserved_rate": 52.5
+            },
+            {
+              "name": "㉟投資家",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 8,
+              "capacity_total": 32,
+              "reserved_total": 16,
+              "remaining_total": 16,
               "reserved_rate": 50.0
+            },
+            {
+              "name": "㉑科学者",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 12,
+              "capacity_total": 72,
+              "reserved_total": 35,
+              "remaining_total": 37,
+              "reserved_rate": 48.6
             },
             {
               "name": "⑱セキュリティスタッフ",
               "capacity": 5,
               "duration": 30,
-              "sessions": 5,
-              "capacity_total": 25,
-              "reserved_total": 12,
-              "remaining_total": 13,
+              "sessions": 10,
+              "capacity_total": 50,
+              "reserved_total": 24,
+              "remaining_total": 26,
               "reserved_rate": 48.0
             },
             {
               "name": "㊴ビスコ研究員",
               "capacity": 8,
               "duration": 45,
-              "sessions": 6,
-              "capacity_total": 48,
-              "reserved_total": 23,
-              "remaining_total": 25,
+              "sessions": 12,
+              "capacity_total": 96,
+              "reserved_total": 46,
+              "remaining_total": 50,
               "reserved_rate": 47.9
-            },
-            {
-              "name": "㉑科学者",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 6,
-              "capacity_total": 36,
-              "reserved_total": 17,
-              "remaining_total": 19,
-              "reserved_rate": 47.2
             },
             {
               "name": "③カードクター",
               "capacity": 4,
               "duration": 30,
-              "sessions": 3,
-              "capacity_total": 12,
-              "reserved_total": 5,
-              "remaining_total": 7,
+              "sessions": 6,
+              "capacity_total": 24,
+              "reserved_total": 10,
+              "remaining_total": 14,
               "reserved_rate": 41.7
             },
             {
               "name": "②引越マスター",
               "capacity": 5,
               "duration": 45,
-              "sessions": 6,
-              "capacity_total": 30,
-              "reserved_total": 12,
-              "remaining_total": 18,
+              "sessions": 12,
+              "capacity_total": 60,
+              "reserved_total": 24,
+              "remaining_total": 36,
               "reserved_rate": 40.0
             },
             {
               "name": "⑤スペースセンタークルー",
               "capacity": 6,
               "duration": 30,
-              "sessions": 9,
-              "capacity_total": 54,
-              "reserved_total": 16,
-              "remaining_total": 38,
-              "reserved_rate": 29.6
+              "sessions": 18,
+              "capacity_total": 108,
+              "reserved_total": 37,
+              "remaining_total": 71,
+              "reserved_rate": 34.3
             },
             {
               "name": "㉘ピックアップクルー",
               "capacity": 6,
               "duration": 30,
-              "sessions": 8,
-              "capacity_total": 48,
-              "reserved_total": 10,
-              "remaining_total": 38,
-              "reserved_rate": 20.8
+              "sessions": 16,
+              "capacity_total": 96,
+              "reserved_total": 21,
+              "remaining_total": 75,
+              "reserved_rate": 21.9
             },
             {
               "name": "⑳シニアケア相談員",
               "capacity": 4,
               "duration": 30,
-              "sessions": 4,
-              "capacity_total": 16,
+              "sessions": 8,
+              "capacity_total": 32,
               "reserved_total": 0,
-              "remaining_total": 16,
+              "remaining_total": 32,
               "reserved_rate": 0.0
             },
             {
               "name": "㉛植物工場スタッフ",
               "capacity": 4,
               "duration": 30,
-              "sessions": 4,
-              "capacity_total": 16,
+              "sessions": 8,
+              "capacity_total": 32,
               "reserved_total": 0,
-              "remaining_total": 16,
+              "remaining_total": 32,
               "reserved_rate": 0.0
             }
           ],
@@ -7453,7 +7453,7 @@
                   "11:00": 6,
                   "11:30": 6,
                   "12:00": 6,
-                  "12:30": 6,
+                  "12:30": 4,
                   "13:00": ""
                 }
               },
@@ -7468,7 +7468,7 @@
                   "11:00": 6,
                   "11:30": 6,
                   "12:00": 6,
-                  "12:30": 5,
+                  "12:30": 3,
                   "13:00": ""
                 }
               },
@@ -7483,7 +7483,7 @@
                   "11:00": 6,
                   "11:30": 5,
                   "12:00": 5,
-                  "12:30": 2,
+                  "12:30": 1,
                   "13:00": ""
                 }
               },
@@ -7588,7 +7588,7 @@
                   "11:00": 4,
                   "11:30": 3,
                   "12:00": 2,
-                  "12:30": 1,
+                  "12:30": 0,
                   "13:00": ""
                 }
               },
@@ -7603,7 +7603,7 @@
                   "11:00": 3,
                   "11:30": 3,
                   "12:00": 1,
-                  "12:30": 1,
+                  "12:30": 0,
                   "13:00": ""
                 }
               },
@@ -7873,7 +7873,7 @@
                   "11:00": 3,
                   "11:30": 2,
                   "12:00": 2,
-                  "12:30": 1,
+                  "12:30": 0,
                   "13:00": ""
                 }
               },
@@ -7948,7 +7948,7 @@
                   "11:00": 4,
                   "11:30": 4,
                   "12:00": 4,
-                  "12:30": 4,
+                  "12:30": 3,
                   "13:00": ""
                 }
               },
@@ -7963,7 +7963,7 @@
                   "11:00": 3,
                   "11:30": 3,
                   "12:00": 3,
-                  "12:30": 1,
+                  "12:30": 0,
                   "13:00": ""
                 }
               },
@@ -8398,7 +8398,7 @@
                   "11:00": 5,
                   "11:30": 5,
                   "12:00": 1,
-                  "12:30": 1,
+                  "12:30": 0,
                   "13:00": ""
                 }
               },
@@ -8743,7 +8743,7 @@
                   "11:00": 5,
                   "11:30": 4,
                   "12:00": 2,
-                  "12:30": 1,
+                  "12:30": 0,
                   "13:00": ""
                 }
               },
@@ -9418,7 +9418,7 @@
                   "11:00": 6,
                   "11:30": 6,
                   "12:00": 4,
-                  "12:30": 3,
+                  "12:30": 2,
                   "13:00": ""
                 }
               },
