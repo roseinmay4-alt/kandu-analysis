@@ -3,11 +3,15 @@ name: Update Kandu Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0,30 0-4 * * *"
-    - cron: "0,30 6-9 * * *"
+    # JST 9:15〜14:15 = UTC 0:15〜5:15
+    - cron: "15,45 0-5 * * *"
 
 permissions:
   contents: write
+
+concurrency:
+  group: kandu-update
+  cancel-in-progress: true
 
 jobs:
   update:
