@@ -75,7 +75,6 @@
         <div class="pivot-wrap">
           <table id="pivotTable"></table>
         </div>
-
         <div id="mobileCards" class="mobile-cards"></div>
       </section>
     </main>
@@ -374,7 +373,6 @@ function renderPcTable(pivot) {
 
 function renderMobileCards(pivot) {
   const mobileCards = document.getElementById("mobileCards");
-  mobileCards.innerHTML = "";
 
   const jobs = {};
 
@@ -393,63 +391,48 @@ function renderMobileCards(pivot) {
     title.textContent = job;
     card.appendChild(title);
 
-    const table = document.createElement("table");
-    table.className = "mobile-pivot-table";
-
-    const thead = document.createElement("thead");
-    const headerRow = document.createElement("tr");
-
-    headerRow.innerHTML = `<th>開始</th>`;
-
-    pivot.times.forEach(time => {
-      headerRow.innerHTML += `<th>${time}</th>`;
-    });
-
-    thead.appendChild(headerRow);
-    table.appendChild(thead);
-
-    const tbody = document.createElement("tbody");
-
     rows.forEach(row => {
-      const tr = document.createElement("tr");
+      const item = document.createElement("div");
+      item.className = "mobile-slot-row";
 
-      const startTh = document.createElement("th");
-      startTh.textContent = row.start;
-      startTh.className = "mobile-start-cell";
-      tr.appendChild(startTh);
+      const start = document.createElement("div");
+      start.className = "mobile-start";
+      start.textContent = row.start;
 
-      const startMinutes = timeToMinutes(row.start);
+      const chips = document.createElement("div");
+      chips.className = "mobile-chips";
 
       pivot.times.forEach(time => {
-        const td = document.createElement("td");
         const value = row.values?.[time] ?? "";
+        const chip = document.createElement("span");
 
-        td.textContent = value === "" ? "-" : value;
+        chip.className = "mobile-chip";
+        chip.innerHTML = `<b>${time}</b><em>${value === "" ? "-" : value}</em>`;
 
+        const startMinutes = timeToMinutes(row.start);
         const headerMinutes = timeToMinutes(time);
 
         if (headerMinutes !== null && startMinutes !== null) {
           if (headerMinutes > startMinutes) {
-            td.classList.add("after");
+            chip.classList.add("after");
           } else if (headerMinutes === startMinutes) {
-            td.classList.add("during");
+            chip.classList.add("during");
           } else {
-            td.classList.add("before");
+            chip.classList.add("before");
           }
         }
 
-        tr.appendChild(td);
+        chips.appendChild(chip);
       });
 
-      tbody.appendChild(tr);
+      item.appendChild(start);
+      item.appendChild(chips);
+      card.appendChild(item);
     });
 
-    table.appendChild(tbody);
-    card.appendChild(table);
     mobileCards.appendChild(card);
   });
 }
-
 loadData();
 </script>
 </body>
