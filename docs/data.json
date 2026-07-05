@@ -13352,7 +13352,7 @@
       }
     },
     "2026-07-05": {
-      "updated_at": "2026/07/05 15:56",
+      "updated_at": "2026/07/05 16:19",
       "parts": {
         "part1": {
           "label": "1部",
@@ -17345,7 +17345,7 @@
         },
         "part2": {
           "label": "2部",
-          "updated_at": "2026/07/05 15:56",
+          "updated_at": "2026/07/05 16:19",
           "times": [
             "15:00",
             "15:30",
@@ -17369,6 +17369,15 @@
             },
             {
               "rank": 2,
+              "name": "㉓eスポーツ体験",
+              "reserved_rate": 100.0,
+              "reserved_total": 12,
+              "capacity_total": 12,
+              "remaining_total": 0,
+              "sessions": 3
+            },
+            {
+              "rank": 3,
               "name": "㉙銀だこ職人",
               "reserved_rate": 100.0,
               "reserved_total": 28,
@@ -17377,7 +17386,7 @@
               "sessions": 7
             },
             {
-              "rank": 3,
+              "rank": 4,
               "name": "㉚アイスクリームメーカー",
               "reserved_rate": 100.0,
               "reserved_total": 54,
@@ -17386,70 +17395,71 @@
               "sessions": 9
             },
             {
-              "rank": 4,
+              "rank": 5,
+              "name": "④キャビンアテンダント",
+              "reserved_rate": 85.2,
+              "reserved_total": 23,
+              "capacity_total": 27,
+              "remaining_total": 4,
+              "sessions": 9
+            },
+            {
+              "rank": 6,
+              "name": "㉕おかしクリエイター",
+              "reserved_rate": 81.5,
+              "reserved_total": 44,
+              "capacity_total": 54,
+              "remaining_total": 10,
+              "sessions": 9
+            },
+            {
+              "rank": 7,
+              "name": "㉒ボートレーサー",
+              "reserved_rate": 80.6,
+              "reserved_total": 29,
+              "capacity_total": 36,
+              "remaining_total": 7,
+              "sessions": 9
+            },
+            {
+              "rank": 8,
+              "name": "⑤スペースセンタークルー",
+              "reserved_rate": 77.8,
+              "reserved_total": 14,
+              "capacity_total": 18,
+              "remaining_total": 4,
+              "sessions": 3
+            },
+            {
+              "rank": 9,
+              "name": "⑧建設エンジニア",
+              "reserved_rate": 75.0,
+              "reserved_total": 9,
+              "capacity_total": 12,
+              "remaining_total": 3,
+              "sessions": 3
+            },
+            {
+              "rank": 10,
               "name": "②引越マスター",
               "reserved_rate": 73.3,
               "reserved_total": 22,
               "capacity_total": 30,
               "remaining_total": 8,
               "sessions": 6
-            },
-            {
-              "rank": 5,
-              "name": "④キャビンアテンダント",
-              "reserved_rate": 66.7,
-              "reserved_total": 18,
-              "capacity_total": 27,
-              "remaining_total": 9,
-              "sessions": 9
-            },
-            {
-              "rank": 6,
-              "name": "④パイロット",
-              "reserved_rate": 53.7,
-              "reserved_total": 29,
-              "capacity_total": 54,
-              "remaining_total": 25,
-              "sessions": 9
-            },
-            {
-              "rank": 7,
-              "name": "㉒ボートレーサー",
-              "reserved_rate": 52.8,
-              "reserved_total": 19,
-              "capacity_total": 36,
-              "remaining_total": 17,
-              "sessions": 9
-            },
-            {
-              "rank": 8,
-              "name": "⑪ドライバー/メカニック",
-              "reserved_rate": 50.0,
-              "reserved_total": 4,
-              "capacity_total": 8,
-              "remaining_total": 4,
-              "sessions": 2
-            },
-            {
-              "rank": 9,
-              "name": "⑧建設エンジニア",
-              "reserved_rate": 50.0,
-              "reserved_total": 6,
-              "capacity_total": 12,
-              "remaining_total": 6,
-              "sessions": 3
-            },
-            {
-              "rank": 10,
-              "name": "㊶モデル",
-              "reserved_rate": 50.0,
-              "reserved_total": 15,
-              "capacity_total": 30,
-              "remaining_total": 15,
-              "sessions": 5
             }
           ],
           "summary": [
+            {
+              "name": "㉓eスポーツ体験",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 3,
+              "capacity_total": 12,
+              "reserved_total": 12,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
             {
               "name": "㉙銀だこ職人",
               "capacity": 4,
@@ -17481,6 +17491,56 @@
               "reserved_rate": 100.0
             },
             {
+              "name": "④キャビンアテンダント",
+              "capacity": 3,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 27,
+              "reserved_total": 23,
+              "remaining_total": 4,
+              "reserved_rate": 85.2
+            },
+            {
+              "name": "㉕おかしクリエイター",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 54,
+              "reserved_total": 44,
+              "remaining_total": 10,
+              "reserved_rate": 81.5
+            },
+            {
+              "name": "㉒ボートレーサー",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 36,
+              "reserved_total": 29,
+              "remaining_total": 7,
+              "reserved_rate": 80.6
+            },
+            {
+              "name": "⑤スペースセンタークルー",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 3,
+              "capacity_total": 18,
+              "reserved_total": 14,
+              "remaining_total": 4,
+              "reserved_rate": 77.8
+            },
+            {
+              "name": "⑧建設エンジニア",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 3,
+              "capacity_total": 12,
+              "reserved_total": 9,
+              "remaining_total": 3,
+              "reserved_rate": 75.0
+            },
+            {
               "name": "②引越マスター",
               "capacity": 5,
               "duration": 45,
@@ -17491,34 +17551,54 @@
               "reserved_rate": 73.3
             },
             {
-              "name": "④キャビンアテンダント",
-              "capacity": 3,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 27,
-              "reserved_total": 18,
-              "remaining_total": 9,
-              "reserved_rate": 66.7
-            },
-            {
               "name": "④パイロット",
               "capacity": 6,
               "duration": 30,
               "sessions": 9,
               "capacity_total": 54,
-              "reserved_total": 29,
-              "remaining_total": 25,
-              "reserved_rate": 53.7
+              "reserved_total": 38,
+              "remaining_total": 16,
+              "reserved_rate": 70.4
             },
             {
-              "name": "㉒ボートレーサー",
+              "name": "㉟銀行員",
+              "capacity": 2,
+              "duration": 15,
+              "sessions": 3,
+              "capacity_total": 6,
+              "reserved_total": 4,
+              "remaining_total": 2,
+              "reserved_rate": 66.7
+            },
+            {
+              "name": "⑰助産師",
+              "capacity": 4,
+              "duration": 25,
+              "sessions": 3,
+              "capacity_total": 12,
+              "reserved_total": 8,
+              "remaining_total": 4,
+              "reserved_rate": 66.7
+            },
+            {
+              "name": "㉜カフェ店長",
               "capacity": 4,
               "duration": 30,
               "sessions": 9,
               "capacity_total": 36,
-              "reserved_total": 19,
-              "remaining_total": 17,
-              "reserved_rate": 52.8
+              "reserved_total": 23,
+              "remaining_total": 13,
+              "reserved_rate": 63.9
+            },
+            {
+              "name": "㊶モデル",
+              "capacity": 6,
+              "duration": 55,
+              "sessions": 5,
+              "capacity_total": 30,
+              "reserved_total": 18,
+              "remaining_total": 12,
+              "reserved_rate": 60.0
             },
             {
               "name": "⑪ドライバー/メカニック",
@@ -17531,37 +17611,27 @@
               "reserved_rate": 50.0
             },
             {
-              "name": "⑧建設エンジニア",
+              "name": "㉛植物工場スタッフ",
               "capacity": 4,
               "duration": 30,
-              "sessions": 3,
-              "capacity_total": 12,
-              "reserved_total": 6,
-              "remaining_total": 6,
+              "sessions": 2,
+              "capacity_total": 8,
+              "reserved_total": 4,
+              "remaining_total": 4,
               "reserved_rate": 50.0
             },
             {
-              "name": "㊶モデル",
-              "capacity": 6,
-              "duration": 55,
+              "name": "⑯お医者さん",
+              "capacity": 4,
+              "duration": 30,
               "sessions": 5,
-              "capacity_total": 30,
-              "reserved_total": 15,
-              "remaining_total": 15,
-              "reserved_rate": 50.0
+              "capacity_total": 20,
+              "reserved_total": 9,
+              "remaining_total": 11,
+              "reserved_rate": 45.0
             },
             {
-              "name": "㉜カフェ店長",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 36,
-              "reserved_total": 16,
-              "remaining_total": 20,
-              "reserved_rate": 44.4
-            },
-            {
-              "name": "㉕おかしクリエイター",
+              "name": "⑨警察官",
               "capacity": 6,
               "duration": 30,
               "sessions": 9,
@@ -17571,84 +17641,14 @@
               "reserved_rate": 42.6
             },
             {
-              "name": "㉓eスポーツ体験",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 3,
-              "capacity_total": 12,
-              "reserved_total": 5,
-              "remaining_total": 7,
-              "reserved_rate": 41.7
-            },
-            {
-              "name": "⑤スペースセンタークルー",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 3,
-              "capacity_total": 18,
-              "reserved_total": 7,
-              "remaining_total": 11,
-              "reserved_rate": 38.9
-            },
-            {
-              "name": "⑨警察官",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 54,
-              "reserved_total": 19,
-              "remaining_total": 35,
-              "reserved_rate": 35.2
-            },
-            {
-              "name": "㉟銀行員",
-              "capacity": 2,
-              "duration": 15,
-              "sessions": 3,
-              "capacity_total": 6,
-              "reserved_total": 2,
-              "remaining_total": 4,
-              "reserved_rate": 33.3
-            },
-            {
-              "name": "⑰助産師",
-              "capacity": 4,
-              "duration": 25,
-              "sessions": 3,
-              "capacity_total": 12,
-              "reserved_total": 4,
-              "remaining_total": 8,
-              "reserved_rate": 33.3
-            },
-            {
-              "name": "⑯お医者さん",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 5,
-              "capacity_total": 20,
-              "reserved_total": 5,
-              "remaining_total": 15,
-              "reserved_rate": 25.0
-            },
-            {
               "name": "㉔モノレール運転士",
               "capacity": 5,
               "duration": 25,
               "sessions": 5,
               "capacity_total": 25,
-              "reserved_total": 6,
-              "remaining_total": 19,
-              "reserved_rate": 24.0
-            },
-            {
-              "name": "㊴ビスコ研究員",
-              "capacity": 8,
-              "duration": 45,
-              "sessions": 4,
-              "capacity_total": 32,
-              "reserved_total": 6,
-              "remaining_total": 26,
-              "reserved_rate": 18.8
+              "reserved_total": 9,
+              "remaining_total": 16,
+              "reserved_rate": 36.0
             },
             {
               "name": "⑮弁護士",
@@ -17656,8 +17656,78 @@
               "duration": 45,
               "sessions": 1,
               "capacity_total": 6,
-              "reserved_total": 1,
-              "remaining_total": 5,
+              "reserved_total": 2,
+              "remaining_total": 4,
+              "reserved_rate": 33.3
+            },
+            {
+              "name": "⑩自衛隊員",
+              "capacity": 5,
+              "duration": 30,
+              "sessions": 5,
+              "capacity_total": 25,
+              "reserved_total": 8,
+              "remaining_total": 17,
+              "reserved_rate": 32.0
+            },
+            {
+              "name": "㊴ビスコ研究員",
+              "capacity": 8,
+              "duration": 45,
+              "sessions": 4,
+              "capacity_total": 32,
+              "reserved_total": 10,
+              "remaining_total": 22,
+              "reserved_rate": 31.2
+            },
+            {
+              "name": "㉑科学者",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 6,
+              "capacity_total": 36,
+              "reserved_total": 9,
+              "remaining_total": 27,
+              "reserved_rate": 25.0
+            },
+            {
+              "name": "⑥ロードサービス隊員",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 5,
+              "capacity_total": 20,
+              "reserved_total": 4,
+              "remaining_total": 16,
+              "reserved_rate": 20.0
+            },
+            {
+              "name": "㊵ヘアスタイリスト",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 7,
+              "capacity_total": 42,
+              "reserved_total": 8,
+              "remaining_total": 34,
+              "reserved_rate": 19.0
+            },
+            {
+              "name": "⑲月面基地開発プロジェクト",
+              "capacity": 2,
+              "duration": 20,
+              "sessions": 8,
+              "capacity_total": 16,
+              "reserved_total": 3,
+              "remaining_total": 13,
+              "reserved_rate": 18.8
+            },
+            {
+              "name": "⑭ダンサー",
+              "capacity": 4,
+              "duration": 25,
+              "sessions": 3,
+              "capacity_total": 12,
+              "reserved_total": 2,
+              "remaining_total": 10,
               "reserved_rate": 16.7
             },
             {
@@ -17681,14 +17751,14 @@
               "reserved_rate": 16.7
             },
             {
-              "name": "㉛植物工場スタッフ",
-              "capacity": 4,
+              "name": "㊲イマーシブファイアファイタ",
+              "capacity": 6,
               "duration": 30,
-              "sessions": 2,
-              "capacity_total": 8,
-              "reserved_total": 1,
-              "remaining_total": 7,
-              "reserved_rate": 12.5
+              "sessions": 3,
+              "capacity_total": 18,
+              "reserved_total": 3,
+              "remaining_total": 15,
+              "reserved_rate": 16.7
             },
             {
               "name": "㉟投資家",
@@ -17701,49 +17771,9 @@
               "reserved_rate": 12.5
             },
             {
-              "name": "⑲月面基地開発プロジェクト",
-              "capacity": 2,
-              "duration": 20,
-              "sessions": 8,
-              "capacity_total": 16,
-              "reserved_total": 2,
-              "remaining_total": 14,
-              "reserved_rate": 12.5
-            },
-            {
-              "name": "⑩自衛隊員",
-              "capacity": 5,
-              "duration": 30,
-              "sessions": 5,
-              "capacity_total": 25,
-              "reserved_total": 3,
-              "remaining_total": 22,
-              "reserved_rate": 12.0
-            },
-            {
-              "name": "㊵ヘアスタイリスト",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 7,
-              "capacity_total": 42,
-              "reserved_total": 5,
-              "remaining_total": 37,
-              "reserved_rate": 11.9
-            },
-            {
-              "name": "㊲イマーシブファイアファイタ",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 3,
-              "capacity_total": 18,
-              "reserved_total": 2,
-              "remaining_total": 16,
-              "reserved_rate": 11.1
-            },
-            {
-              "name": "⑭ダンサー",
+              "name": "③カードクター",
               "capacity": 4,
-              "duration": 25,
+              "duration": 30,
               "sessions": 3,
               "capacity_total": 12,
               "reserved_total": 1,
@@ -17761,44 +17791,24 @@
               "reserved_rate": 8.3
             },
             {
-              "name": "㉑科学者",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 6,
-              "capacity_total": 36,
-              "reserved_total": 3,
-              "remaining_total": 33,
-              "reserved_rate": 8.3
-            },
-            {
-              "name": "⑥ロードサービス隊員",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 5,
-              "capacity_total": 20,
-              "reserved_total": 1,
-              "remaining_total": 19,
-              "reserved_rate": 5.0
-            },
-            {
               "name": "⑱セキュリティスタッフ",
               "capacity": 5,
               "duration": 30,
               "sessions": 5,
               "capacity_total": 25,
-              "reserved_total": 1,
-              "remaining_total": 24,
-              "reserved_rate": 4.0
+              "reserved_total": 2,
+              "remaining_total": 23,
+              "reserved_rate": 8.0
             },
             {
-              "name": "③カードクター",
-              "capacity": 4,
+              "name": "⑱セキュリティスタッフ 救命",
+              "capacity": 5,
               "duration": 30,
-              "sessions": 3,
-              "capacity_total": 12,
-              "reserved_total": 0,
-              "remaining_total": 12,
-              "reserved_rate": 0.0
+              "sessions": 4,
+              "capacity_total": 20,
+              "reserved_total": 1,
+              "remaining_total": 19,
+              "reserved_rate": 5.0
             },
             {
               "name": "⑳シニアケア相談員",
@@ -17808,16 +17818,6 @@
               "capacity_total": 16,
               "reserved_total": 0,
               "remaining_total": 16,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "⑱セキュリティスタッフ 救命",
-              "capacity": 5,
-              "duration": 30,
-              "sessions": 4,
-              "capacity_total": 20,
-              "reserved_total": 0,
-              "remaining_total": 20,
               "reserved_rate": 0.0
             }
           ],
@@ -17840,7 +17840,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -17855,7 +17855,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -17870,7 +17870,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -17885,7 +17885,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -17900,7 +17900,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -17915,7 +17915,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -17930,7 +17930,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -17945,7 +17945,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -17960,7 +17960,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -17975,7 +17975,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -17990,7 +17990,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18005,7 +18005,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18020,7 +18020,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18035,7 +18035,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18050,7 +18050,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18065,7 +18065,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 1,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18080,7 +18080,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18095,7 +18095,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18110,7 +18110,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18125,7 +18125,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18140,7 +18140,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18155,7 +18155,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18170,7 +18170,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18185,7 +18185,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18200,7 +18200,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18215,7 +18215,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18230,7 +18230,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18245,7 +18245,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18260,7 +18260,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18275,7 +18275,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18290,7 +18290,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18305,7 +18305,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18320,7 +18320,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18335,7 +18335,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18350,7 +18350,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18365,7 +18365,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18380,7 +18380,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18395,7 +18395,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18410,7 +18410,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18425,7 +18425,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 1,
-                  "16:00": "",
+                  "16:00": 1,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18440,7 +18440,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18455,7 +18455,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18470,7 +18470,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18485,7 +18485,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18500,7 +18500,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18515,7 +18515,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18530,7 +18530,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18545,7 +18545,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18560,7 +18560,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18575,7 +18575,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18590,7 +18590,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18605,7 +18605,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18620,7 +18620,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18635,7 +18635,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18650,7 +18650,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18665,7 +18665,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18680,7 +18680,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18695,7 +18695,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18710,7 +18710,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18725,7 +18725,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18740,7 +18740,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18755,7 +18755,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18770,7 +18770,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18785,7 +18785,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18800,7 +18800,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 1,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18815,7 +18815,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 1,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18830,7 +18830,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18845,7 +18845,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18860,7 +18860,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18875,7 +18875,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18890,7 +18890,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18905,7 +18905,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18920,7 +18920,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18935,7 +18935,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18950,7 +18950,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18965,7 +18965,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18980,7 +18980,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -18995,7 +18995,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19010,7 +19010,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19025,7 +19025,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 1,
-                  "16:00": "",
+                  "16:00": 1,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19040,7 +19040,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19055,7 +19055,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 1,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19070,7 +19070,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19085,7 +19085,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19100,7 +19100,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19115,7 +19115,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19130,7 +19130,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19145,7 +19145,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19160,7 +19160,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19175,7 +19175,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19190,7 +19190,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19205,7 +19205,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19220,7 +19220,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19235,7 +19235,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19250,7 +19250,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19265,7 +19265,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19280,7 +19280,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19295,7 +19295,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19310,7 +19310,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 1,
-                  "16:00": "",
+                  "16:00": 1,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19325,7 +19325,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19340,7 +19340,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 1,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19355,7 +19355,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19370,7 +19370,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 1,
-                  "16:00": "",
+                  "16:00": 1,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19385,7 +19385,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19400,7 +19400,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19415,7 +19415,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19430,7 +19430,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19445,7 +19445,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19460,7 +19460,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19475,7 +19475,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19490,7 +19490,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19505,7 +19505,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19520,7 +19520,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19535,7 +19535,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19550,7 +19550,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19565,7 +19565,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19580,7 +19580,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19595,7 +19595,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 1,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19610,7 +19610,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19625,7 +19625,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19640,7 +19640,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19655,7 +19655,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19670,7 +19670,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19685,7 +19685,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19700,7 +19700,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19715,7 +19715,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19730,7 +19730,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19745,7 +19745,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19760,7 +19760,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19775,7 +19775,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19790,7 +19790,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19805,7 +19805,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19820,7 +19820,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19835,7 +19835,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19850,7 +19850,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19865,7 +19865,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19880,7 +19880,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19895,7 +19895,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19910,7 +19910,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19925,7 +19925,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19940,7 +19940,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19955,7 +19955,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19970,7 +19970,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -19985,7 +19985,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20000,7 +20000,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20015,7 +20015,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20030,7 +20030,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 1,
-                  "16:00": "",
+                  "16:00": 1,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20045,7 +20045,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20060,7 +20060,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 1,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20075,7 +20075,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20090,7 +20090,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20105,7 +20105,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20120,7 +20120,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20135,7 +20135,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20150,7 +20150,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20165,7 +20165,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 3,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20180,7 +20180,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20195,7 +20195,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20210,7 +20210,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20225,7 +20225,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 2,
-                  "16:00": "",
+                  "16:00": 2,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20240,7 +20240,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20255,7 +20255,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20270,7 +20270,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20285,7 +20285,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20300,7 +20300,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20315,7 +20315,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20330,7 +20330,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 3,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20345,7 +20345,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 8,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20360,7 +20360,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 8,
-                  "16:00": "",
+                  "16:00": 8,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20375,7 +20375,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20390,7 +20390,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20405,7 +20405,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20420,7 +20420,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20435,7 +20435,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 4,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20450,7 +20450,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20465,7 +20465,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20480,7 +20480,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20495,7 +20495,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 0,
-                  "16:00": "",
+                  "16:00": 0,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20510,7 +20510,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 4,
-                  "16:00": "",
+                  "16:00": 1,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20525,7 +20525,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 5,
-                  "16:00": "",
+                  "16:00": 5,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
@@ -20540,7 +20540,7 @@
                 "values": {
                   "15:00": "",
                   "15:30": 6,
-                  "16:00": "",
+                  "16:00": 6,
                   "16:30": "",
                   "17:00": "",
                   "17:30": "",
