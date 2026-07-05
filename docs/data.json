@@ -13352,7 +13352,7 @@
       }
     },
     "2026-07-05": {
-      "updated_at": "2026/07/05 16:30",
+      "updated_at": "2026/07/05 19:00",
       "parts": {
         "part1": {
           "label": "1部",
@@ -17345,7 +17345,7 @@
         },
         "part2": {
           "label": "2部",
-          "updated_at": "2026/07/05 16:30",
+          "updated_at": "2026/07/05 19:00",
           "times": [
             "15:00",
             "15:30",
@@ -17369,6 +17369,33 @@
             },
             {
               "rank": 2,
+              "name": "⑤スペースセンタークルー",
+              "reserved_rate": 100.0,
+              "reserved_total": 18,
+              "capacity_total": 18,
+              "remaining_total": 0,
+              "sessions": 3
+            },
+            {
+              "rank": 3,
+              "name": "⑧建設エンジニア",
+              "reserved_rate": 100.0,
+              "reserved_total": 12,
+              "capacity_total": 12,
+              "remaining_total": 0,
+              "sessions": 3
+            },
+            {
+              "rank": 4,
+              "name": "⑰助産師",
+              "reserved_rate": 100.0,
+              "reserved_total": 12,
+              "capacity_total": 12,
+              "remaining_total": 0,
+              "sessions": 3
+            },
+            {
+              "rank": 5,
               "name": "㉓eスポーツ体験",
               "reserved_rate": 100.0,
               "reserved_total": 12,
@@ -17377,81 +17404,174 @@
               "sessions": 3
             },
             {
-              "rank": 3,
-              "name": "㉙銀だこ職人",
-              "reserved_rate": 100.0,
-              "reserved_total": 28,
-              "capacity_total": 28,
-              "remaining_total": 0,
-              "sessions": 7
-            },
-            {
-              "rank": 4,
-              "name": "㉚アイスクリームメーカー",
-              "reserved_rate": 100.0,
-              "reserved_total": 54,
-              "capacity_total": 54,
-              "remaining_total": 0,
-              "sessions": 9
-            },
-            {
-              "rank": 5,
-              "name": "㉕おかしクリエイター",
-              "reserved_rate": 92.6,
-              "reserved_total": 50,
-              "capacity_total": 54,
-              "remaining_total": 4,
-              "sessions": 9
-            },
-            {
               "rank": 6,
-              "name": "⑧建設エンジニア",
-              "reserved_rate": 91.7,
-              "reserved_total": 11,
+              "name": "㉖消防士",
+              "reserved_rate": 100.0,
+              "reserved_total": 12,
               "capacity_total": 12,
-              "remaining_total": 1,
+              "remaining_total": 0,
               "sessions": 3
             },
             {
               "rank": 7,
-              "name": "㉒ボートレーサー",
-              "reserved_rate": 91.7,
-              "reserved_total": 33,
-              "capacity_total": 36,
-              "remaining_total": 3,
-              "sessions": 9
+              "name": "㉟銀行員",
+              "reserved_rate": 100.0,
+              "reserved_total": 6,
+              "capacity_total": 6,
+              "remaining_total": 0,
+              "sessions": 3
             },
             {
               "rank": 8,
-              "name": "④キャビンアテンダント",
-              "reserved_rate": 88.9,
+              "name": "⑫ラジオパーソナリティ",
+              "reserved_rate": 100.0,
               "reserved_total": 24,
-              "capacity_total": 27,
-              "remaining_total": 3,
-              "sessions": 9
+              "capacity_total": 24,
+              "remaining_total": 0,
+              "sessions": 4
             },
             {
               "rank": 9,
-              "name": "⑰助産師",
-              "reserved_rate": 83.3,
-              "reserved_total": 10,
-              "capacity_total": 12,
-              "remaining_total": 2,
-              "sessions": 3
+              "name": "⑳シニアケア相談員",
+              "reserved_rate": 100.0,
+              "reserved_total": 16,
+              "capacity_total": 16,
+              "remaining_total": 0,
+              "sessions": 4
             },
             {
               "rank": 10,
-              "name": "⑤スペースセンタークルー",
-              "reserved_rate": 77.8,
-              "reserved_total": 14,
-              "capacity_total": 18,
-              "remaining_total": 4,
-              "sessions": 3
+              "name": "②引越マスター",
+              "reserved_rate": 100.0,
+              "reserved_total": 30,
+              "capacity_total": 30,
+              "remaining_total": 0,
+              "sessions": 6
             }
           ],
           "summary": [
             {
+              "name": "②引越マスター",
+              "capacity": 5,
+              "duration": 45,
+              "sessions": 6,
+              "capacity_total": 30,
+              "reserved_total": 30,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "④キャビンアテンダント",
+              "capacity": 3,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 27,
+              "reserved_total": 27,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "④パイロット",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 54,
+              "reserved_total": 54,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "⑤スペースセンタークルー",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 3,
+              "capacity_total": 18,
+              "reserved_total": 18,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "⑧建設エンジニア",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 3,
+              "capacity_total": 12,
+              "reserved_total": 12,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "⑫ラジオパーソナリティ",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 4,
+              "capacity_total": 24,
+              "reserved_total": 24,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "⑰助産師",
+              "capacity": 4,
+              "duration": 25,
+              "sessions": 3,
+              "capacity_total": 12,
+              "reserved_total": 12,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "⑲月面基地開発プロジェクト",
+              "capacity": 2,
+              "duration": 20,
+              "sessions": 8,
+              "capacity_total": 16,
+              "reserved_total": 16,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "⑳シニアケア相談員",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 4,
+              "capacity_total": 16,
+              "reserved_total": 16,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "㉑科学者",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 6,
+              "capacity_total": 36,
+              "reserved_total": 36,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
               "name": "㉓eスポーツ体験",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 3,
+              "capacity_total": 12,
+              "reserved_total": 12,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "㉕おかしクリエイター",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 54,
+              "reserved_total": 54,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "㉖消防士",
               "capacity": 4,
               "duration": 30,
               "sessions": 3,
@@ -17481,6 +17601,16 @@
               "reserved_rate": 100.0
             },
             {
+              "name": "㉟銀行員",
+              "capacity": 2,
+              "duration": 15,
+              "sessions": 3,
+              "capacity_total": 6,
+              "reserved_total": 6,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
               "name": "㊳ユーチューバー",
               "capacity": 2,
               "duration": 30,
@@ -17491,84 +17621,14 @@
               "reserved_rate": 100.0
             },
             {
-              "name": "㉕おかしクリエイター",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 54,
-              "reserved_total": 50,
-              "remaining_total": 4,
-              "reserved_rate": 92.6
-            },
-            {
-              "name": "⑧建設エンジニア",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 3,
-              "capacity_total": 12,
-              "reserved_total": 11,
-              "remaining_total": 1,
-              "reserved_rate": 91.7
-            },
-            {
               "name": "㉒ボートレーサー",
               "capacity": 4,
               "duration": 30,
               "sessions": 9,
               "capacity_total": 36,
-              "reserved_total": 33,
-              "remaining_total": 3,
-              "reserved_rate": 91.7
-            },
-            {
-              "name": "④キャビンアテンダント",
-              "capacity": 3,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 27,
-              "reserved_total": 24,
-              "remaining_total": 3,
-              "reserved_rate": 88.9
-            },
-            {
-              "name": "⑰助産師",
-              "capacity": 4,
-              "duration": 25,
-              "sessions": 3,
-              "capacity_total": 12,
-              "reserved_total": 10,
-              "remaining_total": 2,
-              "reserved_rate": 83.3
-            },
-            {
-              "name": "⑤スペースセンタークルー",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 3,
-              "capacity_total": 18,
-              "reserved_total": 14,
-              "remaining_total": 4,
-              "reserved_rate": 77.8
-            },
-            {
-              "name": "④パイロット",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 54,
-              "reserved_total": 41,
-              "remaining_total": 13,
-              "reserved_rate": 75.9
-            },
-            {
-              "name": "②引越マスター",
-              "capacity": 5,
-              "duration": 45,
-              "sessions": 6,
-              "capacity_total": 30,
-              "reserved_total": 22,
-              "remaining_total": 8,
-              "reserved_rate": 73.3
+              "reserved_total": 35,
+              "remaining_total": 1,
+              "reserved_rate": 97.2
             },
             {
               "name": "㉜カフェ店長",
@@ -17576,19 +17636,19 @@
               "duration": 30,
               "sessions": 9,
               "capacity_total": 36,
-              "reserved_total": 25,
-              "remaining_total": 11,
-              "reserved_rate": 69.4
+              "reserved_total": 35,
+              "remaining_total": 1,
+              "reserved_rate": 97.2
             },
             {
-              "name": "㉟銀行員",
-              "capacity": 2,
-              "duration": 15,
-              "sessions": 3,
-              "capacity_total": 6,
-              "reserved_total": 4,
+              "name": "⑨警察官",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 54,
+              "reserved_total": 52,
               "remaining_total": 2,
-              "reserved_rate": 66.7
+              "reserved_rate": 96.3
             },
             {
               "name": "㊶モデル",
@@ -17596,9 +17656,79 @@
               "duration": 55,
               "sessions": 5,
               "capacity_total": 30,
-              "reserved_total": 19,
+              "reserved_total": 28,
+              "remaining_total": 2,
+              "reserved_rate": 93.3
+            },
+            {
+              "name": "⑱セキュリティスタッフ 救命",
+              "capacity": 5,
+              "duration": 30,
+              "sessions": 4,
+              "capacity_total": 20,
+              "reserved_total": 17,
+              "remaining_total": 3,
+              "reserved_rate": 85.0
+            },
+            {
+              "name": "㉔モノレール運転士",
+              "capacity": 5,
+              "duration": 25,
+              "sessions": 5,
+              "capacity_total": 25,
+              "reserved_total": 21,
+              "remaining_total": 4,
+              "reserved_rate": 84.0
+            },
+            {
+              "name": "㊴ビスコ研究員",
+              "capacity": 8,
+              "duration": 45,
+              "sessions": 4,
+              "capacity_total": 32,
+              "reserved_total": 24,
+              "remaining_total": 8,
+              "reserved_rate": 75.0
+            },
+            {
+              "name": "⑯お医者さん",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 5,
+              "capacity_total": 20,
+              "reserved_total": 14,
+              "remaining_total": 6,
+              "reserved_rate": 70.0
+            },
+            {
+              "name": "㊵ヘアスタイリスト",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 7,
+              "capacity_total": 42,
+              "reserved_total": 26,
+              "remaining_total": 16,
+              "reserved_rate": 61.9
+            },
+            {
+              "name": "⑩自衛隊員",
+              "capacity": 5,
+              "duration": 30,
+              "sessions": 5,
+              "capacity_total": 25,
+              "reserved_total": 15,
+              "remaining_total": 10,
+              "reserved_rate": 60.0
+            },
+            {
+              "name": "⑱セキュリティスタッフ",
+              "capacity": 5,
+              "duration": 30,
+              "sessions": 5,
+              "capacity_total": 25,
+              "reserved_total": 14,
               "remaining_total": 11,
-              "reserved_rate": 63.3
+              "reserved_rate": 56.0
             },
             {
               "name": "⑪ドライバー/メカニック",
@@ -17621,7 +17751,7 @@
               "reserved_rate": 50.0
             },
             {
-              "name": "⑯お医者さん",
+              "name": "⑥ロードサービス隊員",
               "capacity": 4,
               "duration": 30,
               "sessions": 5,
@@ -17631,44 +17761,14 @@
               "reserved_rate": 50.0
             },
             {
-              "name": "㉔モノレール運転士",
-              "capacity": 5,
-              "duration": 25,
-              "sessions": 5,
-              "capacity_total": 25,
-              "reserved_total": 12,
-              "remaining_total": 13,
-              "reserved_rate": 48.0
-            },
-            {
-              "name": "⑨警察官",
-              "capacity": 6,
+              "name": "㉟投資家",
+              "capacity": 4,
               "duration": 30,
-              "sessions": 9,
-              "capacity_total": 54,
-              "reserved_total": 24,
-              "remaining_total": 30,
-              "reserved_rate": 44.4
-            },
-            {
-              "name": "㊴ビスコ研究員",
-              "capacity": 8,
-              "duration": 45,
-              "sessions": 4,
-              "capacity_total": 32,
-              "reserved_total": 13,
-              "remaining_total": 19,
-              "reserved_rate": 40.6
-            },
-            {
-              "name": "⑩自衛隊員",
-              "capacity": 5,
-              "duration": 30,
-              "sessions": 5,
-              "capacity_total": 25,
-              "reserved_total": 9,
-              "remaining_total": 16,
-              "reserved_rate": 36.0
+              "sessions": 2,
+              "capacity_total": 8,
+              "reserved_total": 3,
+              "remaining_total": 5,
+              "reserved_rate": 37.5
             },
             {
               "name": "⑮弁護士",
@@ -17681,56 +17781,6 @@
               "reserved_rate": 33.3
             },
             {
-              "name": "⑲月面基地開発プロジェクト",
-              "capacity": 2,
-              "duration": 20,
-              "sessions": 8,
-              "capacity_total": 16,
-              "reserved_total": 5,
-              "remaining_total": 11,
-              "reserved_rate": 31.2
-            },
-            {
-              "name": "㉑科学者",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 6,
-              "capacity_total": 36,
-              "reserved_total": 11,
-              "remaining_total": 25,
-              "reserved_rate": 30.6
-            },
-            {
-              "name": "㉟投資家",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 2,
-              "capacity_total": 8,
-              "reserved_total": 2,
-              "remaining_total": 6,
-              "reserved_rate": 25.0
-            },
-            {
-              "name": "⑥ロードサービス隊員",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 5,
-              "capacity_total": 20,
-              "reserved_total": 5,
-              "remaining_total": 15,
-              "reserved_rate": 25.0
-            },
-            {
-              "name": "㊵ヘアスタイリスト",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 7,
-              "capacity_total": 42,
-              "reserved_total": 10,
-              "remaining_total": 32,
-              "reserved_rate": 23.8
-            },
-            {
               "name": "㊲イマーシブファイアファイタ",
               "capacity": 6,
               "duration": 30,
@@ -17741,29 +17791,9 @@
               "reserved_rate": 22.2
             },
             {
-              "name": "⑫ラジオパーソナリティ",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 4,
-              "capacity_total": 24,
-              "reserved_total": 5,
-              "remaining_total": 19,
-              "reserved_rate": 20.8
-            },
-            {
               "name": "⑭ダンサー",
               "capacity": 4,
               "duration": 25,
-              "sessions": 3,
-              "capacity_total": 12,
-              "reserved_total": 2,
-              "remaining_total": 10,
-              "reserved_rate": 16.7
-            },
-            {
-              "name": "㉖消防士",
-              "capacity": 4,
-              "duration": 30,
               "sessions": 3,
               "capacity_total": 12,
               "reserved_total": 2,
@@ -17781,16 +17811,6 @@
               "reserved_rate": 16.7
             },
             {
-              "name": "⑱セキュリティスタッフ 救命",
-              "capacity": 5,
-              "duration": 30,
-              "sessions": 4,
-              "capacity_total": 20,
-              "reserved_total": 2,
-              "remaining_total": 18,
-              "reserved_rate": 10.0
-            },
-            {
               "name": "③カードクター",
               "capacity": 4,
               "duration": 30,
@@ -17799,26 +17819,6 @@
               "reserved_total": 1,
               "remaining_total": 11,
               "reserved_rate": 8.3
-            },
-            {
-              "name": "⑱セキュリティスタッフ",
-              "capacity": 5,
-              "duration": 30,
-              "sessions": 5,
-              "capacity_total": 25,
-              "reserved_total": 2,
-              "remaining_total": 23,
-              "reserved_rate": 8.0
-            },
-            {
-              "name": "⑳シニアケア相談員",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 4,
-              "capacity_total": 16,
-              "reserved_total": 0,
-              "remaining_total": 16,
-              "reserved_rate": 0.0
             }
           ],
           "pivot": {
@@ -17842,11 +17842,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -17857,11 +17857,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -17872,11 +17872,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -17887,11 +17887,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -17902,11 +17902,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -17917,11 +17917,11 @@
                   "15:30": 3,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -17932,11 +17932,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -17947,11 +17947,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -17962,11 +17962,11 @@
                   "15:30": 4,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 3,
+                  "18:00": 3,
+                  "18:30": 3,
+                  "19:00": 3
                 }
               },
               {
@@ -17977,11 +17977,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -17992,11 +17992,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18007,11 +18007,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18022,11 +18022,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18037,11 +18037,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18052,11 +18052,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18067,11 +18067,11 @@
                   "15:30": 3,
                   "16:00": 1,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18082,11 +18082,11 @@
                   "15:30": 3,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18097,11 +18097,11 @@
                   "15:30": 3,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18112,11 +18112,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18127,11 +18127,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18142,11 +18142,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18157,11 +18157,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18172,11 +18172,11 @@
                   "15:30": 2,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18187,11 +18187,11 @@
                   "15:30": 5,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18202,11 +18202,11 @@
                   "15:30": 6,
                   "16:00": 4,
                   "16:30": 1,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18217,11 +18217,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18232,11 +18232,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18247,11 +18247,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18262,11 +18262,11 @@
                   "15:30": 5,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18277,11 +18277,11 @@
                   "15:30": 6,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18292,11 +18292,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -18307,11 +18307,11 @@
                   "15:30": 3,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 3,
+                  "18:00": 3,
+                  "18:30": 3,
+                  "19:00": 3
                 }
               },
               {
@@ -18322,11 +18322,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 3,
+                  "18:00": 3,
+                  "18:30": 3,
+                  "19:00": 3
                 }
               },
               {
@@ -18337,11 +18337,11 @@
                   "15:30": 4,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18352,11 +18352,11 @@
                   "15:30": 4,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18367,11 +18367,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18382,11 +18382,11 @@
                   "15:30": 2,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18397,11 +18397,11 @@
                   "15:30": 4,
                   "16:00": 3,
                   "16:30": 1,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18412,11 +18412,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18427,11 +18427,11 @@
                   "15:30": 1,
                   "16:00": 1,
                   "16:30": 1,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 1,
+                  "17:30": 1,
+                  "18:00": 1,
+                  "18:30": 1,
+                  "19:00": 1
                 }
               },
               {
@@ -18442,11 +18442,11 @@
                   "15:30": 2,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18457,11 +18457,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 1,
+                  "17:30": 1,
+                  "18:00": 1,
+                  "18:30": 1,
+                  "19:00": 1
                 }
               },
               {
@@ -18472,11 +18472,11 @@
                   "15:30": 4,
                   "16:00": 2,
                   "16:30": 1,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18487,11 +18487,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18502,11 +18502,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 1,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18517,11 +18517,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 5,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18532,11 +18532,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 1,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18547,11 +18547,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -18562,11 +18562,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -18577,11 +18577,11 @@
                   "15:30": 4,
                   "16:00": 3,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 2,
+                  "17:30": 2,
+                  "18:00": 2,
+                  "18:30": 2,
+                  "19:00": 2
                 }
               },
               {
@@ -18592,11 +18592,11 @@
                   "15:30": 5,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18607,11 +18607,11 @@
                   "15:30": 5,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18622,11 +18622,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18637,11 +18637,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -18652,11 +18652,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 1,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18667,11 +18667,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 5,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18682,11 +18682,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 5,
+                  "17:30": 1,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18697,11 +18697,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 6,
+                  "17:30": 1,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18712,11 +18712,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -18727,11 +18727,11 @@
                   "15:30": 3,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 3,
+                  "18:00": 3,
+                  "18:30": 3,
+                  "19:00": 3
                 }
               },
               {
@@ -18742,11 +18742,11 @@
                   "15:30": 4,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 3,
+                  "18:00": 3,
+                  "18:30": 3,
+                  "19:00": 3
                 }
               },
               {
@@ -18757,11 +18757,11 @@
                   "15:30": 5,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -18772,11 +18772,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 2,
+                  "17:30": 2,
+                  "18:00": 2,
+                  "18:30": 2,
+                  "19:00": 2
                 }
               },
               {
@@ -18787,11 +18787,11 @@
                   "15:30": 3,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 3,
+                  "18:00": 3,
+                  "18:30": 3,
+                  "19:00": 3
                 }
               },
               {
@@ -18802,11 +18802,11 @@
                   "15:30": 2,
                   "16:00": 1,
                   "16:30": 1,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 1,
+                  "17:30": 1,
+                  "18:00": 1,
+                  "18:30": 1,
+                  "19:00": 1
                 }
               },
               {
@@ -18817,11 +18817,11 @@
                   "15:30": 4,
                   "16:00": 1,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18832,11 +18832,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18847,11 +18847,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18862,11 +18862,11 @@
                   "15:30": 4,
                   "16:00": 2,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18877,11 +18877,11 @@
                   "15:30": 4,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18892,11 +18892,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 5,
+                  "17:30": 5,
+                  "18:00": 5,
+                  "18:30": 5,
+                  "19:00": 5
                 }
               },
               {
@@ -18907,11 +18907,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -18922,11 +18922,11 @@
                   "15:30": 5,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 2,
+                  "17:30": 2,
+                  "18:00": 2,
+                  "18:30": 2,
+                  "19:00": 2
                 }
               },
               {
@@ -18937,11 +18937,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 5,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18952,11 +18952,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 5,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18967,11 +18967,11 @@
                   "15:30": 5,
                   "16:00": 4,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 3,
+                  "18:00": 3,
+                  "18:30": 3,
+                  "19:00": 3
                 }
               },
               {
@@ -18982,11 +18982,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -18997,11 +18997,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19012,11 +19012,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 5,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19027,11 +19027,11 @@
                   "15:30": 1,
                   "16:00": 1,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19042,11 +19042,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19057,11 +19057,11 @@
                   "15:30": 1,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19072,11 +19072,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19087,11 +19087,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19102,11 +19102,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19117,11 +19117,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 1,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19132,11 +19132,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19147,11 +19147,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19162,11 +19162,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 2,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19177,11 +19177,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 1,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19192,11 +19192,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19207,11 +19207,11 @@
                   "15:30": 3,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19222,11 +19222,11 @@
                   "15:30": 6,
                   "16:00": 3,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19237,11 +19237,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19252,11 +19252,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 1,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19267,11 +19267,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 1,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19282,11 +19282,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 6,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19297,11 +19297,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19312,11 +19312,11 @@
                   "15:30": 1,
                   "16:00": 1,
                   "16:30": 1,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 1,
+                  "17:30": 1,
+                  "18:00": 1,
+                  "18:30": 1,
+                  "19:00": 1
                 }
               },
               {
@@ -19327,11 +19327,11 @@
                   "15:30": 2,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19342,11 +19342,11 @@
                   "15:30": 3,
                   "16:00": 1,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19357,11 +19357,11 @@
                   "15:30": 4,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19372,11 +19372,11 @@
                   "15:30": 1,
                   "16:00": 1,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19387,11 +19387,11 @@
                   "15:30": 2,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19402,11 +19402,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19417,11 +19417,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19432,11 +19432,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19447,11 +19447,11 @@
                   "15:30": 3,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19462,11 +19462,11 @@
                   "15:30": 4,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19477,11 +19477,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 2,
+                  "17:30": 2,
+                  "18:00": 2,
+                  "18:30": 2,
+                  "19:00": 2
                 }
               },
               {
@@ -19492,11 +19492,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 2,
+                  "17:30": 2,
+                  "18:00": 2,
+                  "18:30": 2,
+                  "19:00": 2
                 }
               },
               {
@@ -19507,11 +19507,11 @@
                   "15:30": 5,
                   "16:00": 2,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19522,11 +19522,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19537,11 +19537,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19552,11 +19552,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19567,11 +19567,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19582,11 +19582,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19597,11 +19597,11 @@
                   "15:30": 1,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19612,11 +19612,11 @@
                   "15:30": 6,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19627,11 +19627,11 @@
                   "15:30": 6,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19642,11 +19642,11 @@
                   "15:30": 6,
                   "16:00": 2,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19657,11 +19657,11 @@
                   "15:30": 6,
                   "16:00": 2,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19672,11 +19672,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19687,11 +19687,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19702,11 +19702,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 2,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19717,11 +19717,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19732,11 +19732,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 6,
+                  "17:30": 6,
+                  "18:00": 6,
+                  "18:30": 6,
+                  "19:00": 6
                 }
               },
               {
@@ -19747,11 +19747,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -19762,11 +19762,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19777,11 +19777,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19792,11 +19792,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19807,11 +19807,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19822,11 +19822,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19837,11 +19837,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19852,11 +19852,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19867,11 +19867,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19882,11 +19882,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19897,11 +19897,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19912,11 +19912,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19927,11 +19927,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19942,11 +19942,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19957,11 +19957,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19972,11 +19972,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -19987,11 +19987,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20002,11 +20002,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -20017,11 +20017,11 @@
                   "15:30": 3,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20032,11 +20032,11 @@
                   "15:30": 1,
                   "16:00": 1,
                   "16:30": 1,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 1,
+                  "17:30": 1,
+                  "18:00": 1,
+                  "18:30": 1,
+                  "19:00": 1
                 }
               },
               {
@@ -20047,11 +20047,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20062,11 +20062,11 @@
                   "15:30": 1,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20077,11 +20077,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20092,11 +20092,11 @@
                   "15:30": 2,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20107,11 +20107,11 @@
                   "15:30": 4,
                   "16:00": 2,
                   "16:30": 1,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20122,11 +20122,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20137,11 +20137,11 @@
                   "15:30": 4,
                   "16:00": 3,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20152,11 +20152,11 @@
                   "15:30": 4,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20167,11 +20167,11 @@
                   "15:30": 3,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 3,
+                  "18:00": 3,
+                  "18:30": 3,
+                  "19:00": 3
                 }
               },
               {
@@ -20182,11 +20182,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 2,
+                  "17:30": 2,
+                  "18:00": 2,
+                  "18:30": 2,
+                  "19:00": 2
                 }
               },
               {
@@ -20197,11 +20197,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20212,11 +20212,11 @@
                   "15:30": 2,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20227,11 +20227,11 @@
                   "15:30": 2,
                   "16:00": 2,
                   "16:30": 2,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20242,11 +20242,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 6,
+                  "17:30": 6,
+                  "18:00": 6,
+                  "18:30": 6,
+                  "19:00": 6
                 }
               },
               {
@@ -20257,11 +20257,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -20272,11 +20272,11 @@
                   "15:30": 6,
                   "16:00": 5,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -20287,11 +20287,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20302,11 +20302,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20317,11 +20317,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 5,
+                  "17:30": 5,
+                  "18:00": 5,
+                  "18:30": 5,
+                  "19:00": 5
                 }
               },
               {
@@ -20332,11 +20332,11 @@
                   "15:30": 5,
                   "16:00": 3,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 3,
+                  "18:00": 3,
+                  "18:30": 3,
+                  "19:00": 3
                 }
               },
               {
@@ -20347,11 +20347,11 @@
                   "15:30": 8,
                   "16:00": 6,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20362,11 +20362,11 @@
                   "15:30": 8,
                   "16:00": 8,
                   "16:30": 7,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20377,11 +20377,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 5,
+                  "17:30": 5,
+                  "18:00": 5,
+                  "18:30": 5,
+                  "19:00": 5
                 }
               },
               {
@@ -20392,11 +20392,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -20407,11 +20407,11 @@
                   "15:30": 4,
                   "16:00": 4,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 3,
+                  "17:30": 3,
+                  "18:00": 3,
+                  "18:30": 3,
+                  "19:00": 3
                 }
               },
               {
@@ -20422,11 +20422,11 @@
                   "15:30": 6,
                   "16:00": 5,
                   "16:30": 5,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 4,
+                  "18:00": 4,
+                  "18:30": 4,
+                  "19:00": 4
                 }
               },
               {
@@ -20437,11 +20437,11 @@
                   "15:30": 6,
                   "16:00": 4,
                   "16:30": 3,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20452,11 +20452,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20467,11 +20467,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 2,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20482,11 +20482,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20497,11 +20497,11 @@
                   "15:30": 0,
                   "16:00": 0,
                   "16:30": 0,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 0,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20512,11 +20512,11 @@
                   "15:30": 4,
                   "16:00": 1,
                   "16:30": 1,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 1,
+                  "17:30": 0,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               },
               {
@@ -20527,11 +20527,11 @@
                   "15:30": 5,
                   "16:00": 5,
                   "16:30": 4,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 2,
+                  "18:00": 2,
+                  "18:30": 2,
+                  "19:00": 2
                 }
               },
               {
@@ -20542,11 +20542,11 @@
                   "15:30": 6,
                   "16:00": 6,
                   "16:30": 6,
-                  "17:00": "",
-                  "17:30": "",
-                  "18:00": "",
-                  "18:30": "",
-                  "19:00": ""
+                  "17:00": 4,
+                  "17:30": 1,
+                  "18:00": 0,
+                  "18:30": 0,
+                  "19:00": 0
                 }
               }
             ]
