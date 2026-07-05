@@ -101,9 +101,9 @@ function formatDateJa(dateKey) {
 }
 
 function timeToMinutes(time) {
-  if (!time || !time.includes(":")) return null;
-  const [h, m] = time.split(":").map(Number);
-  return h * 60 + m;
+  const match = String(time).match(/(\d{1,2}):(\d{2})/);
+  if (!match) return null;
+  return Number(match[1]) * 60 + Number(match[2]);
 }
 
 function cleanJobName(name) {
@@ -150,25 +150,55 @@ function getDayData(dateKey) {
   return getDateStore()?.[dateKey] || null;
 }
 
-function convertDayDataToPivot(dayData) {
+function convertDayDataToPivot(dayData, partKey) {
   if (!dayData || !dayData.jobs) return null;
+
+  const isPart2 = partKey === "part2";
+
+  const times = (dayData.fetch_times || []).filter(time => {
+    const m = timeToMinutes(time);
+    if (m === null) return false;
+    return isPart2 ? m >= 15 * 60 : m < 15 * 60;
+  });
 
   const rows = [];
 
   dayData.jobs.forEach(jobData => {
     jobData.rows.forEach(row => {
+      const startMin = timeToMinutes(row.start);
+      if (startMin === null) return;
+
+      const rowIsPart2 = startMin >= 15 * 60;
+
+      if (rowIsPart2 !== isPart2) return;
+
+      const values = {};
+
+      times.forEach(time => {
+        if (row.values && Object.prototype.hasOwnProperty.call(row.values, time)) {
+          values[time] = row.values[time];
+        }
+      });
+
       rows.push({
-        job: cleanJobName(jobData.job),
+        job: cleanJobName(jobData.job || row.job),
         start: row.start,
         end: row.end,
         capacity: row.capacity,
-        values: row.values
+        values: values
       });
     });
   });
 
+  rows.sort((a, b) => {
+    if (a.job === b.job) {
+      return timeToMinutes(a.start) - timeToMinutes(b.start);
+    }
+    return a.job.localeCompare(b.job, "ja");
+  });
+
   return {
-    times: dayData.fetch_times || [],
+    times: times,
     rows: rows
   };
 }
@@ -181,13 +211,28 @@ function getParts(dateKey) {
     return dayData.parts;
   }
 
-  return {
-    part1: {
+  const parts = {};
+
+  const part1Pivot = convertDayDataToPivot(dayData, "part1");
+  const part2Pivot = convertDayDataToPivot(dayData, "part2");
+
+  if (part1Pivot && part1Pivot.rows.length > 0) {
+    parts.part1 = {
       label: "1部",
       updated_at: siteData.updated_at || dayData.updated_at || "",
-      pivot: convertDayDataToPivot(dayData)
-    }
-  };
+      pivot: part1Pivot
+    };
+  }
+
+  if (part2Pivot && part2Pivot.rows.length > 0) {
+    parts.part2 = {
+      label: "2部",
+      updated_at: siteData.updated_at || dayData.updated_at || "",
+      pivot: part2Pivot
+    };
+  }
+
+  return parts;
 }
 
 function getAvailablePartKeys(dateKey) {
@@ -253,7 +298,10 @@ function renderCalendar() {
 
       btn.addEventListener("click", () => {
         selectedDateKey = key;
-        selectedPartKey = "part1";
+
+        const parts = getAvailablePartKeys(key);
+        selectedPartKey = parts.includes("part1") ? "part1" : parts[0];
+
         renderDate(key);
         renderCalendar();
       });
@@ -284,13 +332,15 @@ function renderDate(dateKey) {
   const availableParts = getAvailablePartKeys(dateKey);
 
   if (!availableParts.includes(selectedPartKey)) {
-    selectedPartKey = availableParts[0] || "";
+    selectedPartKey = availableParts.includes("part1") ? "part1" : availableParts[0] || "";
   }
 
   const partData = getParts(dateKey)[selectedPartKey];
 
   document.getElementById("updatedAt").textContent =
-    partData ? `最終更新：${partData.updated_at || dayData.updated_at || siteData.updated_at || ""}（${partData.label}）` : `最終更新：${dayData.updated_at || siteData.updated_at || ""}`;
+    partData
+      ? `最終更新：${partData.updated_at || dayData.updated_at || siteData.updated_at || ""}（${partData.label}）`
+      : `最終更新：${dayData.updated_at || siteData.updated_at || ""}`;
 
   renderTabs(dateKey);
   renderPivot(normalizePivot(partData));
