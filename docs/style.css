@@ -648,7 +648,7 @@ body {
     color: #111827;
   }
 
-  .mobile-mini-table {
+   .mobile-mini-table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
@@ -667,23 +667,27 @@ body {
   }
 
   .mobile-mini-table thead th {
+    width: 28px;
+    height: 58px;
+    padding: 2px 0;
     background: #fff8ef;
     font-size: 9px;
     font-weight: 900;
-    height: 48px;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    white-space: nowrap;
   }
 
   .mobile-mini-table thead th:first-child {
-    width: 42px;
+    width: 44px;
     writing-mode: horizontal-tb;
     text-orientation: initial;
   }
 
   .mobile-start-cell {
-    width: 42px;
+    width: 44px;
     background: #fff8ef;
     font-size: 10px;
     font-weight: 900;
@@ -691,6 +695,7 @@ body {
   }
 
   .mobile-mini-table td {
+    width: 28px;
     font-size: 11px;
     font-weight: 850;
   }
@@ -706,5 +711,4 @@ body {
   .mobile-mini-table td.after {
     background: #d9d9d9;
     color: #666;
-  }
-}
+  } } 
