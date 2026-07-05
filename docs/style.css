@@ -675,68 +675,46 @@ body {
     color: #111827;
   }
 
-  .mobile-slot-row {
-    padding: 12px 0;
-    border-bottom: 1px solid #f4dec8;
-  }
-
-  .mobile-slot-row:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .mobile-start {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 70px;
-    height: 28px;
-    margin-bottom: 8px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #ff7aa2, #ffbd67);
-    color: #fff;
-    font-weight: 900;
-    font-size: 13px;
-  }
-
-  .mobile-chips {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 6px;
-  }
-
-  .mobile-chip {
-    border: 1px solid #f0d4b8;
-    border-radius: 9px;
-    padding: 6px 4px;
-    text-align: center;
-    font-size: 11px;
-    line-height: 1.2;
+  .mobile-pivot-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
     background: #fff;
+    font-size: 10.5px;
   }
 
-  .mobile-chip b {
-    display: block;
-    margin-bottom: 3px;
-    font-size: 10px;
+  .mobile-pivot-table th,
+  .mobile-pivot-table td {
+    border: 1px solid #f0d4b8;
+    height: 28px;
+    padding: 4px 1px;
+    text-align: center;
+    vertical-align: middle;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .mobile-pivot-table thead th {
+    background: #fff8ef;
+    font-weight: 900;
+    font-size: 9.5px;
+  }
+
+  .mobile-pivot-table thead th:first-child,
+  .mobile-start-cell {
+    width: 43px;
+    background: #fff8ef;
     font-weight: 900;
   }
 
-  .mobile-chip em {
-    font-style: normal;
-    font-weight: 900;
-    font-size: 13px;
-  }
-
-  .mobile-chip.before {
+  .mobile-pivot-table td.before {
     background: #fff4c7;
   }
 
-  .mobile-chip.during {
+  .mobile-pivot-table td.during {
     background: #e7f3ff;
   }
 
-  .mobile-chip.after {
+  .mobile-pivot-table td.after {
     background: #d9d9d9;
     color: #666;
   }
