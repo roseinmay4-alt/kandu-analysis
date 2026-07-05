@@ -75,6 +75,7 @@
         <div class="pivot-wrap">
           <table id="pivotTable"></table>
         </div>
+
         <div id="mobileCards" class="mobile-cards"></div>
       </section>
     </main>
@@ -105,6 +106,15 @@ function timeToMinutes(time) {
   return h * 60 + m;
 }
 
+function cleanJobName(name) {
+  return String(name)
+    .replace(/\[([^=\]]+)=([^\]]+)\]/g, "$1")
+    .replace(/\[/g, "")
+    .replace(/\]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 async function loadData() {
   const res = await fetch("data.json?ts=" + Date.now());
   siteData = await res.json();
@@ -129,7 +139,7 @@ async function loadData() {
 }
 
 function getDateStore() {
-  return siteData.dates || siteData.days || {};
+  return siteData.dates || {};
 }
 
 function getDateKeys() {
@@ -142,45 +152,24 @@ function getDayData(dateKey) {
 
 function getParts(dateKey) {
   const dayData = getDayData(dateKey);
-  if (!dayData) return {};
-
-  if (dayData.parts) {
-    return dayData.parts;
-  }
-
-  return {
-    part1: {
-      label: "1部",
-      updated_at: siteData.updated_at || dayData.updated_at || "",
-      pivot: convertDayDataToPivot(dayData)
-    }
-  };
+  if (!dayData || !dayData.parts) return {};
+  return dayData.parts;
 }
 
 function getAvailablePartKeys(dateKey) {
   return Object.keys(getParts(dateKey));
 }
 
-function convertDayDataToPivot(dayData) {
-  if (!dayData || !dayData.jobs) return null;
+function normalizePivot(partData) {
+  if (!partData) return null;
 
-  const rows = [];
-
-  dayData.jobs.forEach(jobData => {
-    jobData.rows.forEach(row => {
-      rows.push({
-        job: jobData.job,
-        start: row.start,
-        end: row.end,
-        capacity: row.capacity,
-        values: row.values
-      });
-    });
-  });
+  if (partData.pivot) {
+    return partData.pivot;
+  }
 
   return {
-    times: dayData.fetch_times || [],
-    rows: rows
+    times: partData.times || [],
+    rows: partData.rows || []
   };
 }
 
@@ -267,10 +256,10 @@ function renderDate(dateKey) {
   const partData = getParts(dateKey)[selectedPartKey];
 
   document.getElementById("updatedAt").textContent =
-    partData ? `最終更新：${partData.updated_at || siteData.updated_at || ""}（${partData.label}）` : `最終更新：${dayData.updated_at || siteData.updated_at || ""}`;
+    partData ? `最終更新：${partData.updated_at || dayData.updated_at || ""}（${partData.label}）` : `最終更新：${dayData.updated_at || ""}`;
 
   renderTabs(dateKey);
-  renderPivot(partData?.pivot || null);
+  renderPivot(normalizePivot(partData));
 }
 
 function renderTabs(dateKey) {
@@ -282,7 +271,7 @@ function renderTabs(dateKey) {
   Object.entries(parts).forEach(([partKey, partData]) => {
     const btn = document.createElement("button");
     btn.className = "part-tab";
-    btn.textContent = partData.label;
+    btn.textContent = partData.label || partKey;
     btn.dataset.part = partKey;
 
     if (partKey === selectedPartKey) {
@@ -306,41 +295,19 @@ function renderRanking() {
 
   const weeklyRanking = siteData.weekly_ranking || [];
 
-  if (weeklyRanking.length > 0) {
-    sub.textContent = "直近7日間の人気順";
-
-    weeklyRanking.forEach(item => {
-      const li = document.createElement("li");
-
-      li.innerHTML = `
-        <span class="rank-num">${item.rank}</span>
-        <strong>${item.job}</strong>
-      `;
-
-      rankingEl.appendChild(li);
-    });
-
-    return;
-  }
-
-  const dates = getDateKeys();
-  const latestDate = dates[dates.length - 1];
-  const latestParts = getParts(latestDate);
-  const firstPart = Object.values(latestParts)[0];
-
-  if (!firstPart || !firstPart.ranking || firstPart.ranking.length === 0) {
+  if (weeklyRanking.length === 0) {
     sub.textContent = "ランキングデータなし";
     return;
   }
 
-  sub.textContent = "人気順";
+  sub.textContent = "直近7日間の人気順";
 
-  firstPart.ranking.forEach((item, index) => {
+  weeklyRanking.forEach(item => {
     const li = document.createElement("li");
 
     li.innerHTML = `
-      <span class="rank-num">${index + 1}</span>
-      <strong>${item.name || item.job}</strong>
+      <span class="rank-num">${item.rank}</span>
+      <strong>${cleanJobName(item.job)}</strong>
     `;
 
     rankingEl.appendChild(li);
@@ -383,21 +350,23 @@ function renderPcTable(pivot) {
 
   const jobRowCount = {};
   pivot.rows.forEach(row => {
-    jobRowCount[row.job] = (jobRowCount[row.job] || 0) + 1;
+    const jobName = cleanJobName(row.job);
+    jobRowCount[jobName] = (jobRowCount[jobName] || 0) + 1;
   });
 
   let prevJob = "";
 
   pivot.rows.forEach(row => {
     const tr = document.createElement("tr");
+    const jobName = cleanJobName(row.job);
 
-    if (row.job !== prevJob) {
+    if (jobName !== prevJob) {
       const tdJob = document.createElement("td");
-      tdJob.textContent = row.job;
-      tdJob.rowSpan = jobRowCount[row.job];
+      tdJob.textContent = jobName;
+      tdJob.rowSpan = jobRowCount[jobName];
       tdJob.className = "job-cell";
       tr.appendChild(tdJob);
-      prevJob = row.job;
+      prevJob = jobName;
     }
 
     const tdStart = document.createElement("td");
@@ -440,10 +409,13 @@ function renderMobileCards(pivot) {
   const jobs = {};
 
   pivot.rows.forEach(row => {
-    if (!jobs[row.job]) {
-      jobs[row.job] = [];
+    const jobName = cleanJobName(row.job);
+
+    if (!jobs[jobName]) {
+      jobs[jobName] = [];
     }
-    jobs[row.job].push(row);
+
+    jobs[jobName].push(row);
   });
 
   Object.entries(jobs).forEach(([job, rows]) => {
