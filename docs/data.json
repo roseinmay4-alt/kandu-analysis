@@ -13352,11 +13352,11 @@
       }
     },
     "2026-07-05": {
-      "updated_at": "2026/07/05 09:02",
+      "updated_at": "2026/07/05 09:53",
       "parts": {
         "part1": {
           "label": "1部",
-          "updated_at": "2026/07/05 09:02",
+          "updated_at": "2026/07/05 09:53",
           "times": [
             "09:00",
             "09:30",
@@ -13371,15 +13371,78 @@
           "ranking": [
             {
               "rank": 1,
-              "name": "⑩自衛隊員",
-              "reserved_rate": 53.3,
+              "name": "㊶モデル",
+              "reserved_rate": 100.0,
               "reserved_total": 24,
-              "capacity_total": 45,
-              "remaining_total": 21,
-              "sessions": 9
+              "capacity_total": 24,
+              "remaining_total": 0,
+              "sessions": 4
             },
             {
               "rank": 2,
+              "name": "㉚アイスクリームメーカー",
+              "reserved_rate": 93.8,
+              "reserved_total": 45,
+              "capacity_total": 48,
+              "remaining_total": 3,
+              "sessions": 8
+            },
+            {
+              "rank": 3,
+              "name": "㉙銀だこ職人",
+              "reserved_rate": 79.2,
+              "reserved_total": 19,
+              "capacity_total": 24,
+              "remaining_total": 5,
+              "sessions": 6
+            },
+            {
+              "rank": 4,
+              "name": "㉟投資家",
+              "reserved_rate": 75.0,
+              "reserved_total": 12,
+              "capacity_total": 16,
+              "remaining_total": 4,
+              "sessions": 4
+            },
+            {
+              "rank": 5,
+              "name": "⑲月面基地開発プロジェクト",
+              "reserved_rate": 61.5,
+              "reserved_total": 16,
+              "capacity_total": 26,
+              "remaining_total": 10,
+              "sessions": 13
+            },
+            {
+              "rank": 6,
+              "name": "㉕おかしクリエイター",
+              "reserved_rate": 60.4,
+              "reserved_total": 29,
+              "capacity_total": 48,
+              "remaining_total": 19,
+              "sessions": 8
+            },
+            {
+              "rank": 7,
+              "name": "⑩自衛隊員",
+              "reserved_rate": 57.8,
+              "reserved_total": 26,
+              "capacity_total": 45,
+              "remaining_total": 19,
+              "sessions": 9
+            },
+            {
+              "rank": 8,
+              "name": "㉟銀行員",
+              "reserved_rate": 50.0,
+              "reserved_total": 4,
+              "capacity_total": 8,
+              "remaining_total": 4,
+              "sessions": 4
+            },
+            {
+              "rank": 9,
               "name": "②引越マスター",
               "reserved_rate": 50.0,
               "reserved_total": 15,
@@ -13388,88 +13451,95 @@
               "sessions": 6
             },
             {
-              "rank": 3,
-              "name": "⑮弁護士",
-              "reserved_rate": 0.0,
-              "reserved_total": 0,
-              "capacity_total": 6,
-              "remaining_total": 6,
-              "sessions": 1
-            },
-            {
-              "rank": 4,
-              "name": "㉟銀行員",
-              "reserved_rate": 0.0,
-              "reserved_total": 0,
-              "capacity_total": 8,
-              "remaining_total": 8,
-              "sessions": 4
-            },
-            {
-              "rank": 5,
-              "name": "㊳ユーチューバー",
-              "reserved_rate": 0.0,
-              "reserved_total": 0,
-              "capacity_total": 8,
-              "remaining_total": 8,
-              "sessions": 4
-            },
-            {
-              "rank": 6,
-              "name": "⑭ダンサー",
-              "reserved_rate": 0.0,
-              "reserved_total": 0,
-              "capacity_total": 12,
-              "remaining_total": 12,
-              "sessions": 3
-            },
-            {
-              "rank": 7,
-              "name": "㉛植物工場スタッフ",
-              "reserved_rate": 0.0,
-              "reserved_total": 0,
-              "capacity_total": 12,
-              "remaining_total": 12,
-              "sessions": 3
-            },
-            {
-              "rank": 8,
-              "name": "⑰助産師",
-              "reserved_rate": 0.0,
-              "reserved_total": 0,
-              "capacity_total": 16,
-              "remaining_total": 16,
-              "sessions": 4
-            },
-            {
-              "rank": 9,
-              "name": "㉖消防士",
-              "reserved_rate": 0.0,
-              "reserved_total": 0,
-              "capacity_total": 16,
-              "remaining_total": 16,
-              "sessions": 4
-            },
-            {
               "rank": 10,
-              "name": "㉟投資家",
-              "reserved_rate": 0.0,
-              "reserved_total": 0,
-              "capacity_total": 16,
-              "remaining_total": 16,
-              "sessions": 4
+              "name": "㊲イマーシブファイアファイタ",
+              "reserved_rate": 40.0,
+              "reserved_total": 12,
+              "capacity_total": 30,
+              "remaining_total": 18,
+              "sessions": 5
             }
           ],
           "summary": [
+            {
+              "name": "㊶モデル",
+              "capacity": 6,
+              "duration": 55,
+              "sessions": 4,
+              "capacity_total": 24,
+              "reserved_total": 24,
+              "remaining_total": 0,
+              "reserved_rate": 100.0
+            },
+            {
+              "name": "㉚アイスクリームメーカー",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 8,
+              "capacity_total": 48,
+              "reserved_total": 45,
+              "remaining_total": 3,
+              "reserved_rate": 93.8
+            },
+            {
+              "name": "㉙銀だこ職人",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 6,
+              "capacity_total": 24,
+              "reserved_total": 19,
+              "remaining_total": 5,
+              "reserved_rate": 79.2
+            },
+            {
+              "name": "㉟投資家",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 4,
+              "capacity_total": 16,
+              "reserved_total": 12,
+              "remaining_total": 4,
+              "reserved_rate": 75.0
+            },
+            {
+              "name": "⑲月面基地開発プロジェクト",
+              "capacity": 2,
+              "duration": 20,
+              "sessions": 13,
+              "capacity_total": 26,
+              "reserved_total": 16,
+              "remaining_total": 10,
+              "reserved_rate": 61.5
+            },
+            {
+              "name": "㉕おかしクリエイター",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 8,
+              "capacity_total": 48,
+              "reserved_total": 29,
+              "remaining_total": 19,
+              "reserved_rate": 60.4
+            },
             {
               "name": "⑩自衛隊員",
               "capacity": 5,
               "duration": 30,
               "sessions": 9,
               "capacity_total": 45,
-              "reserved_total": 24,
-              "remaining_total": 21,
-              "reserved_rate": 53.3
+              "reserved_total": 26,
+              "remaining_total": 19,
+              "reserved_rate": 57.8
+            },
+            {
+              "name": "㉟銀行員",
+              "capacity": 2,
+              "duration": 15,
+              "sessions": 4,
+              "capacity_total": 8,
+              "reserved_total": 4,
+              "remaining_total": 4,
+              "reserved_rate": 50.0
             },
             {
               "name": "②引越マスター",
@@ -13482,24 +13552,164 @@
               "reserved_rate": 50.0
             },
             {
+              "name": "㊲イマーシブファイアファイタ",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 5,
+              "capacity_total": 30,
+              "reserved_total": 12,
+              "remaining_total": 18,
+              "reserved_rate": 40.0
+            },
+            {
+              "name": "⑯お医者さん",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 36,
+              "reserved_total": 13,
+              "remaining_total": 23,
+              "reserved_rate": 36.1
+            },
+            {
+              "name": "㉘ピックアップクルー",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 8,
+              "capacity_total": 48,
+              "reserved_total": 13,
+              "remaining_total": 35,
+              "reserved_rate": 27.1
+            },
+            {
+              "name": "④キャビンアテンダント",
+              "capacity": 3,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 27,
+              "reserved_total": 7,
+              "remaining_total": 20,
+              "reserved_rate": 25.9
+            },
+            {
+              "name": "㊵ヘアスタイリスト",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 54,
+              "reserved_total": 14,
+              "remaining_total": 40,
+              "reserved_rate": 25.9
+            },
+            {
+              "name": "⑤スペースセンタークルー",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 4,
+              "capacity_total": 24,
+              "reserved_total": 6,
+              "remaining_total": 18,
+              "reserved_rate": 25.0
+            },
+            {
+              "name": "㉜カフェ店長",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 8,
+              "capacity_total": 32,
+              "reserved_total": 8,
+              "remaining_total": 24,
+              "reserved_rate": 25.0
+            },
+            {
               "name": "⑮弁護士",
               "capacity": 6,
               "duration": 45,
               "sessions": 1,
               "capacity_total": 6,
-              "reserved_total": 0,
-              "remaining_total": 6,
-              "reserved_rate": 0.0
+              "reserved_total": 1,
+              "remaining_total": 5,
+              "reserved_rate": 16.7
             },
             {
-              "name": "㉟銀行員",
-              "capacity": 2,
-              "duration": 15,
+              "name": "④パイロット",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 54,
+              "reserved_total": 9,
+              "remaining_total": 45,
+              "reserved_rate": 16.7
+            },
+            {
+              "name": "⑰助産師",
+              "capacity": 4,
+              "duration": 25,
               "sessions": 4,
-              "capacity_total": 8,
-              "reserved_total": 0,
-              "remaining_total": 8,
-              "reserved_rate": 0.0
+              "capacity_total": 16,
+              "reserved_total": 2,
+              "remaining_total": 14,
+              "reserved_rate": 12.5
+            },
+            {
+              "name": "⑭ダンサー",
+              "capacity": 4,
+              "duration": 25,
+              "sessions": 3,
+              "capacity_total": 12,
+              "reserved_total": 1,
+              "remaining_total": 11,
+              "reserved_rate": 8.3
+            },
+            {
+              "name": "⑨警察官",
+              "capacity": 6,
+              "duration": 30,
+              "sessions": 8,
+              "capacity_total": 48,
+              "reserved_total": 4,
+              "remaining_total": 44,
+              "reserved_rate": 8.3
+            },
+            {
+              "name": "㉓eスポーツ体験",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 7,
+              "capacity_total": 28,
+              "reserved_total": 2,
+              "remaining_total": 26,
+              "reserved_rate": 7.1
+            },
+            {
+              "name": "⑥ロードサービス隊員",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 8,
+              "capacity_total": 32,
+              "reserved_total": 2,
+              "remaining_total": 30,
+              "reserved_rate": 6.2
+            },
+            {
+              "name": "㉒ボートレーサー",
+              "capacity": 4,
+              "duration": 30,
+              "sessions": 9,
+              "capacity_total": 36,
+              "reserved_total": 1,
+              "remaining_total": 35,
+              "reserved_rate": 2.8
+            },
+            {
+              "name": "㉔モノレール運転士",
+              "capacity": 5,
+              "duration": 25,
+              "sessions": 8,
+              "capacity_total": 40,
+              "reserved_total": 1,
+              "remaining_total": 39,
+              "reserved_rate": 2.5
             },
             {
               "name": "㊳ユーチューバー",
@@ -13509,16 +13719,6 @@
               "capacity_total": 8,
               "reserved_total": 0,
               "remaining_total": 8,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "⑭ダンサー",
-              "capacity": 4,
-              "duration": 25,
-              "sessions": 3,
-              "capacity_total": 12,
-              "reserved_total": 0,
-              "remaining_total": 12,
               "reserved_rate": 0.0
             },
             {
@@ -13532,27 +13732,7 @@
               "reserved_rate": 0.0
             },
             {
-              "name": "⑰助産師",
-              "capacity": 4,
-              "duration": 25,
-              "sessions": 4,
-              "capacity_total": 16,
-              "reserved_total": 0,
-              "remaining_total": 16,
-              "reserved_rate": 0.0
-            },
-            {
               "name": "㉖消防士",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 4,
-              "capacity_total": 16,
-              "reserved_total": 0,
-              "remaining_total": 16,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "㉟投資家",
               "capacity": 4,
               "duration": 30,
               "sessions": 4,
@@ -13582,16 +13762,6 @@
               "reserved_rate": 0.0
             },
             {
-              "name": "⑤スペースセンタークルー",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 4,
-              "capacity_total": 24,
-              "reserved_total": 0,
-              "remaining_total": 24,
-              "reserved_rate": 0.0
-            },
-            {
               "name": "⑳シニアケア相談員",
               "capacity": 4,
               "duration": 30,
@@ -13612,26 +13782,6 @@
               "reserved_rate": 0.0
             },
             {
-              "name": "㉙銀だこ職人",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 6,
-              "capacity_total": 24,
-              "reserved_total": 0,
-              "remaining_total": 24,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "㊶モデル",
-              "capacity": 6,
-              "duration": 55,
-              "sessions": 4,
-              "capacity_total": 24,
-              "reserved_total": 0,
-              "remaining_total": 24,
-              "reserved_rate": 0.0
-            },
-            {
               "name": "⑱セキュリティスタッフ",
               "capacity": 5,
               "duration": 30,
@@ -13639,26 +13789,6 @@
               "capacity_total": 25,
               "reserved_total": 0,
               "remaining_total": 25,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "⑲月面基地開発プロジェクト",
-              "capacity": 2,
-              "duration": 20,
-              "sessions": 13,
-              "capacity_total": 26,
-              "reserved_total": 0,
-              "remaining_total": 26,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "④キャビンアテンダント",
-              "capacity": 3,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 27,
-              "reserved_total": 0,
-              "remaining_total": 27,
               "reserved_rate": 0.0
             },
             {
@@ -13682,76 +13812,6 @@
               "reserved_rate": 0.0
             },
             {
-              "name": "㉓eスポーツ体験",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 7,
-              "capacity_total": 28,
-              "reserved_total": 0,
-              "remaining_total": 28,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "㊲イマーシブファイアファイタ",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 5,
-              "capacity_total": 30,
-              "reserved_total": 0,
-              "remaining_total": 30,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "⑥ロードサービス隊員",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 8,
-              "capacity_total": 32,
-              "reserved_total": 0,
-              "remaining_total": 32,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "㉜カフェ店長",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 8,
-              "capacity_total": 32,
-              "reserved_total": 0,
-              "remaining_total": 32,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "⑯お医者さん",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 36,
-              "reserved_total": 0,
-              "remaining_total": 36,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "㉒ボートレーサー",
-              "capacity": 4,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 36,
-              "reserved_total": 0,
-              "remaining_total": 36,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "㉔モノレール運転士",
-              "capacity": 5,
-              "duration": 25,
-              "sessions": 8,
-              "capacity_total": 40,
-              "reserved_total": 0,
-              "remaining_total": 40,
-              "reserved_rate": 0.0
-            },
-            {
               "name": "⑫ラジオパーソナリティ",
               "capacity": 6,
               "duration": 30,
@@ -13762,46 +13822,6 @@
               "reserved_rate": 0.0
             },
             {
-              "name": "⑨警察官",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 8,
-              "capacity_total": 48,
-              "reserved_total": 0,
-              "remaining_total": 48,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "㉕おかしクリエイター",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 8,
-              "capacity_total": 48,
-              "reserved_total": 0,
-              "remaining_total": 48,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "㉘ピックアップクルー",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 8,
-              "capacity_total": 48,
-              "reserved_total": 0,
-              "remaining_total": 48,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "㉚アイスクリームメーカー",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 8,
-              "capacity_total": 48,
-              "reserved_total": 0,
-              "remaining_total": 48,
-              "reserved_rate": 0.0
-            },
-            {
               "name": "㊴ビスコ研究員",
               "capacity": 8,
               "duration": 45,
@@ -13809,26 +13829,6 @@
               "capacity_total": 48,
               "reserved_total": 0,
               "remaining_total": 48,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "④パイロット",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 54,
-              "reserved_total": 0,
-              "remaining_total": 54,
-              "reserved_rate": 0.0
-            },
-            {
-              "name": "㊵ヘアスタイリスト",
-              "capacity": 6,
-              "duration": 30,
-              "sessions": 9,
-              "capacity_total": 54,
-              "reserved_total": 0,
-              "remaining_total": 54,
               "reserved_rate": 0.0
             }
           ],
@@ -13850,7 +13850,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -13865,7 +13865,7 @@
                 "start": "10:45",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -13880,7 +13880,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -13895,7 +13895,7 @@
                 "start": "12:15",
                 "values": {
                   "09:00": 0,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -13910,7 +13910,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 0,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -13925,7 +13925,7 @@
                 "start": "13:45",
                 "values": {
                   "09:00": 0,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -13940,7 +13940,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -13955,7 +13955,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -13970,7 +13970,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -13985,7 +13985,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14000,7 +14000,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14015,7 +14015,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 3,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14030,7 +14030,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 3,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14045,7 +14045,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 3,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14060,7 +14060,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 3,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14075,7 +14075,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 3,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14090,7 +14090,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 3,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14105,7 +14105,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 3,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14120,7 +14120,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 3,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14135,7 +14135,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 3,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14150,7 +14150,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14165,7 +14165,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14180,7 +14180,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14195,7 +14195,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14210,7 +14210,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14225,7 +14225,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14240,7 +14240,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14255,7 +14255,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14270,7 +14270,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14285,7 +14285,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14300,7 +14300,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14315,7 +14315,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14330,7 +14330,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14345,7 +14345,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14360,7 +14360,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14375,7 +14375,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14390,7 +14390,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14405,7 +14405,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14420,7 +14420,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14435,7 +14435,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14450,7 +14450,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14465,7 +14465,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14480,7 +14480,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14495,7 +14495,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14510,7 +14510,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14525,7 +14525,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14540,7 +14540,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14555,7 +14555,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14570,7 +14570,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14585,7 +14585,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14600,7 +14600,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14615,7 +14615,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14630,7 +14630,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14645,7 +14645,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14660,7 +14660,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14675,7 +14675,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14690,7 +14690,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14705,7 +14705,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14720,7 +14720,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14735,7 +14735,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14750,7 +14750,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 0,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14765,7 +14765,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 0,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14780,7 +14780,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 0,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14795,7 +14795,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 0,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14810,7 +14810,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 1,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14825,7 +14825,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14840,7 +14840,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14855,7 +14855,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14870,7 +14870,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14885,7 +14885,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14900,7 +14900,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14915,7 +14915,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14930,7 +14930,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14945,7 +14945,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14960,7 +14960,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14975,7 +14975,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -14990,7 +14990,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15005,7 +15005,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15020,7 +15020,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15035,7 +15035,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15050,7 +15050,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15065,7 +15065,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15080,7 +15080,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15095,7 +15095,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15110,7 +15110,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15125,7 +15125,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15140,7 +15140,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15155,7 +15155,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15170,7 +15170,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15185,7 +15185,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15200,7 +15200,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15215,7 +15215,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15230,7 +15230,7 @@
                 "start": "10:05",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15245,7 +15245,7 @@
                 "start": "10:35",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15260,7 +15260,7 @@
                 "start": "11:05",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15275,7 +15275,7 @@
                 "start": "11:35",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15290,7 +15290,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15305,7 +15305,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15320,7 +15320,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15335,7 +15335,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15350,7 +15350,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15365,7 +15365,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15380,7 +15380,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15395,7 +15395,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15410,7 +15410,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15425,7 +15425,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15440,7 +15440,7 @@
                 "start": "10:20",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15455,7 +15455,7 @@
                 "start": "10:40",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15470,7 +15470,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15485,7 +15485,7 @@
                 "start": "11:20",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15500,7 +15500,7 @@
                 "start": "11:40",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15515,7 +15515,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15530,7 +15530,7 @@
                 "start": "12:20",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15545,7 +15545,7 @@
                 "start": "12:40",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15560,7 +15560,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15575,7 +15575,7 @@
                 "start": "13:20",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15590,7 +15590,7 @@
                 "start": "13:40",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15605,7 +15605,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15620,7 +15620,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15635,7 +15635,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15650,7 +15650,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15665,7 +15665,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15680,7 +15680,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15695,7 +15695,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15710,7 +15710,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15725,7 +15725,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15740,7 +15740,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15755,7 +15755,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15770,7 +15770,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15785,7 +15785,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15800,7 +15800,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15815,7 +15815,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15830,7 +15830,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15845,7 +15845,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15860,7 +15860,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15875,7 +15875,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15890,7 +15890,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15905,7 +15905,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15920,7 +15920,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15935,7 +15935,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15950,7 +15950,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15965,7 +15965,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15980,7 +15980,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -15995,7 +15995,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16010,7 +16010,7 @@
                 "start": "10:05",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16025,7 +16025,7 @@
                 "start": "10:35",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16040,7 +16040,7 @@
                 "start": "11:35",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16055,7 +16055,7 @@
                 "start": "12:05",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16070,7 +16070,7 @@
                 "start": "12:35",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16085,7 +16085,7 @@
                 "start": "13:05",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16100,7 +16100,7 @@
                 "start": "13:35",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16115,7 +16115,7 @@
                 "start": "14:05",
                 "values": {
                   "09:00": 5,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16130,7 +16130,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16145,7 +16145,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16160,7 +16160,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16175,7 +16175,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16190,7 +16190,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16205,7 +16205,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16220,7 +16220,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16235,7 +16235,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16250,7 +16250,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16265,7 +16265,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16280,7 +16280,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16295,7 +16295,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16310,7 +16310,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 5,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16325,7 +16325,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16340,7 +16340,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16355,7 +16355,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16370,7 +16370,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16385,7 +16385,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16400,7 +16400,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16415,7 +16415,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16430,7 +16430,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16445,7 +16445,7 @@
                 "start": "10:40",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 1,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16460,7 +16460,7 @@
                 "start": "11:20",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 1,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16475,7 +16475,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16490,7 +16490,7 @@
                 "start": "13:20",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 1,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16505,7 +16505,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16520,7 +16520,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16535,7 +16535,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16550,7 +16550,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16565,7 +16565,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16580,7 +16580,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 1,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16595,7 +16595,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 1,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16610,7 +16610,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16625,7 +16625,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 1,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16640,7 +16640,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16655,7 +16655,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16670,7 +16670,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16685,7 +16685,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 1,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16700,7 +16700,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16715,7 +16715,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 3,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16730,7 +16730,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16745,7 +16745,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16760,7 +16760,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16775,7 +16775,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16790,7 +16790,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16805,7 +16805,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16820,7 +16820,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16835,7 +16835,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16850,7 +16850,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 4,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16865,7 +16865,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16880,7 +16880,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16895,7 +16895,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16910,7 +16910,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16925,7 +16925,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16940,7 +16940,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16955,7 +16955,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16970,7 +16970,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -16985,7 +16985,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17000,7 +17000,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17015,7 +17015,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17030,7 +17030,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17045,7 +17045,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 2,
-                  "09:30": "",
+                  "09:30": 2,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17060,7 +17060,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 8,
-                  "09:30": "",
+                  "09:30": 8,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17075,7 +17075,7 @@
                 "start": "10:45",
                 "values": {
                   "09:00": 8,
-                  "09:30": "",
+                  "09:30": 8,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17090,7 +17090,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 8,
-                  "09:30": "",
+                  "09:30": 8,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17105,7 +17105,7 @@
                 "start": "12:15",
                 "values": {
                   "09:00": 8,
-                  "09:30": "",
+                  "09:30": 8,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17120,7 +17120,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 8,
-                  "09:30": "",
+                  "09:30": 8,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17135,7 +17135,7 @@
                 "start": "13:45",
                 "values": {
                   "09:00": 8,
-                  "09:30": "",
+                  "09:30": 8,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17150,7 +17150,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 4,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17165,7 +17165,7 @@
                 "start": "10:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17180,7 +17180,7 @@
                 "start": "11:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17195,7 +17195,7 @@
                 "start": "11:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17210,7 +17210,7 @@
                 "start": "12:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17225,7 +17225,7 @@
                 "start": "12:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17240,7 +17240,7 @@
                 "start": "13:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17255,7 +17255,7 @@
                 "start": "13:30",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17270,7 +17270,7 @@
                 "start": "14:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 6,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17285,7 +17285,7 @@
                 "start": "10:00",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17300,7 +17300,7 @@
                 "start": "11:50",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17315,7 +17315,7 @@
                 "start": "12:45",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
@@ -17330,7 +17330,7 @@
                 "start": "13:40",
                 "values": {
                   "09:00": 6,
-                  "09:30": "",
+                  "09:30": 0,
                   "10:00": "",
                   "10:30": "",
                   "11:00": "",
