@@ -71,12 +71,6 @@ body {
   font-weight: 700;
 }
 
-/* スマホ用ヘッダー・操作欄はPCでは非表示 */
-.mobile-site-header,
-.mobile-controls {
-  display: none;
-}
-
 /* カード */
 .side-card,
 .panel {
@@ -419,6 +413,7 @@ body {
 .legend-row .after {
   background: #d9d9d9;
 }
+
 /* 表 */
 .pivot-wrap {
   width: 100%;
@@ -520,124 +515,126 @@ body {
     padding: 12px;
   }
 
-  /* スマホではランキング・カレンダーを含む左側を非表示 */
-  .sidebar {
-    display: none;
-  }
-
+  .sidebar,
   .main {
     width: 100%;
   }
 
-  .mobile-site-header {
-    display: block;
-    margin-bottom: 12px;
+  .site-header {
+    min-height: auto;
     padding: 18px;
+    margin-bottom: 14px;
     border-radius: 18px;
-    background: linear-gradient(135deg, #ff8faf 0%, #ffc36d 100%);
-    box-shadow: 0 10px 22px rgba(255, 150, 120, 0.22);
-    color: #fff;
   }
 
-  .mobile-site-header h1 {
-    margin: 0 0 6px;
+  .site-header h1 {
     font-size: 27px;
-    line-height: 1.05;
-    font-weight: 950;
-    letter-spacing: 0.02em;
-    color: #fff;
-    text-shadow: 0 3px 0 rgba(130, 70, 40, 0.12);
   }
 
-  .mobile-site-header h1::before {
-    content: "仕事体験テーマパーク";
-    display: block;
-    margin-bottom: 3px;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-  }
-
-  .mobile-site-header p {
-    margin: 0;
+  .site-header p {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.95);
-    font-weight: 700;
+  }
+
+  .side-card,
+  .panel {
+    border-radius: 16px;
+  }
+
+  .side-card {
+    padding: 18px;
+    margin-bottom: 14px;
+  }
+
+  .side-card h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .calendar-header {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .calendar-header button {
+    width: 40px;
+    height: 40px;
+  }
+
+  #calendarTitle {
+    font-size: 18px;
+  }
+
+  .week-row,
+  .calendar {
+    column-gap: 6px;
+    row-gap: 8px;
+  }
+
+  .calendar-day {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .notice {
+    margin-bottom: 16px;
   }
 
   .main-header {
+    min-height: auto;
+    margin: 16px 0 12px;
+    padding-top: 0;
+  }
+
+  .main-header h2 {
+    font-size: 24px;
+  }
+
+  .main-header p {
+    font-size: 12px;
+  }
+
+  .badge {
     display: none;
   }
 
   .panel {
-    padding: 14px;
+    padding: 16px;
     min-height: auto;
-    border-radius: 16px;
-  }
-
-  .mobile-controls {
-    display: block;
-    margin-bottom: 14px;
-  }
-
-  .mobile-controls label {
-    display: block;
-    margin-bottom: 7px;
-    color: #ff7f8f;
-    font-size: 15px;
-    font-weight: 900;
-  }
-
-  .mobile-date-picker {
-    width: 100%;
-    height: 44px;
-    padding: 0 12px;
-    border: 2px solid #f0d4b8;
-    border-radius: 12px;
-    background: #fff;
-    color: #111827;
-    font-size: 16px;
-    font-weight: 850;
-  }
-
-  .mobile-part-tabs {
-    display: flex;
-    gap: 8px;
-    margin-top: 10px;
-  }
-
-  .mobile-part-tab {
-    flex: 1;
-    height: 38px;
-    border: 2px solid #111827;
-    border-radius: 10px;
-    background: #fff;
-    color: #111827;
-    font-size: 15px;
-    font-weight: 900;
-  }
-
-  .mobile-part-tab.active {
-    background: #111827;
-    color: #fff;
   }
 
   .table-title {
-    display: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .table-title h2 {
+    font-size: 20px;
+  }
+
+  .table-title p {
+    margin-top: 8px;
+  }
+
+  .part-tabs {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .part-tab {
+    min-width: 64px;
+    height: 34px;
+    font-size: 14px;
+    border-radius: 9px;
   }
 
   .legend-row {
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 8px 12px;
-    margin: 10px 0 12px;
+    margin: 12px 0 10px;
     font-size: 11px;
     white-space: normal;
-  }
-
-  .legend-row i {
-    width: 22px;
-    height: 10px;
   }
 
   .pivot-wrap {
@@ -646,7 +643,7 @@ body {
 
   #mobileCards.mobile-cards {
     display: block !important;
-    margin-top: 10px;
+    margin-top: 14px;
   }
 
   .mobile-empty {
@@ -664,16 +661,16 @@ body {
     background: #fff;
     border: 1px solid #f0d4b8;
     border-radius: 16px;
-    padding: 12px;
+    padding: 14px;
     margin-bottom: 14px;
     box-shadow: 0 6px 16px rgba(142, 92, 45, 0.08);
   }
 
   .mobile-job-card h3 {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     padding-bottom: 8px;
     border-bottom: 1px solid #f4dec8;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.35;
     color: #111827;
   }
@@ -683,34 +680,23 @@ body {
     border-collapse: collapse;
     table-layout: fixed;
     background: #fff;
-    font-size: 11px;
+    font-size: 10.5px;
   }
 
   .mobile-pivot-table th,
   .mobile-pivot-table td {
     border: 1px solid #f0d4b8;
     height: 28px;
-    padding: 3px 1px;
+    padding: 4px 1px;
     text-align: center;
     vertical-align: middle;
     font-variant-numeric: tabular-nums;
   }
 
   .mobile-pivot-table thead th {
-    height: 58px;
-    padding: 3px 1px;
     background: #fff8ef;
-    font-size: 10px;
     font-weight: 900;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    white-space: nowrap;
-  }
-
-  .mobile-pivot-table thead th:first-child {
-    width: 43px;
-    writing-mode: horizontal-tb;
-    text-orientation: initial;
+    font-size: 9.5px;
   }
 
   .mobile-pivot-table thead th:first-child,
@@ -718,16 +704,6 @@ body {
     width: 43px;
     background: #fff8ef;
     font-weight: 900;
-  }
-
-  .mobile-start-cell {
-    font-size: 10px;
-    white-space: nowrap;
-  }
-
-  .mobile-pivot-table td {
-    font-size: 11px;
-    font-weight: 800;
   }
 
   .mobile-pivot-table td.before {
@@ -742,4 +718,8 @@ body {
     background: #d9d9d9;
     color: #666;
   }
-}
+
+  .weekly-ranking li {
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+  }
+} 
