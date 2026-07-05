@@ -139,7 +139,7 @@ async function loadData() {
 }
 
 function getDateStore() {
-  return siteData.dates || {};
+  return siteData.dates || siteData.days || {};
 }
 
 function getDateKeys() {
@@ -150,10 +150,44 @@ function getDayData(dateKey) {
   return getDateStore()?.[dateKey] || null;
 }
 
+function convertDayDataToPivot(dayData) {
+  if (!dayData || !dayData.jobs) return null;
+
+  const rows = [];
+
+  dayData.jobs.forEach(jobData => {
+    jobData.rows.forEach(row => {
+      rows.push({
+        job: cleanJobName(jobData.job),
+        start: row.start,
+        end: row.end,
+        capacity: row.capacity,
+        values: row.values
+      });
+    });
+  });
+
+  return {
+    times: dayData.fetch_times || [],
+    rows: rows
+  };
+}
+
 function getParts(dateKey) {
   const dayData = getDayData(dateKey);
-  if (!dayData || !dayData.parts) return {};
-  return dayData.parts;
+  if (!dayData) return {};
+
+  if (dayData.parts) {
+    return dayData.parts;
+  }
+
+  return {
+    part1: {
+      label: "1部",
+      updated_at: siteData.updated_at || dayData.updated_at || "",
+      pivot: convertDayDataToPivot(dayData)
+    }
+  };
 }
 
 function getAvailablePartKeys(dateKey) {
@@ -256,7 +290,7 @@ function renderDate(dateKey) {
   const partData = getParts(dateKey)[selectedPartKey];
 
   document.getElementById("updatedAt").textContent =
-    partData ? `最終更新：${partData.updated_at || dayData.updated_at || ""}（${partData.label}）` : `最終更新：${dayData.updated_at || ""}`;
+    partData ? `最終更新：${partData.updated_at || dayData.updated_at || siteData.updated_at || ""}（${partData.label}）` : `最終更新：${dayData.updated_at || siteData.updated_at || ""}`;
 
   renderTabs(dateKey);
   renderPivot(normalizePivot(partData));

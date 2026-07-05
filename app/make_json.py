@@ -30,6 +30,7 @@ def normalize_columns(df):
         "capacity": "定員",
         "possible_number": "定員",
         "remaining": "残席",
+        "reservation_possibles": "残席",
         "fetched_at": "取得時刻",
         "取得時間": "取得時刻",
     }
@@ -102,9 +103,6 @@ def make_part_data(day_df, part_key):
     part_df = day_df.copy()
     part_df["part_key"] = part_df["開始"].apply(part_key_from_start)
     part_df = part_df[part_df["part_key"] == part_key]
-
-    if part_df.empty:
-        return None
 
     if part_key == "part1":
         part_df = part_df[part_df["取得時刻_dt"].dt.hour < 15]
