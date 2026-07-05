@@ -1,312 +1,267 @@
+import os
+import glob
 import json
-import re
-from pathlib import Path
-
 import pandas as pd
 
-BASE_DIR = Path(__file__).resolve().parents[1]
-RAW_DIR = BASE_DIR / "data" / "raw"
-DOCS_DIR = BASE_DIR / "docs"
-OUTPUT_FILE = DOCS_DIR / "data.json"
 
-PARTS = {
-    "part1": {
-        "label": "1部",
-        "slots": [
-            "09:00", "09:30", "10:00", "10:30", "11:00",
-            "11:30", "12:00", "12:30", "13:00"
-        ],
-        "start_min": "09:00",
-        "start_max": "14:59",
-    },
-    "part2": {
-        "label": "2部",
-        "slots": [
-            "15:00", "15:30", "16:00", "16:30", "17:00",
-            "17:30", "18:00", "18:30", "19:00"
-        ],
-        "start_min": "15:00",
-        "start_max": "23:59",
-    },
-}
+RAW_DIR = "data/raw"
+OUTPUT_JSON = "docs/data.json"
 
 
-def clean_job_name(name):
-    if pd.isna(name):
-        return ""
+def normalize_columns(df):
+    df = df.copy()
 
-    name = str(name)
-    name = re.sub(r"\[([^=\]]+)=([^\]]+)\]", r"\1", name)
-    return name.strip()
+    rename_map = {
+        "activity_name": "職業",
+        "activity_name_ruby": "職業",
+        "start": "開始",
+        "start_time": "開始",
+        "end": "終了",
+        "end_time": "終了",
+        "capacity": "定員",
+        "possible_number": "定員",
+        "remaining": "残席",
+        "reservation_possibles": "残席",
+        "fetched_at": "取得時刻",
+        "取得時間": "取得時刻",
+    }
+
+    df = df.rename(columns={c: rename_map.get(c, c) for c in df.columns})
+    return df
 
 
-def load_raw_csv():
-    files = sorted(RAW_DIR.glob("kandu_*.csv"))
+def load_all_csv():
+    files = sorted(glob.glob(os.path.join(RAW_DIR, "*.csv")))
 
     if not files:
-        print("CSVがありません")
-        return pd.DataFrame()
+        raise FileNotFoundError("data/raw にCSVがありません。")
 
-    frames = []
+    dfs = []
 
     for file in files:
         try:
-            frames.append(pd.read_csv(file))
-        except Exception as e:
-            print(f"読み込み失敗: {file} / {e}")
+            df = pd.read_csv(file, encoding="utf-8-sig")
+        except UnicodeDecodeError:
+            df = pd.read_csv(file, encoding="cp932")
 
-    if not frames:
-        return pd.DataFrame()
+        df = normalize_columns(df)
+        df["source_file"] = os.path.basename(file)
+        dfs.append(df)
 
-    return pd.concat(frames, ignore_index=True)
-
-
-def floor_to_30min(dt):
-    minute = 0 if dt.minute < 30 else 30
-    return f"{dt.hour:02d}:{minute:02d}"
+    return pd.concat(dfs, ignore_index=True)
 
 
-def detect_part_by_slot(slot):
-    for part_key, config in PARTS.items():
-        if slot in config["slots"]:
-            return part_key
-    return None
-
-
-def detect_part_by_start(start):
-    if pd.isna(start):
-        return None
-
-    start = str(start)
-
-    for part_key, config in PARTS.items():
-        if config["start_min"] <= start <= config["start_max"]:
-            return part_key
-
-    return None
-
-
-def normalize_df(df):
+def clean_df(df):
     df = df.copy()
 
-    required_columns = ["取得時刻", "職業", "定員", "開始", "体験時間", "残席"]
-    missing_columns = [col for col in required_columns if col not in df.columns]
+    required = ["職業", "開始", "終了", "定員", "残席", "取得時刻"]
+    missing = [c for c in required if c not in df.columns]
 
-    if missing_columns:
-        raise ValueError(f"CSVに必要な列がありません: {missing_columns}")
+    if missing:
+        raise ValueError(f"必要な列がありません: {missing}")
 
-    df["職業"] = df["職業"].apply(clean_job_name)
+    df["職業"] = df["職業"].astype(str).str.strip()
+    df["開始"] = df["開始"].astype(str).str.strip()
+    df["終了"] = df["終了"].astype(str).str.strip()
 
-    df["取得時刻"] = pd.to_datetime(df["取得時刻"], errors="coerce")
-    df = df[df["取得時刻"].notna()]
+    df["定員"] = pd.to_numeric(df["定員"], errors="coerce")
+    df["残席"] = pd.to_numeric(df["残席"], errors="coerce")
+    df["取得時刻_dt"] = pd.to_datetime(df["取得時刻"], errors="coerce")
 
-    df["取得日"] = df["取得時刻"].dt.strftime("%Y-%m-%d")
-    df["取得枠"] = df["取得時刻"].apply(floor_to_30min)
+    df = df.dropna(subset=["職業", "開始", "終了", "定員", "残席", "取得時刻_dt"])
+    df = df[df["定員"] > 0]
 
-    df["取得部"] = df["取得枠"].apply(detect_part_by_slot)
-    df["開始部"] = df["開始"].apply(detect_part_by_start)
-
-    df = df[df["取得部"].notna()]
-    df = df[df["開始部"].notna()]
-    df = df[df["取得部"] == df["開始部"]]
-
-    for col in ["定員", "体験時間", "残席"]:
-        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0).astype(int)
+    df["日付"] = df["取得時刻_dt"].dt.strftime("%Y-%m-%d")
+    df["取得時刻表示"] = df["取得時刻_dt"].dt.strftime("%H:%M")
 
     return df
 
 
-def latest_snapshot(part_df):
-    latest_slot = part_df["取得枠"].max()
-    return part_df[part_df["取得枠"] == latest_slot].copy()
+def make_days_data(df):
+    days_data = {}
+
+    for date, day_df in df.groupby("日付"):
+        day_df = day_df.copy()
+        day_df = day_df.sort_values(["職業", "開始", "取得時刻_dt"])
+
+        fetch_times = sorted(day_df["取得時刻表示"].unique().tolist())
+
+        jobs = []
+
+        for job, job_df in day_df.groupby("職業"):
+            rows = []
+
+            for start, start_df in job_df.groupby("開始"):
+                start_df = start_df.sort_values("取得時刻_dt")
+
+                values = {}
+
+                for _, row in start_df.iterrows():
+                    values[row["取得時刻表示"]] = None if pd.isna(row["残席"]) else int(row["残席"])
+
+                rows.append({
+                    "start": start,
+                    "end": str(start_df["終了"].iloc[0]),
+                    "capacity": int(start_df["定員"].max()),
+                    "values": values
+                })
+
+            rows = sorted(rows, key=lambda x: x["start"])
+
+            jobs.append({
+                "job": job,
+                "rows": rows
+            })
+
+        jobs = sorted(jobs, key=lambda x: x["job"])
+
+        days_data[date] = {
+            "fetch_times": fetch_times,
+            "jobs": jobs
+        }
+
+    return days_data
 
 
-def make_ranking(part_df):
-    latest_df = latest_snapshot(part_df)
+def make_weekly_ranking(df, top_n=10):
+    """
+    週間人気ランキング。
 
-    summary = (
-        latest_df.groupby("職業", as_index=False)
-        .agg(
-            capacity_total=("定員", "sum"),
-            remaining_total=("残席", "sum"),
-            sessions=("開始", "count"),
-        )
-    )
+    内部計算：
+    ・残席率 50%
+    ・完売速度 30%
+    ・完売率 20%
+    ・定員補正あり
 
-    summary["reserved_total"] = summary["capacity_total"] - summary["remaining_total"]
-    summary["reserved_rate"] = summary.apply(
-        lambda row: row["reserved_total"] / row["capacity_total"]
-        if row["capacity_total"] > 0
-        else 0,
-        axis=1,
-    )
+    JSONに出すのは rank と job のみ。
+    人気指数は公開しない。
+    """
 
-    summary = summary.sort_values(
-        ["reserved_rate", "remaining_total", "sessions", "職業"],
-        ascending=[False, True, True, True],
-    ).head(10)
+    df = df.copy()
 
-    ranking = []
+    latest = df["取得時刻_dt"].max()
+    start_date = latest - pd.Timedelta(days=7)
+    df = df[df["取得時刻_dt"] >= start_date]
 
-    for _, row in summary.iterrows():
-        ranking.append({
-            "rank": len(ranking) + 1,
-            "name": row["職業"],
-            "reserved_rate": round(float(row["reserved_rate"]) * 100, 1),
-            "reserved_total": int(row["reserved_total"]),
-            "capacity_total": int(row["capacity_total"]),
-            "remaining_total": int(row["remaining_total"]),
-            "sessions": int(row["sessions"]),
-        })
+    if df.empty:
+        return []
 
-    return ranking
+    df["残席率"] = df["残席"] / df["定員"]
 
+    results = []
 
-def make_summary(part_df):
-    latest_df = latest_snapshot(part_df)
+    for job, g in df.groupby("職業"):
+        g = g.copy()
 
-    summary = (
-        latest_df.groupby("職業", as_index=False)
-        .agg(
-            capacity_total=("定員", "sum"),
-            remaining_total=("残席", "sum"),
-            sessions=("開始", "count"),
-            capacity=("定員", "max"),
-            duration=("体験時間", "max"),
-        )
-    )
+        # ① 残席率：低いほど人気
+        avg_remaining_rate = g["残席率"].mean()
+        remaining_score = 1 - avg_remaining_rate
 
-    summary["reserved_total"] = summary["capacity_total"] - summary["remaining_total"]
-    summary["reserved_rate"] = summary.apply(
-        lambda row: row["reserved_total"] / row["capacity_total"]
-        if row["capacity_total"] > 0
-        else 0,
-        axis=1,
-    )
+        soldout_count = 0
+        total_slots = 0
+        speed_scores = []
+        capacities = []
 
-    summary = summary.sort_values(
-        ["reserved_rate", "remaining_total", "職業"],
-        ascending=[False, True, True],
-    )
+        # 日付＋開始時刻ごとに1開催枠として扱う
+        for _, sg in g.groupby(["日付", "開始"]):
+            sg = sg.sort_values("取得時刻_dt")
 
-    result = []
+            total_slots += 1
 
-    for _, row in summary.iterrows():
-        result.append({
-            "name": row["職業"],
-            "capacity": int(row["capacity"]),
-            "duration": int(row["duration"]),
-            "sessions": int(row["sessions"]),
-            "capacity_total": int(row["capacity_total"]),
-            "reserved_total": int(row["reserved_total"]),
-            "remaining_total": int(row["remaining_total"]),
-            "reserved_rate": round(float(row["reserved_rate"]) * 100, 1),
-        })
+            capacity = sg["定員"].max()
+            capacities.append(capacity)
 
-    return result
+            soldout_rows = sg[sg["残席"] <= 0]
 
+            if not soldout_rows.empty:
+                soldout_count += 1
 
-def make_pivot(part_df, slots):
-    pivot_df = (
-        part_df.pivot_table(
-            index=["職業", "開始"],
-            columns="取得枠",
-            values="残席",
-            aggfunc="min",
-        )
-        .reset_index()
-        .sort_values(["職業", "開始"])
-    )
+                first_soldout_time = soldout_rows["取得時刻_dt"].min()
 
-    rows = []
+                start_dt = pd.to_datetime(
+                    sg["日付"].iloc[0] + " " + str(sg["開始"].iloc[0]),
+                    errors="coerce"
+                )
 
-    for _, row in pivot_df.iterrows():
-        values = {}
+                if pd.notna(start_dt):
+                    minutes_until_start = (start_dt - first_soldout_time).total_seconds() / 60
 
-        for slot in slots:
-            if slot in pivot_df.columns:
-                value = row[slot]
+                    # 90分以上前に完売 → 1.0
+                    # 開始30分後以降に完売 → 0
+                    speed_score = (minutes_until_start + 30) / 120
+                    speed_score = max(0, min(1, speed_score))
+                else:
+                    speed_score = 0
+
+                speed_scores.append(speed_score)
             else:
-                value = ""
+                speed_scores.append(0)
 
-            if pd.isna(value) or value == "":
-                values[slot] = ""
-            else:
-                values[slot] = int(value)
+        # ② 完売速度
+        avg_speed_score = sum(speed_scores) / len(speed_scores) if speed_scores else 0
 
-        rows.append({
-            "job": row["職業"],
-            "start": row["開始"],
-            "values": values,
+        # ③ 完売率
+        soldout_rate = soldout_count / total_slots if total_slots else 0
+
+        # 定員補正
+        avg_capacity = sum(capacities) / len(capacities) if capacities else 1
+
+        if avg_capacity <= 1:
+            capacity_bonus = 0.92
+        elif avg_capacity <= 3:
+            capacity_bonus = 0.97
+        elif avg_capacity <= 5:
+            capacity_bonus = 1.00
+        else:
+            capacity_bonus = 1.05
+
+        popularity_score = (
+            remaining_score * 0.50 +
+            avg_speed_score * 0.30 +
+            soldout_rate * 0.20
+        ) * capacity_bonus
+
+        results.append({
+            "job": job,
+            "score": popularity_score
         })
 
-    return {
-        "times": slots,
-        "rows": rows,
-    }
+    ranking = sorted(results, key=lambda x: x["score"], reverse=True)
 
-
-def make_part(part_df, part_key):
-    config = PARTS[part_key]
-    latest_time = part_df["取得時刻"].max()
-
-    return {
-        "label": config["label"],
-        "updated_at": latest_time.strftime("%Y/%m/%d %H:%M"),
-        "times": config["slots"],
-        "ranking": make_ranking(part_df),
-        "summary": make_summary(part_df),
-        "pivot": make_pivot(part_df, config["slots"]),
-    }
-
-
-def build_json(df):
-    result = {
-        "dates": {}
-    }
-
-    for date, day_df in df.groupby("取得日"):
-        parts = {}
-
-        for part_key in PARTS:
-            part_df = day_df[day_df["取得部"] == part_key].copy()
-
-            if not part_df.empty:
-                parts[part_key] = make_part(part_df, part_key)
-
-        if parts:
-            latest_time = day_df["取得時刻"].max()
-
-            result["dates"][date] = {
-                "updated_at": latest_time.strftime("%Y/%m/%d %H:%M"),
-                "parts": parts,
-            }
-
-    return result
+    return [
+        {
+            "rank": i + 1,
+            "job": item["job"]
+        }
+        for i, item in enumerate(ranking[:top_n])
+    ]
 
 
 def main():
-    df = load_raw_csv()
+    df = load_all_csv()
+    df = clean_df(df)
 
-    if df.empty:
-        print("処理するCSVがありません")
-        return
+    latest_time = df["取得時刻_dt"].max().strftime("%Y-%m-%d %H:%M:%S")
 
-    df = normalize_df(df)
+    days_data = make_days_data(df)
+    weekly_ranking = make_weekly_ranking(df, top_n=10)
 
-    if df.empty:
-        print("有効なデータがありません")
-        return
+    data = {
+        "updated_at": latest_time,
+        "days": days_data,
+        "weekly_ranking": weekly_ranking
+    }
 
-    result = build_json(df)
+    os.makedirs(os.path.dirname(OUTPUT_JSON), exist_ok=True)
 
-    DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-
-    print(f"{OUTPUT_FILE} を更新しました")
-    print(f"{len(result['dates'])}日分のデータを書き出しました")
+    print(f"OK: {OUTPUT_JSON} を作成しました")
+    print(f"更新時刻: {latest_time}")
+    print("週間ランキング:")
+    for item in weekly_ranking:
+        print(f'{item["rank"]}位 {item["job"]}')
 
 
 if __name__ == "__main__":
