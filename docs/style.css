@@ -504,9 +504,6 @@ body {
 @media screen and (max-width: 768px) {
   body {
     font-size: 13px;
-    background:
-      radial-gradient(circle at 16px 16px, rgba(255, 186, 113, 0.12) 0 2px, transparent 3px),
-      linear-gradient(135deg, #fff8ee 0%, #fffaf6 45%, #fff3ec 100%);
   }
 
   .layout {
@@ -518,6 +515,12 @@ body {
   .sidebar,
   .main {
     width: 100%;
+  }
+
+  /* スマホではランキング不要 */
+  .sidebar .side-card:nth-of-type(2),
+  .notice {
+    display: none;
   }
 
   .site-header {
@@ -535,33 +538,20 @@ body {
     font-size: 12px;
   }
 
-  .side-card,
-  .panel {
-    border-radius: 16px;
-  }
-
   .side-card {
-    padding: 18px;
+    padding: 16px;
     margin-bottom: 14px;
-  }
-
-  .side-card h2 {
-    font-size: 18px;
-    margin-bottom: 14px;
+    border-radius: 16px;
   }
 
   .calendar-header {
     gap: 12px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .calendar-header button {
     width: 40px;
     height: 40px;
-  }
-
-  #calendarTitle {
-    font-size: 18px;
   }
 
   .week-row,
@@ -576,63 +566,48 @@ body {
     font-size: 14px;
   }
 
-  .notice {
-    margin-bottom: 16px;
-  }
-
   .main-header {
-    min-height: auto;
-    margin: 16px 0 12px;
-    padding-top: 0;
-  }
-
-  .main-header h2 {
-    font-size: 24px;
-  }
-
-  .main-header p {
-    font-size: 12px;
-  }
-
-  .badge {
     display: none;
   }
 
   .panel {
-    padding: 16px;
+    padding: 14px;
     min-height: auto;
+    border-radius: 16px;
   }
 
   .table-title {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .table-title h2 {
-    font-size: 20px;
+    display: none;
   }
 
   .table-title p {
-    margin-top: 8px;
+    margin: 0 0 8px;
+    font-size: 12px;
   }
 
   .part-tabs {
-    margin-top: 10px;
+    display: flex;
     gap: 8px;
+    margin: 0 0 10px;
   }
 
   .part-tab {
-    min-width: 64px;
-    height: 34px;
+    flex: 1;
+    height: 36px;
+    border-radius: 10px;
     font-size: 14px;
-    border-radius: 9px;
   }
 
   .legend-row {
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 8px 12px;
-    margin: 12px 0 10px;
+    margin: 10px 0 12px;
     font-size: 11px;
     white-space: normal;
   }
@@ -643,7 +618,6 @@ body {
 
   #mobileCards.mobile-cards {
     display: block !important;
-    margin-top: 14px;
   }
 
   .mobile-empty {
@@ -657,75 +631,95 @@ body {
   }
 
   .mobile-job-card {
-    display: block;
     background: #fff;
     border: 1px solid #f0d4b8;
-    border-radius: 16px;
-    padding: 14px;
-    margin-bottom: 14px;
-    box-shadow: 0 6px 16px rgba(142, 92, 45, 0.08);
+    border-radius: 14px;
+    padding: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 5px 14px rgba(142, 92, 45, 0.08);
   }
 
   .mobile-job-card h3 {
-    margin: 0 0 12px;
-    padding-bottom: 8px;
+    margin: 0 0 8px;
+    padding-bottom: 7px;
     border-bottom: 1px solid #f4dec8;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.35;
     color: #111827;
   }
 
   .mobile-slot-row {
-    padding: 12px 0;
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    align-items: stretch;
+    padding: 0;
     border-bottom: 1px solid #f4dec8;
   }
 
   .mobile-slot-row:last-child {
     border-bottom: none;
-    padding-bottom: 0;
   }
 
   .mobile-start {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 70px;
-    height: 28px;
-    margin-bottom: 8px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #ff7aa2, #ffbd67);
-    color: #fff;
-    font-weight: 900;
-    font-size: 13px;
-  }
-
-  .mobile-chips {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 6px;
-  }
-
-  .mobile-chip {
-    border: 1px solid #f0d4b8;
-    border-radius: 9px;
-    padding: 6px 4px;
-    text-align: center;
-    font-size: 11px;
-    line-height: 1.2;
-    background: #fff;
-  }
-
-  .mobile-chip b {
-    display: block;
-    margin-bottom: 3px;
+    min-width: 0;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    background: #fff8ef;
+    color: #111827;
     font-size: 10px;
     font-weight: 900;
   }
 
+  .mobile-chips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22px, 1fr));
+    gap: 0;
+  }
+
+  .mobile-chip {
+    min-width: 0;
+    border: none;
+    border-left: 1px solid #f0d4b8;
+    border-radius: 0;
+    padding: 4px 1px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.1;
+    background: #fff;
+  }
+
+  .mobile-chip b {
+    display: none;
+  }
+
   .mobile-chip em {
+    display: block;
     font-style: normal;
     font-weight: 900;
-    font-size: 13px;
+    font-size: 11px;
+  }
+
+  /* 各職業カードの1行目だけ、取得時間をX軸として表示 */
+  .mobile-slot-row:first-of-type .mobile-chip {
+    padding-top: 24px;
+    position: relative;
+  }
+
+  .mobile-slot-row:first-of-type .mobile-chip b {
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    transform-origin: center;
+    font-size: 9px;
+    font-weight: 900;
+    white-space: nowrap;
+    color: #555;
   }
 
   .mobile-chip.before {
@@ -739,9 +733,5 @@ body {
   .mobile-chip.after {
     background: #d9d9d9;
     color: #666;
-  }
-
-  .weekly-ranking li {
-    grid-template-columns: 30px minmax(0, 1fr) auto;
   }
 }
