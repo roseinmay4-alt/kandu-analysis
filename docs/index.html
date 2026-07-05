@@ -41,7 +41,7 @@
 
       <section class="side-card">
         <h2>人気ランキング TOP10</h2>
-        <p id="rankingSub" class="small">予約率が高い順</p>
+        <p id="rankingSub" class="small">直近7日間の人気順</p>
         <ol id="weeklyRanking" class="weekly-ranking"></ol>
       </section>
 
@@ -128,20 +128,60 @@ async function loadData() {
   renderPage();
 }
 
+function getDateStore() {
+  return siteData.dates || siteData.days || {};
+}
+
 function getDateKeys() {
-  return Object.keys(siteData.dates || {}).sort();
+  return Object.keys(getDateStore()).sort();
 }
 
 function getDayData(dateKey) {
-  return siteData.dates?.[dateKey] || null;
+  return getDateStore()?.[dateKey] || null;
 }
 
 function getParts(dateKey) {
-  return getDayData(dateKey)?.parts || {};
+  const dayData = getDayData(dateKey);
+  if (!dayData) return {};
+
+  if (dayData.parts) {
+    return dayData.parts;
+  }
+
+  return {
+    part1: {
+      label: "1部",
+      updated_at: siteData.updated_at || dayData.updated_at || "",
+      pivot: convertDayDataToPivot(dayData)
+    }
+  };
 }
 
 function getAvailablePartKeys(dateKey) {
   return Object.keys(getParts(dateKey));
+}
+
+function convertDayDataToPivot(dayData) {
+  if (!dayData || !dayData.jobs) return null;
+
+  const rows = [];
+
+  dayData.jobs.forEach(jobData => {
+    jobData.rows.forEach(row => {
+      rows.push({
+        job: jobData.job,
+        start: row.start,
+        end: row.end,
+        capacity: row.capacity,
+        values: row.values
+      });
+    });
+  });
+
+  return {
+    times: dayData.fetch_times || [],
+    rows: rows
+  };
 }
 
 function renderPage() {
@@ -152,6 +192,7 @@ function renderPage() {
     selectedDateKey = dates[dates.length - 1];
   }
 
+  renderRanking();
   renderDate(selectedDateKey);
 }
 
@@ -210,7 +251,6 @@ function renderDate(dateKey) {
     document.getElementById("pageTitle").textContent = "データなし";
     document.getElementById("updatedAt").textContent = "この日のデータはありません";
     document.getElementById("partTabs").innerHTML = "";
-    document.getElementById("weeklyRanking").innerHTML = "";
     renderPivot(null);
     return;
   }
@@ -227,10 +267,9 @@ function renderDate(dateKey) {
   const partData = getParts(dateKey)[selectedPartKey];
 
   document.getElementById("updatedAt").textContent =
-    partData ? `最終更新：${partData.updated_at}（${partData.label}）` : `最終更新：${dayData.updated_at}`;
+    partData ? `最終更新：${partData.updated_at || siteData.updated_at || ""}（${partData.label}）` : `最終更新：${dayData.updated_at || siteData.updated_at || ""}`;
 
   renderTabs(dateKey);
-  renderRanking(partData);
   renderPivot(partData?.pivot || null);
 }
 
@@ -259,26 +298,49 @@ function renderTabs(dateKey) {
   });
 }
 
-function renderRanking(partData) {
+function renderRanking() {
   const rankingEl = document.getElementById("weeklyRanking");
   const sub = document.getElementById("rankingSub");
 
   rankingEl.innerHTML = "";
 
-  if (!partData || !partData.ranking || partData.ranking.length === 0) {
+  const weeklyRanking = siteData.weekly_ranking || [];
+
+  if (weeklyRanking.length > 0) {
+    sub.textContent = "直近7日間の人気順";
+
+    weeklyRanking.forEach(item => {
+      const li = document.createElement("li");
+
+      li.innerHTML = `
+        <span class="rank-num">${item.rank}</span>
+        <strong>${item.job}</strong>
+      `;
+
+      rankingEl.appendChild(li);
+    });
+
+    return;
+  }
+
+  const dates = getDateKeys();
+  const latestDate = dates[dates.length - 1];
+  const latestParts = getParts(latestDate);
+  const firstPart = Object.values(latestParts)[0];
+
+  if (!firstPart || !firstPart.ranking || firstPart.ranking.length === 0) {
     sub.textContent = "ランキングデータなし";
     return;
   }
 
-  sub.textContent = `${partData.label}｜予約率が高い順`;
+  sub.textContent = "人気順";
 
-  partData.ranking.forEach((item, index) => {
+  firstPart.ranking.forEach((item, index) => {
     const li = document.createElement("li");
 
     li.innerHTML = `
       <span class="rank-num">${index + 1}</span>
-      <strong>${item.name}</strong>
-      <em>${item.reserved_rate}%</em>
+      <strong>${item.name || item.job}</strong>
     `;
 
     rankingEl.appendChild(li);
