@@ -373,6 +373,7 @@ function renderPcTable(pivot) {
 
 function renderMobileCards(pivot) {
   const mobileCards = document.getElementById("mobileCards");
+  mobileCards.innerHTML = "";
 
   const jobs = {};
 
@@ -391,48 +392,62 @@ function renderMobileCards(pivot) {
     title.textContent = job;
     card.appendChild(title);
 
+    const table = document.createElement("table");
+    table.className = "mobile-mini-table";
+
+    const thead = document.createElement("thead");
+    const headRow = document.createElement("tr");
+
+    headRow.innerHTML = `<th>開始</th>`;
+
+    pivot.times.forEach(time => {
+      headRow.innerHTML += `<th>${time}</th>`;
+    });
+
+    thead.appendChild(headRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement("tbody");
+
     rows.forEach(row => {
-      const item = document.createElement("div");
-      item.className = "mobile-slot-row";
+      const tr = document.createElement("tr");
 
-      const start = document.createElement("div");
-      start.className = "mobile-start";
-      start.textContent = row.start;
+      const startTh = document.createElement("th");
+      startTh.textContent = row.start;
+      startTh.className = "mobile-start-cell";
+      tr.appendChild(startTh);
 
-      const chips = document.createElement("div");
-      chips.className = "mobile-chips";
+      const startMinutes = timeToMinutes(row.start);
 
       pivot.times.forEach(time => {
+        const td = document.createElement("td");
         const value = row.values?.[time] ?? "";
-        const chip = document.createElement("span");
+        td.textContent = value === "" ? "-" : value;
 
-        chip.className = "mobile-chip";
-        chip.innerHTML = `<b>${time}</b><em>${value === "" ? "-" : value}</em>`;
-
-        const startMinutes = timeToMinutes(row.start);
         const headerMinutes = timeToMinutes(time);
 
         if (headerMinutes !== null && startMinutes !== null) {
           if (headerMinutes > startMinutes) {
-            chip.classList.add("after");
+            td.classList.add("after");
           } else if (headerMinutes === startMinutes) {
-            chip.classList.add("during");
+            td.classList.add("during");
           } else {
-            chip.classList.add("before");
+            td.classList.add("before");
           }
         }
 
-        chips.appendChild(chip);
+        tr.appendChild(td);
       });
 
-      item.appendChild(start);
-      item.appendChild(chips);
-      card.appendChild(item);
+      tbody.appendChild(tr);
     });
 
+    table.appendChild(tbody);
+    card.appendChild(table);
     mobileCards.appendChild(card);
   });
 }
+
 loadData();
 </script>
 </body>
